@@ -37,7 +37,8 @@ public class GestorSeguimiento {
 
         try {
             conexion = cn.conexion();
-            PreparedStatement ps = conexion.prepareStatement("insert into seguimiento (id, idPaciente,cedulaEspecialista,fecha, observacion) values (null,?,?,?,?)");
+            PreparedStatement ps = conexion.prepareStatement(
+                    "insert into seguimiento (id, idPaciente,cedulaEspecialista,fecha, observacion) values (null,?,?,?,?)");
             ps.setInt(1, paciente_id);
             ps.setString(2, especialista_cedula);
             ps.setDate(3, new java.sql.Date(seguimiento.getFecha().getTime()));
@@ -45,14 +46,16 @@ public class GestorSeguimiento {
             ps.executeUpdate();
             ps.close();
         } catch (SQLException e) {
-            JOptionPane.showMessageDialog(null, "Error al guardar seguimiento: " + e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(null, "Error al guardar seguimiento: " + e.getMessage(), "ERROR!",
+                    JOptionPane.ERROR_MESSAGE);
 
         } finally {
             if (conexion != null) {
                 try {
                     conexion.close();
                 } catch (SQLException e) {
-                    JOptionPane.showMessageDialog(null, "Error al guardar el archivo: " + e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+                    JOptionPane.showMessageDialog(null, "Error al guardar el archivo: " + e.getMessage(), "ERROR!",
+                            JOptionPane.ERROR_MESSAGE);
 
                 }
             }
@@ -69,7 +72,8 @@ public class GestorSeguimiento {
             ps.close();
             conexion.close();
         } catch (SQLException ex) {
-            JOptionPane.showMessageDialog(null, "Error al eliminar el seguimiento: " + ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(null, "Error al eliminar el seguimiento: " + ex.getMessage(), "ERROR!",
+                    JOptionPane.ERROR_MESSAGE);
         }
     }
 
@@ -93,7 +97,8 @@ public class GestorSeguimiento {
             rs = ps.executeQuery();
             return rs;
         } catch (SQLException ex) {
-            JOptionPane.showMessageDialog(null, "Error al consultar los archivos: " + ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(null, "Error al consultar los archivos: " + ex.getMessage(), "ERROR!",
+                    JOptionPane.ERROR_MESSAGE);
         } finally {
 
         }
@@ -134,7 +139,7 @@ public class GestorSeguimiento {
                 }
             };
         } catch (Exception e) {
-            JOptionPane.showMessageDialog(null, "Error: " + e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(null, "Error: " + e.getMessage(), "ERROR!", JOptionPane.ERROR_MESSAGE);
 
             return null;
         }

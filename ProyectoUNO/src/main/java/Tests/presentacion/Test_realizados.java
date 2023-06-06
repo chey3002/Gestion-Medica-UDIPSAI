@@ -59,7 +59,7 @@ public class Test_realizados extends javax.swing.JFrame {
         try {
             this.idList = getIdsFromResultSet(new GestorTest().getArchivosPDF(paciente.getId()));
         } catch (SQLException ex) {
-            JOptionPane.showMessageDialog(null, "Error: " + ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(null, "Error: " + ex.getMessage(), "ERROR!", JOptionPane.ERROR_MESSAGE);
         }
     }
 
@@ -220,7 +220,7 @@ public class Test_realizados extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, "El archivo se descargado correctamente.", "Confirmación", JOptionPane.INFORMATION_MESSAGE);
 
             } catch (IOException ex) {
-                JOptionPane.showMessageDialog(null, "Error al descargar el archivo: " + ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(null, "Error al descargar el archivo: " + ex.getMessage(), "ERROR!", JOptionPane.ERROR_MESSAGE);
             }
         }
         if (col == 4) {

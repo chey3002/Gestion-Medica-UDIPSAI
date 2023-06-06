@@ -5,6 +5,7 @@
 package menuLogin.formularios;
 
 import asignaciones.Asignar_Paciente;
+import comons.negocio.Especialista;
 import java.awt.Cursor;
 import javax.swing.JFrame;
 import menuLogin.modelo.usuarios;
@@ -15,21 +16,24 @@ import menuLogin.modelo.usuarios;
  */
 public class frm_home extends javax.swing.JFrame {
 
-    usuarios mod;
+    Especialista mod;
 
     public frm_home() {
         initComponents();
         this.setLocationRelativeTo(null);
     }
 
-    public frm_home(usuarios mod) {
+    public frm_home(Especialista mod) {
         initComponents();
         setLocationRelativeTo(null);
         this.mod = mod;
 
         lblNombre.setText(mod.getPrimerNombre());
-        lblRol.setText(mod.getArea());
-        lblPasante.setText(mod.getEsPasante());
+        //lblRol.setText(mod.getArea());
+        //lblPasante.setText(mod.isEsPasante());
+        boolean esPasante = mod.isEsPasante();
+        String textoPasante = Boolean.toString(esPasante);
+        lblPasante.setText(textoPasante);
 
         /*if (mod.getId_especialidad() == 1) {
             menuPsicologiaEducativa.setVisible(false);
@@ -43,7 +47,7 @@ public class frm_home extends javax.swing.JFrame {
 
         }*/
         // Nuevo condicional para mostrar el menú "menuEspecialistas"
-        if (mod.getEsPasante().equalsIgnoreCase("false")) {
+        if (!mod.isEsPasante()) {
             menuEspecialistas.setVisible(false);
         } else {
             menuEspecialistas.setVisible(true);

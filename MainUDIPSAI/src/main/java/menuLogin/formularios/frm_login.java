@@ -195,7 +195,7 @@ public class frm_login extends javax.swing.JFrame {
     private void btnIniciarSesionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnIniciarSesionActionPerformed
 
        SqlUsuarios modSql = new SqlUsuarios();
-        usuarios mod = new usuarios();
+        comons.negocio.Especialista mod = new comons.negocio.Especialista();
 
         
         String pass = new String(txtPassword.getPassword());
@@ -206,7 +206,7 @@ public class frm_login extends javax.swing.JFrame {
             
 
             mod.setCedula(txtUsuario.getText());
-            mod.setContrasenia(txtPassword.getText());
+            mod.setContraseña(txtPassword.getText());
             // mod.setLast_session(fechaHora.format(date));
 
             if (modSql.login(mod)) {

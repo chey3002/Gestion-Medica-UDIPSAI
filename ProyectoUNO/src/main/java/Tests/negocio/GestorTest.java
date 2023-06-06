@@ -45,7 +45,8 @@ public class GestorTest {
             ps.close();
             conexion.close();
         } catch (SQLException ex) {
-            JOptionPane.showMessageDialog(null, "Error al guardar el archivo: " + ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(null, "Error al guardar el archivo: " + ex.getMessage(), "ERROR!",
+                    JOptionPane.ERROR_MESSAGE);
         }
     }
 
@@ -63,7 +64,8 @@ public class GestorTest {
         try {
             FileInputStream flujo = new FileInputStream(archivo);
             conexion = cn.conexion();
-            PreparedStatement ps = conexion.prepareStatement("insert into tests (id, idPaciente,cedulaEspecialista,nombre,fecha, contenido) values (null,?,?,?,?,?)");
+            PreparedStatement ps = conexion.prepareStatement(
+                    "insert into tests (id, idPaciente,cedulaEspecialista,nombre,fecha, contenido) values (null,?,?,?,?,?)");
             ps.setInt(1, paciente_id);
             ps.setString(2, especialista_cedula);
             ps.setString(3, nombre);
@@ -72,17 +74,20 @@ public class GestorTest {
             ps.executeUpdate();
             ps.close();
         } catch (FileNotFoundException e) {
-            JOptionPane.showMessageDialog(null, "Error al guardar el archivo: " + e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(null, "Error al guardar el archivo: " + e.getMessage(), "ERROR!",
+                    JOptionPane.ERROR_MESSAGE);
 
         } catch (SQLException e) {
-            JOptionPane.showMessageDialog(null, "Error al guardar el archivo: " + e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
-            
+            JOptionPane.showMessageDialog(null, "Error al guardar el archivo: " + e.getMessage(), "ERROR!",
+                    JOptionPane.ERROR_MESSAGE);
+
         } finally {
             if (conexion != null) {
                 try {
                     conexion.close();
                 } catch (SQLException e) {
-                                JOptionPane.showMessageDialog(null, "Error al guardar el archivo: " + e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+                    JOptionPane.showMessageDialog(null, "Error al guardar el archivo: " + e.getMessage(), "ERROR!",
+                            JOptionPane.ERROR_MESSAGE);
 
                 }
             }
@@ -114,11 +119,13 @@ public class GestorTest {
             in.close();
 
         } catch (FileNotFoundException e) {
-                        JOptionPane.showMessageDialog(null, "Error al guardar el archivo: " + e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(null, "Error al guardar el archivo: " + e.getMessage(), "ERROR!",
+                    JOptionPane.ERROR_MESSAGE);
 
         } catch (IOException e) {
 
-                        JOptionPane.showMessageDialog(null, "Error al guardar el archivo: " + e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(null, "Error al guardar el archivo: " + e.getMessage(), "ERROR!",
+                    JOptionPane.ERROR_MESSAGE);
 
         }
 
@@ -137,7 +144,8 @@ public class GestorTest {
             }
             st.close();
         } catch (SQLException ex) {
-            JOptionPane.showMessageDialog(null, "Error al descargar el archivo: " + ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(null, "Error al descargar el archivo: " + ex.getMessage(), "ERROR!",
+                    JOptionPane.ERROR_MESSAGE);
         }
     }
 
@@ -149,16 +157,18 @@ public class GestorTest {
         try {
             mysql cn = new mysql("udipsai", "root", "");
             conexion = cn.conexion();
-            ps = conexion.prepareStatement("SELECT tests.id AS id, CONCAT(especialista.primerNombre, ' ', especialista.primerApellido) AS Especialista, tests.nombre AS Nombre, tests.fecha AS Fecha "
-                    + "FROM tests "
-                    + "JOIN especialista ON tests.cedulaEspecialista = especialista.cedula "
-                    + "WHERE tests.idPaciente = ?");
+            ps = conexion.prepareStatement(
+                    "SELECT tests.id AS id, CONCAT(especialista.primerNombre, ' ', especialista.primerApellido) AS Especialista, tests.nombre AS Nombre, tests.fecha AS Fecha "
+                            + "FROM tests "
+                            + "JOIN especialista ON tests.cedulaEspecialista = especialista.cedula "
+                            + "WHERE tests.idPaciente = ?");
             ps.setInt(1, idPaciente);
 
             rs = ps.executeQuery();
             return rs;
         } catch (SQLException ex) {
-            JOptionPane.showMessageDialog(null, "Error al consultar los archivos: " + ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(null, "Error al consultar los archivos: " + ex.getMessage(), "ERROR!",
+                    JOptionPane.ERROR_MESSAGE);
         } finally {
 
         }
@@ -198,7 +208,7 @@ public class GestorTest {
                 }
             };
         } catch (Exception e) {
-            JOptionPane.showMessageDialog(null, "Error: " + e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(null, "Error: " + e.getMessage(), "ERROR!", JOptionPane.ERROR_MESSAGE);
 
             return null;
         }

@@ -24,6 +24,8 @@ public class usuarios {
     private String contrasenia;
     private String area;
 
+    
+    
     public String getCedula() {
         return cedula;
     }

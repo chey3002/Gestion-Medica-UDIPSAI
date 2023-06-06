@@ -5,6 +5,7 @@
 package menuLogin.modelo;
 
 import comons.datos.Conexion_2;
+import comons.negocio.Especialista;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -45,7 +46,7 @@ public class SqlUsuarios extends Conexion_2{
             return false;
         }
     }
-    public boolean login(usuarios usr){
+    public boolean login(Especialista usr){
         PreparedStatement ps=null;
         ResultSet rs = null;
         Connection conectar=establecerConexion();
@@ -58,7 +59,7 @@ public class SqlUsuarios extends Conexion_2{
             ps.setString(1, usr.getCedula());
             rs = ps.executeQuery();
             if(rs.next()){
-                if(usr.getContrasenia().equals(rs.getString(3))){
+                if(usr.getContraseña().equals(rs.getString(3))){
                     
                     /*String sqlUpdate="UPDATE usuarios SET last_session = ? WHERE id=?";
                     
@@ -69,8 +70,8 @@ public class SqlUsuarios extends Conexion_2{
                     
                     usr.setPrimerNombre(rs.getString(2));
                     usr.setId_especialidad(rs.getInt(4));
-                    usr.setEsPasante(rs.getString(5));
-                    usr.setArea(rs.getString(6));
+                    usr.setEsPasante(rs.getBoolean(5));
+                    //usr.setArea(rs.getString(6));
                     
                     return true;
                     

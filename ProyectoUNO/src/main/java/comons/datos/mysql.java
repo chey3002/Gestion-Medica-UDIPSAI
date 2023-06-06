@@ -24,7 +24,6 @@ public class mysql {
     private String usuario;
     private String contrasena;
 
-
     public mysql(String nombreBaseDatos, String usuario, String contrasena) {
         setNombreBaseDatos(nombreBaseDatos);
         setUsuario(usuario);
@@ -37,9 +36,10 @@ public class mysql {
             Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection(url, usuario, contrasena);
         } catch (ClassNotFoundException e) {
-            JOptionPane.showMessageDialog(null, "ClassNotFoundException " + e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(null, "ClassNotFoundException " + e.getMessage(), "ERROR!",
+                    JOptionPane.ERROR_MESSAGE);
         } catch (SQLException e) {
-            JOptionPane.showMessageDialog(null, "SQLException " + e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(null, "SQLException " + e.getMessage(), "ERROR!", JOptionPane.ERROR_MESSAGE);
         }
         return con;
     }
@@ -47,7 +47,8 @@ public class mysql {
     public mysql() {
 
     }
-        public String getUrl() {
+
+    public String getUrl() {
         return url;
     }
 
@@ -62,7 +63,6 @@ public class mysql {
     public void setCon(Connection con) {
         this.con = con;
     }
-
 
     public String getNombreBaseDatos() {
         return nombreBaseDatos;
