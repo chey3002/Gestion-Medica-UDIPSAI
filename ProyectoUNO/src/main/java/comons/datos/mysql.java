@@ -36,10 +36,10 @@ public class mysql {
             Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection(url, usuario, contrasena);
         } catch (ClassNotFoundException e) {
-            JOptionPane.showMessageDialog(null, "ClassNotFoundException " + e.getMessage(), "ERROR!",
+            JOptionPane.showMessageDialog(null, "ClassNotFoundException " + e.getMessage(), "Error",
                     JOptionPane.ERROR_MESSAGE);
         } catch (SQLException e) {
-            JOptionPane.showMessageDialog(null, "SQLException " + e.getMessage(), "ERROR!", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(null, "SQLException " + e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
         }
         return con;
     }

@@ -45,7 +45,7 @@ public class GestorTest {
             ps.close();
             conexion.close();
         } catch (SQLException ex) {
-            JOptionPane.showMessageDialog(null, "Error al guardar el archivo: " + ex.getMessage(), "ERROR!",
+            JOptionPane.showMessageDialog(null, "Error al guardar el archivo: " + ex.getMessage(), "Error",
                     JOptionPane.ERROR_MESSAGE);
         }
     }
@@ -74,11 +74,11 @@ public class GestorTest {
             ps.executeUpdate();
             ps.close();
         } catch (FileNotFoundException e) {
-            JOptionPane.showMessageDialog(null, "Error al guardar el archivo: " + e.getMessage(), "ERROR!",
+            JOptionPane.showMessageDialog(null, "Error al guardar el archivo: " + e.getMessage(), "Error",
                     JOptionPane.ERROR_MESSAGE);
 
         } catch (SQLException e) {
-            JOptionPane.showMessageDialog(null, "Error al guardar el archivo: " + e.getMessage(), "ERROR!",
+            JOptionPane.showMessageDialog(null, "Error al guardar el archivo: " + e.getMessage(), "Error",
                     JOptionPane.ERROR_MESSAGE);
 
         } finally {
@@ -86,7 +86,7 @@ public class GestorTest {
                 try {
                     conexion.close();
                 } catch (SQLException e) {
-                    JOptionPane.showMessageDialog(null, "Error al guardar el archivo: " + e.getMessage(), "ERROR!",
+                    JOptionPane.showMessageDialog(null, "Error al guardar el archivo: " + e.getMessage(), "Error",
                             JOptionPane.ERROR_MESSAGE);
 
                 }
@@ -119,12 +119,12 @@ public class GestorTest {
             in.close();
 
         } catch (FileNotFoundException e) {
-            JOptionPane.showMessageDialog(null, "Error al guardar el archivo: " + e.getMessage(), "ERROR!",
+            JOptionPane.showMessageDialog(null, "Error al guardar el archivo: " + e.getMessage(), "Error",
                     JOptionPane.ERROR_MESSAGE);
 
         } catch (IOException e) {
 
-            JOptionPane.showMessageDialog(null, "Error al guardar el archivo: " + e.getMessage(), "ERROR!",
+            JOptionPane.showMessageDialog(null, "Error al guardar el archivo: " + e.getMessage(), "Error",
                     JOptionPane.ERROR_MESSAGE);
 
         }
@@ -144,7 +144,7 @@ public class GestorTest {
             }
             st.close();
         } catch (SQLException ex) {
-            JOptionPane.showMessageDialog(null, "Error al descargar el archivo: " + ex.getMessage(), "ERROR!",
+            JOptionPane.showMessageDialog(null, "Error al descargar el archivo: " + ex.getMessage(), "Error",
                     JOptionPane.ERROR_MESSAGE);
         }
     }
@@ -167,7 +167,7 @@ public class GestorTest {
             rs = ps.executeQuery();
             return rs;
         } catch (SQLException ex) {
-            JOptionPane.showMessageDialog(null, "Error al consultar los archivos: " + ex.getMessage(), "ERROR!",
+            JOptionPane.showMessageDialog(null, "Error al consultar los archivos: " + ex.getMessage(), "Error",
                     JOptionPane.ERROR_MESSAGE);
         } finally {
 
@@ -208,7 +208,7 @@ public class GestorTest {
                 }
             };
         } catch (Exception e) {
-            JOptionPane.showMessageDialog(null, "Error: " + e.getMessage(), "ERROR!", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(null, "Error: " + e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
 
             return null;
         }
