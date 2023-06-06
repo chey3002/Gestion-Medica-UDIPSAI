@@ -72,10 +72,10 @@ public class GestorTest {
             ps.executeUpdate();
             ps.close();
         } catch (FileNotFoundException e) {
-            JOptionPane.showMessageDialog(null, "Error al guardar el archivo: " + e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(null, "Error al guardar el archivo: " + e.getMessage(), "ERROR!", JOptionPane.ERROR_MESSAGE);
 
         } catch (SQLException e) {
-            JOptionPane.showMessageDialog(null, "Error al guardar el archivo: " + e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(null, "Error al guardar el archivo: " + e.getMessage(), "ERROR!", JOptionPane.ERROR_MESSAGE);
             
         } finally {
             if (conexion != null) {
