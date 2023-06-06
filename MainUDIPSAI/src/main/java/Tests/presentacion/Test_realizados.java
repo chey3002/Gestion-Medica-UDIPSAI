@@ -143,6 +143,11 @@ public class Test_realizados extends javax.swing.JFrame {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
+        jTable1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jTable1MouseClicked(evt);
+            }
+        });
         jScrollPane1.setViewportView(jTable1);
 
         jLabel4.setFont(new java.awt.Font("Arial Narrow", 1, 12)); // NOI18N
@@ -214,6 +219,7 @@ public class Test_realizados extends javax.swing.JFrame {
     private void jTable1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable1MouseClicked
         int col = jTable1.columnAtPoint(evt.getPoint());
         int row = jTable1.rowAtPoint(evt.getPoint());
+        
         if (col == 3) {
             try {
                 new GestorTest().DescargarPDF(idList[row]);
