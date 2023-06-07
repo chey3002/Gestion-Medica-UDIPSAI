@@ -12,7 +12,7 @@ import java.sql.Date;
  */
 public class Registro {
     public Date FechaApertura;
-    public Integer NumeroFicha;
+    public Integer id;
     public String Nombres;
     public String lugaryfechanacimiento;
     public String Ciudad;
@@ -44,7 +44,7 @@ public class Registro {
 
     public Registro(Date FechaApertura, Integer NumeroFicha, String Nombres, String lugaryfechanacimiento, String Ciudad, String Domicilio, String Edad, Integer Cedula, String SectorEst, String Barrio, Integer Telefono, Integer Celular, String Correo, String PresentaDiscapacidad, String PortadordelCarnet, String Tipodediscapacidad, String InstitucionEducativa, String Direccion, String SectorInst, String EducacionInclusiva, String Jornada, String TipodeInstitucion, String Paralelo, Integer TelefonoInst, Date AnioEGB_BGU, String DisponeInternet, String Dispositivo, String TipodeInternet, String MotivoConsulta, String Observaciones) {
         this.FechaApertura = FechaApertura;
-        this.NumeroFicha = NumeroFicha;
+        this.id = NumeroFicha;
         this.Nombres = Nombres;
         this.lugaryfechanacimiento = lugaryfechanacimiento;
         this.Ciudad = Ciudad;
@@ -83,12 +83,12 @@ public class Registro {
         this.FechaApertura = FechaApertura;
     }
 
-    public Integer getNumeroFicha() {
-        return NumeroFicha;
+    public Integer getId() {
+        return id;
     }
 
-    public void setNumeroFicha(Integer NumeroFicha) {
-        this.NumeroFicha = NumeroFicha;
+    public void setId(Integer id) {
+        this.id = id;
     }
 
     public String getNombres() {

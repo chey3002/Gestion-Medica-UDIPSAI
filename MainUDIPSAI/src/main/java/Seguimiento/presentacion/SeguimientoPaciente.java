@@ -34,7 +34,7 @@ public class SeguimientoPaciente extends javax.swing.JFrame {
         jTable1.setModel(tb);
         jTable1.setRowHeight(75);
         jTextField_CedulaPaciente.setText(paciente.getCedula());
-        jTextField_NombrePaciente.setText(paciente.getNombre());
+        jTextField_NombrePaciente.setText(paciente.getNombres());
         TableColumnModel columnModel = jTable1.getColumnModel();
 
         columnModel.getColumn(0).setPreferredWidth(20);

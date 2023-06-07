@@ -36,7 +36,7 @@ public class AgregarTest extends javax.swing.JFrame {
         this.paciente = paciente;
         initComponents();
         this.jTextField_CedulaPaciente.setText(this.paciente.getCedula());
-        this.jTextField_nombrePaciente.setText(this.paciente.getNombre());
+        this.jTextField_nombrePaciente.setText(this.paciente.getNombres());
         this.jTextField_especialista.setText(this.sesion.getNombre());
 
     }
