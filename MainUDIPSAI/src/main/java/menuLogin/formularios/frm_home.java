@@ -6,6 +6,7 @@ package menuLogin.formularios;
 
 import asignaciones.Asignar_Paciente;
 import comons.negocio.Especialista;
+import eliminarAsignacion.ListarAsignaciones;
 import java.awt.Cursor;
 import javax.swing.JFrame;
 import menuLogin.modelo.usuarios;
@@ -285,6 +286,11 @@ public class frm_home extends javax.swing.JFrame {
         menuAsignarPacientes.setText("Asignar Pacientes Especialistas");
 
         jMenuItem11.setText("Asignar Paciente");
+        jMenuItem11.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem11ActionPerformed(evt);
+            }
+        });
         menuAsignarPacientes.add(jMenuItem11);
 
         jMenuBar1.add(menuAsignarPacientes);
@@ -292,6 +298,11 @@ public class frm_home extends javax.swing.JFrame {
         menuEliminarAsignacion.setText("Eliminar asignacion");
 
         jMenuItem5.setText("Eliminar");
+        jMenuItem5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem5ActionPerformed(evt);
+            }
+        });
         menuEliminarAsignacion.add(jMenuItem5);
 
         jMenuBar1.add(menuEliminarAsignacion);
@@ -347,6 +358,20 @@ public class frm_home extends javax.swing.JFrame {
 
         sc.setVisible(true);
     }//GEN-LAST:event_menuPasswordActionPerformed
+
+    private void jMenuItem11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem11ActionPerformed
+        // TODO add your handling code here:
+         Asignar_Paciente asignaciones = new Asignar_Paciente();
+        asignaciones.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE); // Establecer acción de cierre
+        asignaciones.setVisible(true); // Mostrar el JFrame NuevoFrame
+    }//GEN-LAST:event_jMenuItem11ActionPerformed
+
+    private void jMenuItem5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem5ActionPerformed
+        // TODO add your handling code here:
+        ListarAsignaciones asignaciones = new ListarAsignaciones();
+        asignaciones.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE); // Establecer acción de cierre
+        asignaciones.setVisible(true); // Mostrar el JFrame NuevoFrame
+    }//GEN-LAST:event_jMenuItem5ActionPerformed
 
     /**
      * @param args the command line arguments

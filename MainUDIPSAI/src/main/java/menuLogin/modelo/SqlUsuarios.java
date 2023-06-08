@@ -51,7 +51,7 @@ public class SqlUsuarios extends Conexion_2{
         ResultSet rs = null;
         Connection conectar=establecerConexion();
         
-        String sql="SELECT e.cedula, e.primerNombre, e.contraseña, e.id_especialidad, e.esPasante, t.area FROM especialista AS e "
+        String sql="SELECT e.cedula, e.primerNombre, e.segundoNombre, e.primerApellido, e.segundoApellido, e.contraseña, e.id_especialidad, e.esPasante, t.area FROM especialista AS e "
                 + "INNER JOIN especialidad AS t ON e.id_especialidad=t.id WHERE cedula = ?";
         //INSERT INTO tipo_usuario(nombre)VALUES('Usuario');
         try {
@@ -59,7 +59,7 @@ public class SqlUsuarios extends Conexion_2{
             ps.setString(1, usr.getCedula());
             rs = ps.executeQuery();
             if(rs.next()){
-                if(usr.getContraseña().equals(rs.getString(3))){
+                if(usr.getContraseña().equals(rs.getString(6))){
                     
                     /*String sqlUpdate="UPDATE usuarios SET last_session = ? WHERE id=?";
                     
@@ -69,8 +69,11 @@ public class SqlUsuarios extends Conexion_2{
                     ps.execute();*/
                     
                     usr.setPrimerNombre(rs.getString(2));
-                    usr.setId_especialidad(rs.getInt(4));
-                    usr.setEsPasante(rs.getBoolean(5));
+                    usr.setSegundoNombre(rs.getString(3));
+                    usr.setPrimerApellido(rs.getString(4));
+                    usr.setSegundoApellido(rs.getString(5));
+                    usr.setId_especialidad(rs.getInt(7));
+                    usr.setEsPasante(rs.getBoolean(8));
                     //usr.setArea(rs.getString(6));
                     
                     return true;
