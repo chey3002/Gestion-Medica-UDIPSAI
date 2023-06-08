@@ -27,3 +27,6 @@
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 replay_pid*
+ProyectoUNO/target/classes/Tests/presentacion/Test_realizados$1.class
+ProyectoUNO/target/classes/Tests/presentacion/Test_realizados$2.class
+ProyectoUNO/target/classes/Tests/presentacion/Test_realizados$3.class

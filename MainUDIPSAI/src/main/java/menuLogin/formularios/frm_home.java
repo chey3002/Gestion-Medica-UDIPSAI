@@ -27,30 +27,77 @@ public class frm_home extends javax.swing.JFrame {
         initComponents();
         setLocationRelativeTo(null);
         this.mod = mod;
+        String area;
+        String textoPasante;
+        String nombreCompleto = mod.getPrimerNombre() + " " + mod.getSegundoNombre() + " " + mod.getPrimerApellido() + " " + mod.getSegundoApellido();
 
-        lblNombre.setText(mod.getPrimerNombre());
-        //lblRol.setText(mod.getArea());
-        //lblPasante.setText(mod.isEsPasante());
+
+        switch (mod.getId_especialidad()) {
+            case 1:
+                area = "Director";
+                break;
+            case 2:
+                area = "Secretaria";
+                break;
+            case 3:
+                area = "Psicología Educativa";
+                break;
+            case 4:
+                area = "Psicología Clínica";
+                break;
+            case 5:
+                area = "Terapia de Lenguaje y Fonoaudiología";
+                break;
+            case 6:
+                area = "Estimulación Temprana";
+                break;
+            case 7:
+                area = "Recuperación Pedagógica";
+                break;
+                
+                
+            default:
+                area = "Área no especificada";
+        }
+        lblNombre.setText(nombreCompleto);
+        lblRol.setText(area);
         boolean esPasante = mod.isEsPasante();
-        String textoPasante = Boolean.toString(esPasante);
+        /*String textoPasante = Boolean.toString(esPasante);
+        lblPasante.setText(textoPasante);*/
+        
+        
+        
+        if (esPasante) {
+            textoPasante = "Si";
+        } else {
+            textoPasante = "No";
+        }
         lblPasante.setText(textoPasante);
 
-        /*if (mod.getId_especialidad() == 1) {
-            menuPsicologiaEducativa.setVisible(false);
-            menuFonoaudiologia.setVisible(false);
-        } else if (mod.getId_especialidad() == 2) {
-            menuPsicologiaClinica.setVisible(false);
-            menuPsicologiaEducativa.setVisible(false);
-        } else if (mod.getId_especialidad() == 3) {
-            menuPsicologiaClinica.setVisible(false);
-            menuFonoaudiologia.setVisible(false);
-
-        }*/
-        // Nuevo condicional para mostrar el menú "menuEspecialistas"
-        if (!mod.isEsPasante()) {
-            menuEspecialistas.setVisible(false);
+        
+        
+        if (mod.getId_especialidad() == 2 || mod.getId_especialidad() == 1) {
+            menuNuevoPaciente.setVisible(true);
         } else {
+            menuNuevoPaciente.setVisible(false);
+        }
+
+        if (mod.getId_especialidad() == 1) {
+            menuAsignarPacientes.setVisible(true);
+            menuEliminarAsignacion.setVisible(true);
+        } else {
+            menuAsignarPacientes.setVisible(false);
+            menuEliminarAsignacion.setVisible(false);
+        }
+
+        
+        //jMenu4.setVisible(true);
+        
+        
+        if (!mod.isEsPasante()) {
             menuEspecialistas.setVisible(true);
+        } else {
+            menuEspecialistas.setVisible(false);
         }
 
     }
@@ -73,20 +120,23 @@ public class frm_home extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
+        jSeparator7 = new javax.swing.JSeparator();
+        jSeparator8 = new javax.swing.JSeparator();
+        jSeparator9 = new javax.swing.JSeparator();
         jMenuBar1 = new javax.swing.JMenuBar();
+        menuNuevoPaciente = new javax.swing.JMenu();
+        jMenuItem4 = new javax.swing.JMenuItem();
+        jMenu3 = new javax.swing.JMenu();
+        jMenuItem2 = new javax.swing.JMenuItem();
         menuEspecialistas = new javax.swing.JMenu();
-        jMenuItem8 = new javax.swing.JMenuItem();
-        jMenuItem9 = new javax.swing.JMenuItem();
-        jMenu1 = new javax.swing.JMenu();
-        jMenuItem10 = new javax.swing.JMenuItem();
-        jMenuItem11 = new javax.swing.JMenuItem();
-        jMenuItem3 = new javax.swing.JMenuItem();
-        jMenu2 = new javax.swing.JMenu();
         jMenuItem12 = new javax.swing.JMenuItem();
         jMenuItem13 = new javax.swing.JMenuItem();
-        jMenu3 = new javax.swing.JMenu();
-        jMenuItem1 = new javax.swing.JMenuItem();
-        jMenuItem2 = new javax.swing.JMenuItem();
+        menuAsignarPacientes = new javax.swing.JMenu();
+        jMenuItem11 = new javax.swing.JMenuItem();
+        menuEliminarAsignacion = new javax.swing.JMenu();
+        jMenuItem5 = new javax.swing.JMenuItem();
+        jMenu4 = new javax.swing.JMenu();
+        menuPassword = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         addWindowListener(new java.awt.event.WindowAdapter() {
@@ -125,9 +175,9 @@ public class frm_home extends javax.swing.JFrame {
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(14, 14, 14)
-                .addComponent(jLabelMenu)
-                .addContainerGap(22, Short.MAX_VALUE))
+                .addContainerGap()
+                .addComponent(jLabelMenu, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jLabel1.setBackground(new java.awt.Color(58, 69, 75));
@@ -143,113 +193,126 @@ public class frm_home extends javax.swing.JFrame {
         jLabel3.setForeground(new java.awt.Color(58, 69, 75));
         jLabel3.setText("Es pasante:");
 
+        jSeparator7.setForeground(new java.awt.Color(58, 69, 75));
+
+        jSeparator8.setForeground(new java.awt.Color(58, 69, 75));
+
+        jSeparator9.setForeground(new java.awt.Color(58, 69, 75));
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel2)
-                    .addComponent(jLabel1)
-                    .addComponent(jLabel3))
-                .addGap(20, 20, 20)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(lblRol, javax.swing.GroupLayout.PREFERRED_SIZE, 199, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 199, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblPasante, javax.swing.GroupLayout.PREFERRED_SIZE, 199, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(15, 15, 15)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.TRAILING)))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabel2)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jSeparator7, javax.swing.GroupLayout.DEFAULT_SIZE, 267, Short.MAX_VALUE)
+                    .addComponent(lblNombre, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(lblRol, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(lblPasante, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jSeparator8, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 267, Short.MAX_VALUE)
+                    .addComponent(jSeparator9, javax.swing.GroupLayout.Alignment.TRAILING))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(30, 30, 30)
+                .addGap(77, 77, 77)
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(27, 27, 27)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(lblNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(lblNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jSeparator7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jLabel1))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lblRol, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.TRAILING))
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 16, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(lblPasante, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel3))
-                .addContainerGap(250, Short.MAX_VALUE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(lblRol, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(3, 3, 3)
+                        .addComponent(jSeparator8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabel2))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(9, 9, 9)
+                        .addComponent(lblPasante, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jSeparator9, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(311, Short.MAX_VALUE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addComponent(jLabel3)
+                        .addGap(0, 0, Short.MAX_VALUE))))
         );
 
-        menuEspecialistas.setText("Cambiar Contraseña");
-        menuEspecialistas.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        menuEspecialistas.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
-            public void mouseMoved(java.awt.event.MouseEvent evt) {
-                menuEspecialistasMouseMoved(evt);
-            }
-        });
+        jMenuBar1.setForeground(new java.awt.Color(58, 69, 75));
 
-        jMenuItem8.setText("Cambiar contraseña");
-        jMenuItem8.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem8ActionPerformed(evt);
-            }
-        });
-        menuEspecialistas.add(jMenuItem8);
+        menuNuevoPaciente.setText("Nuevo paciente");
 
-        jMenuItem9.setText("Nuevo paciente");
-        jMenuItem9.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem9ActionPerformed(evt);
-            }
-        });
-        menuEspecialistas.add(jMenuItem9);
+        jMenuItem4.setText("Agregar paciente");
+        menuNuevoPaciente.add(jMenuItem4);
 
-        jMenuBar1.add(menuEspecialistas);
-
-        jMenu1.setText("Asignar Pacientes Especialistas");
-
-        jMenuItem10.setText("Crear paciente");
-        jMenu1.add(jMenuItem10);
-
-        jMenuItem11.setText("Editar paciente");
-        jMenu1.add(jMenuItem11);
-
-        jMenuItem3.setText("Asignar Paciente");
-        jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem3ActionPerformed(evt);
-            }
-        });
-        jMenu1.add(jMenuItem3);
-
-        jMenuBar1.add(jMenu1);
-
-        jMenu2.setText("Especialistas");
-
-        jMenuItem12.setText("Crear");
-        jMenu2.add(jMenuItem12);
-
-        jMenuItem13.setText("Buscar");
-        jMenu2.add(jMenuItem13);
-
-        jMenuBar1.add(jMenu2);
+        jMenuBar1.add(menuNuevoPaciente);
 
         jMenu3.setText("Buscar Paciente");
 
-        jMenuItem1.setText("Reactivar paciente");
-        jMenu3.add(jMenuItem1);
-
-        jMenuItem2.setText("Ver paciente");
-        jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem2ActionPerformed(evt);
-            }
-        });
+        jMenuItem2.setText("Buscar Paciente");
         jMenu3.add(jMenuItem2);
 
         jMenuBar1.add(jMenu3);
+
+        menuEspecialistas.setText("Especialistas");
+
+        jMenuItem12.setText("Crear");
+        menuEspecialistas.add(jMenuItem12);
+
+        jMenuItem13.setText("Buscar");
+        menuEspecialistas.add(jMenuItem13);
+
+        jMenuBar1.add(menuEspecialistas);
+
+        menuAsignarPacientes.setText("Asignar Pacientes Especialistas");
+
+        jMenuItem11.setText("Asignar Paciente");
+        menuAsignarPacientes.add(jMenuItem11);
+
+        jMenuBar1.add(menuAsignarPacientes);
+
+        menuEliminarAsignacion.setText("Eliminar asignacion");
+
+        jMenuItem5.setText("Eliminar");
+        menuEliminarAsignacion.add(jMenuItem5);
+
+        jMenuBar1.add(menuEliminarAsignacion);
+
+        jMenu4.setText("Cambiar Contraseña");
+        jMenu4.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        jMenu4.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseMoved(java.awt.event.MouseEvent evt) {
+                jMenu4MouseMoved(evt);
+            }
+        });
+
+        menuPassword.setText("Cambiar contraseña");
+        menuPassword.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menuPasswordActionPerformed(evt);
+            }
+        });
+        jMenu4.add(menuPassword);
+
+        jMenuBar1.add(jMenu4);
 
         setJMenuBar(jMenuBar1);
 
@@ -272,32 +335,18 @@ public class frm_home extends javax.swing.JFrame {
         frm_login.frmLog = null;
     }//GEN-LAST:event_formWindowClosing
 
-    private void menuEspecialistasMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_menuEspecialistasMouseMoved
+    private void jMenu4MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu4MouseMoved
         // TODO add your handling code here:
         
-    }//GEN-LAST:event_menuEspecialistasMouseMoved
+    }//GEN-LAST:event_jMenu4MouseMoved
 
-    private void jMenuItem8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem8ActionPerformed
+    private void menuPasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuPasswordActionPerformed
         // TODO add your handling code here:
          frm_RecuperarContra sc = new frm_RecuperarContra();
         //this.setVisible(false);
 
         sc.setVisible(true);
-    }//GEN-LAST:event_jMenuItem8ActionPerformed
-
-    private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
-        // TODO add your handling code here:
-        
-    }//GEN-LAST:event_jMenuItem3ActionPerformed
-
-    private void jMenuItem9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem9ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jMenuItem9ActionPerformed
-
-    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
-        // TODO add your handling code here:
-        
-    }//GEN-LAST:event_jMenuItem2ActionPerformed
+    }//GEN-LAST:event_menuPasswordActionPerformed
 
     /**
      * @param args the command line arguments
@@ -325,6 +374,7 @@ public class frm_home extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(frm_home.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
+        //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -339,24 +389,27 @@ public class frm_home extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabelMenu;
-    private javax.swing.JMenu jMenu1;
-    private javax.swing.JMenu jMenu2;
     private javax.swing.JMenu jMenu3;
+    private javax.swing.JMenu jMenu4;
     private javax.swing.JMenuBar jMenuBar1;
-    private javax.swing.JMenuItem jMenuItem1;
-    private javax.swing.JMenuItem jMenuItem10;
     private javax.swing.JMenuItem jMenuItem11;
     private javax.swing.JMenuItem jMenuItem12;
     private javax.swing.JMenuItem jMenuItem13;
     private javax.swing.JMenuItem jMenuItem2;
-    private javax.swing.JMenuItem jMenuItem3;
-    private javax.swing.JMenuItem jMenuItem8;
-    private javax.swing.JMenuItem jMenuItem9;
+    private javax.swing.JMenuItem jMenuItem4;
+    private javax.swing.JMenuItem jMenuItem5;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JSeparator jSeparator7;
+    private javax.swing.JSeparator jSeparator8;
+    private javax.swing.JSeparator jSeparator9;
     private javax.swing.JLabel lblNombre;
     private javax.swing.JLabel lblPasante;
     private javax.swing.JLabel lblRol;
+    private javax.swing.JMenu menuAsignarPacientes;
+    private javax.swing.JMenu menuEliminarAsignacion;
     private javax.swing.JMenu menuEspecialistas;
+    private javax.swing.JMenu menuNuevoPaciente;
+    private javax.swing.JMenuItem menuPassword;
     // End of variables declaration//GEN-END:variables
 }
