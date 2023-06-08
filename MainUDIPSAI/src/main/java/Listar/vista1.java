@@ -3,9 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.mycompany.busqueda;
+package Listar;
 
-import comons.datos.Conectar;
+import comons.datos.mysql;
 import javax.swing.table.DefaultTableModel;
 import java.sql.*;
 import java.util.logging.Level;
@@ -15,59 +15,65 @@ import javax.swing.table.TableRowSorter;
 
 /**
  *
- * @author 
+ * @author KEVIN
  */
-public class Listar extends javax.swing.JFrame {
+public class vista1 extends javax.swing.JFrame {
 
     String[] Titulos = {"ID", "NOMBRE", "TELEFONO", "EDAD"}; //Arreglo de los titulos para la tabla
     DefaultTableModel dtm_datos = new DefaultTableModel(); //creamos  un modelo para la taba de datos
     TableRowSorter<TableModel> trs; //Hacemos el table row sorter para poder ordenar la tabla al presionar los encabezados de la misma
     ResultSet rs;  //el result set es el resultado de la consulta que mandamos por sql
     String[][] M_datos;  //iniciamos una matriz donde pasaremos los datos de sql
-    Conectar cc = new Conectar();   //iniciamos un objeto que se encargara de la conexion de datos
-    Connection cn = cc.conectar();
+
+    mysql cc = new mysql("udipsai", "root", "");
+    Connection cn = cc.conexion();
+    //Conectar cc = new Conectar();   //iniciamos un objeto que se encargara de la conexion de datos
+    // Connection cn = cc.conectar();
 
     /**
      * Creates new form vista1
      */
-    public Listar() {
+    public vista1() {
         initComponents();
         datos_tabla(); //iniciamos el metodo para mostrar los datos en la tabla
     }
 
     private void datos_tabla() {
-       
+
         int contador = 0;  //creamos un contador para saber el numero de datos que obtendremos de la tabla datos de sql
         try { //para las consultas sql siempre vamos a ocupar un try catch por su ocurre un error
             Statement st_cont = cn.createStatement(); //el statement nos ayuda a procesar una sentencia sql 
             ResultSet rs_cont = st_cont.executeQuery("SELECT COUNT(*) FROM paciente"); // asignamos los datos obtenidos de la consulta al result set
-             if (rs_cont.next()) {
+            if (rs_cont.next()) {
                 contador = rs_cont.getInt(1);
             }
 //lo anterior fue solo para conocer el numero de datos que manejariamos esto mediante logra gracias con count de sql y con el  * le decimos que nos cuenta todas las filas de la tabla
 
-            
             Statement st = cn.createStatement(); //ahora vamos a  hacer lo mismo solo que esta vez no obtendremos el numero de filas en la tabla
-            rs = st.executeQuery("SELECT id,nombresApellidos,telefono,edad FROM paciente"); //aora obtendremos los datos de la tabla para mostrarlos en el jtable
-            
+            rs = st.executeQuery("SELECT p.*\n"
+                    + "FROM paciente p\n"
+                    + "INNER JOIN asignaciones a ON p.id = a.id\n"
+                    + "INNER JOIN especialista e ON a.cedulaEspecialista = e.cedula\n"
+                    + "WHERE e.cedula = 0105706105");                                                 //aora obtendremos los datos de la tabla para mostrarlos en el jtable
+
             int cont = 0; //el contador nos ayudara para movernos en las filas de la matriz mientras que los numeros fijos (0,1,2,3) nos moveran por las 4 columnas que seran el id, nombre, etc
             M_datos = new String[contador][4]; //definimos el tamaño de la matriz 
             while (rs.next()) { //el while nos ayudara a recorrer los datos obtenidos en la consulta anterior y asignarlos a la matriz  
                 M_datos[cont][0] = rs.getString("id");    //agregamos los datos a la table
-                M_datos[cont][1] = rs.getString("nombresApellidos");
-                M_datos[cont][2] = rs.getString("telefono");
-                M_datos[cont][3] = rs.getString("edad");
+                M_datos[cont][1] = rs.getString("fechaApertura");
+                M_datos[cont][2] = rs.getString("nombresApellidos");
+                M_datos[cont][3] = rs.getString("ciudad");
                 cont = cont + 1; //avanzamos una posicion del contador para que pase a la siguiente fila
             }
 
         } catch (SQLException ex) {
-            Logger.getLogger(Listar.class.getName()).log(Level.SEVERE, null, ex); //si llegara a ocurrir un error ya se  una mala consulta o mala conexion aqui nos lo mostraria
+            Logger.getLogger(vista1.class.getName()).log(Level.SEVERE, null, ex); //si llegara a ocurrir un error ya se  una mala consulta o mala conexion aqui nos lo mostraria
         }
 
         dtm_datos = new DefaultTableModel(M_datos, Titulos) { //ahora agregaremos la matriz y los titulos al modelo de tabla
-            public boolean isCellEditable(int row, int column) {//este metodo es muy util si no quieren que editen su tabla, 
-                return false;  //si quieren modificar los campos al dar clic entonces borren este metodo
-            }
+          //  public boolean isCellEditable(int row, int column) {//este metodo es muy util si no quieren que editen su tabla, 
+           //     return false;  //si quieren modificar los campos al dar clic entonces borren este metodo
+          //  }
         };
         jtable_datos.setModel(dtm_datos); //ahora el modelo que ya tiene tanto los datos como los titulos lo agregamos a la tabla
         trs = new TableRowSorter<>(dtm_datos); //iniciamos el table row sorter para ordenar los datos (esto es si gustan)
@@ -170,38 +176,46 @@ public class Listar extends javax.swing.JFrame {
         int valor = 0;
         int cont = 0;
         String aux = "" + jt_buscador.getText();//aqui obtenemos cada letra que ingresemos en el textfield en tiempo real
-            try {
-                Statement st_cont = cn.createStatement(); //hacemos lo mismo que con el metodo mostrar, buscamos el numero de filas dela tabla
-                rs = st_cont.executeQuery("SELECT COUNT(*) FROM datos WHERE nombresApellidos LIKE'" + jt_buscador.getText() + "%'");//solo que esta ves usamos like
-                if (rs.next()) {// like nos ayudara a buscar nombres que tengan similitudes con lo que estamos escribiendo en el texfield
-                    valor = rs.getInt(1); //una vez que obtenimos el numero de filas continuamos a sacar  el valor que buscamos
-                }
-                
-                    M_datos = new String[valor][4];
-                    rs = st_cont.executeQuery("SELECT * FROM datos WHERE nombresApellidos LIKE'" + jt_buscador.getText() + "%'"); //aqui es donde buscaremos a a la persona en especifico o las personas
-                    while (rs.next()) {
-                        M_datos[cont][0] = rs.getString("id");
-                        M_datos[cont][1] = rs.getString("nombresApellidos");
-                        M_datos[cont][2] = rs.getString("telefono");
-                        M_datos[cont][3] = rs.getString("edad");
-                        cont = cont + 1;
-                    }
-                    dtm_datos = new DefaultTableModel(M_datos, Titulos) {
-                        public boolean isCellEditable(int row, int column) {//este metodo es muy util si no quieren que editen su tabla, 
-                return false;  //si quieren modificar los campos al dar clic entonces borren este metodo
+        try {
+            Statement st_cont = cn.createStatement(); //hacemos lo mismo que con el metodo mostrar, buscamos el numero de filas dela tabla
+            //rs = st_cont.executeQuery("SELECT COUNT(*) FROM paciente WHERE cedula LIKE'" + jt_buscador.getText() + "%'");//solo que esta ves usamos like
+            rs = st_cont.executeQuery("SELECT COUNT(*) FROM paciente p INNER JOIN asignaciones a ON p.id = a.idPaciente INNER JOIN especialista e ON a.cedulaEspecialista = e.cedula "
+                    + "WHERE (p.nombresApellidos LIKE '" + jt_buscador.getText() + "%' OR p.cedula LIKE '" + jt_buscador.getText() + "%') AND e.cedula = '0105706105'");
+
+            if (rs.next()) {// like nos ayudara a buscar nombres que tengan similitudes con lo que estamos escribiendo en el texfield
+                valor = rs.getInt(1); //una vez que obtenimos el numero de filas continuamos a sacar  el valor que buscamos
             }
-                    };
-                    jtable_datos.setModel(dtm_datos);
-                    trs = new TableRowSorter<>(dtm_datos);
-                    jtable_datos.setRowSorter(trs);
-              
-            } catch (Exception e) {
+
+            M_datos = new String[valor][4];
+            //rs = st_cont.executeQuery("SELECT * FROM paciente WHERE cedula LIKE'" + jt_buscador.getText() + "%'"); //aqui es donde buscaremos a a la persona en especifico o las personas
+            // rs = st_cont.executeQuery("SELECT * FROM paciente WHERE cedula LIKE '" + jt_buscador.getText() + "%'");
+
+            rs = st_cont.executeQuery("SELECT p.* FROM paciente p INNER JOIN asignaciones a ON p.id = a.idPaciente INNER JOIN especialista e ON a.cedulaEspecialista = e.cedula "
+                    + "WHERE (p.nombresApellidos LIKE '" + jt_buscador.getText() + "%' OR p.cedula LIKE '" + jt_buscador.getText() + "%') AND e.cedula = '0105706105'");
+            while (rs.next()) {
+                M_datos[cont][0] = rs.getString("id");
+                M_datos[cont][1] = rs.getString("fechaApertura");
+                M_datos[cont][2] = rs.getString("nombresApellidos");
+                M_datos[cont][3] = rs.getString("ciudad");
+                cont = cont + 1;
             }
+            
+            dtm_datos = new DefaultTableModel(M_datos, Titulos) {
+               // public boolean isCellEditable(int row, int column) {//este metodo es muy util si no quieren que editen su tabla, 
+             //       return false;  //si quieren modificar los campos al dar clic entonces borren este metodo
+              //  }
+            };
+            jtable_datos.setModel(dtm_datos);
+            trs = new TableRowSorter<>(dtm_datos);
+            jtable_datos.setRowSorter(trs);
+
+        } catch (Exception e) {
+        }
     }//GEN-LAST:event_jt_buscadorKeyReleased
 
     private void jt_buscadorKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jt_buscadorKeyPressed
         // TODO add your handling code here:
-        
+
     }//GEN-LAST:event_jt_buscadorKeyPressed
 
     private void jt_buscadorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jt_buscadorActionPerformed
@@ -225,23 +239,21 @@ public class Listar extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Listar.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(vista1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Listar.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(vista1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Listar.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(vista1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Listar.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(vista1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
-        //</editor-fold>
-        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Listar().setVisible(true);
+                new vista1().setVisible(true);
             }
         });
     }
