@@ -14,15 +14,15 @@ public class Paciente {
     public Date FechaApertura;
     public Integer id;
     public String Nombres;
-    public String lugaryfechanacimiento;
+    public Date fechanacimiento;
     public String Ciudad;
     public String Domicilio;
     public String Edad;
     public String Cedula;
     public String SectorEst;
     public String Barrio;
-    public Integer Telefono;
-    public Integer Celular;
+    public String Telefono;
+    public String Celular;
     public String Correo;
     public String PresentaDiscapacidad;
     public String PortadordelCarnet;
@@ -34,8 +34,8 @@ public class Paciente {
     public String Jornada;
     public String TipodeInstitucion;
     public String Paralelo;
-    public Integer TelefonoInst;
-    public Date AnioEGB_BGU;
+    public String TelefonoInst;
+    public String AnioEGB_BGU;
     public String DisponeInternet;
     public String Dispositivo;
     public String TipodeInternet;
@@ -47,11 +47,11 @@ public class Paciente {
         this.Cedula=cedula;
         this.Nombres=nombres;
     }
-    public Paciente(Date FechaApertura, Integer NumeroFicha, String Nombres, String lugaryfechanacimiento, String Ciudad, String Domicilio, String Edad, String Cedula, String SectorEst, String Barrio, Integer Telefono, Integer Celular, String Correo, String PresentaDiscapacidad, String PortadordelCarnet, String Tipodediscapacidad, String InstitucionEducativa, String Direccion, String SectorInst, String EducacionInclusiva, String Jornada, String TipodeInstitucion, String Paralelo, Integer TelefonoInst, Date AnioEGB_BGU, String DisponeInternet, String Dispositivo, String TipodeInternet, String MotivoConsulta, String Observaciones) {
+    public Paciente(Date FechaApertura, Integer NumeroFicha, String Nombres, Date lugaryfechanacimiento, String Ciudad, String Domicilio, String Edad, String Cedula, String SectorEst, String Barrio, String Telefono, String Celular, String Correo, String PresentaDiscapacidad, String PortadordelCarnet, String Tipodediscapacidad, String InstitucionEducativa, String Direccion, String SectorInst, String EducacionInclusiva, String Jornada, String TipodeInstitucion, String Paralelo, String TelefonoInst, String AnioEGB_BGU, String DisponeInternet, String Dispositivo, String TipodeInternet, String MotivoConsulta, String Observaciones) {
         this.FechaApertura = FechaApertura;
         this.id = NumeroFicha;
         this.Nombres = Nombres;
-        this.lugaryfechanacimiento = lugaryfechanacimiento;
+        this.fechanacimiento = lugaryfechanacimiento;
         this.Ciudad = Ciudad;
         this.Domicilio = Domicilio;
         this.Edad = Edad;
@@ -104,12 +104,12 @@ public class Paciente {
         this.Nombres = Nombres;
     }
 
-    public String getLugaryfechanacimiento() {
-        return lugaryfechanacimiento;
+    public Date getFechanacimiento() {
+        return fechanacimiento;
     }
 
-    public void setLugaryfechanacimiento(String lugaryfechanacimiento) {
-        this.lugaryfechanacimiento = lugaryfechanacimiento;
+    public void setFechanacimiento(Date fechanacimiento) {
+        this.fechanacimiento = fechanacimiento;
     }
 
     public String getCiudad() {
@@ -160,19 +160,19 @@ public class Paciente {
         this.Barrio = Barrio;
     }
 
-    public Integer getTelefono() {
+    public String getTelefono() {
         return Telefono;
     }
 
-    public void setTelefono(Integer Telefono) {
+    public void setTelefono(String Telefono) {
         this.Telefono = Telefono;
     }
 
-    public Integer getCelular() {
+    public String getCelular() {
         return Celular;
     }
 
-    public void setCelular(Integer Celular) {
+    public void setCelular(String Celular) {
         this.Celular = Celular;
     }
 
@@ -264,19 +264,19 @@ public class Paciente {
         this.Paralelo = Paralelo;
     }
 
-    public Integer getTelefonoInst() {
+    public String getTelefonoInst() {
         return TelefonoInst;
     }
 
-    public void setTelefonoInst(Integer TelefonoInst) {
+    public void setTelefonoInst(String TelefonoInst) {
         this.TelefonoInst = TelefonoInst;
     }
 
-    public Date getAnioEGB_BGU() {
+    public String getAnioEGB_BGU() {
         return AnioEGB_BGU;
     }
 
-    public void setAnioEGB_BGU(Date AnioEGB_BGU) {
+    public void setAnioEGB_BGU(String AnioEGB_BGU) {
         this.AnioEGB_BGU = AnioEGB_BGU;
     }
 
