@@ -4,12 +4,14 @@
  */
 package sampleMainMenu;
 
+import Listar.Editar;
 import Seguimiento.presentacion.SeguimientoPaciente;
 import Tests.presentacion.AgregarTest;
 import asignaciones.Asignar_Paciente;
 import comons.negocio.Especialista;
 import comons.negocio.Paciente;
 import eliminarAsignacion.ListarAsignaciones;
+import java.util.Date;
 import javax.swing.JFrame;
 
 /**
@@ -19,7 +21,38 @@ import javax.swing.JFrame;
 public class menuPrincipal extends javax.swing.JFrame {
 
     Especialista especialista = new Especialista();
-    Paciente paciente = new Paciente(2, "151141579", "Diego Alejandro Torres Bueno");
+    Paciente paciente = new Paciente(
+                new Date(),                             // FechaApertura
+                2,                              // NumeroFicha
+                "Juan Pérez",                           // Nombres
+                new Date(1990, 5, 15),                   // lugaryfechanacimiento
+                "Quito",                                // Ciudad
+                "Av. Principal 123",                    // Domicilio
+                "30 años",                              // Edad
+                "1234567890",                           // Cedula
+                "Sector Norte",                         // SectorEst
+                "La Floresta",                          // Barrio
+                "022222222",                            // Telefono
+                "0999999999",                           // Celular
+                "juan.perez@example.com",               // Correo
+                "Sí",                                   // PresentaDiscapacidad
+                "No aplica",                            // PortadordelCarnet
+                "Ninguna",                              // Tipodediscapacidad
+                "Unidad Educativa ABC",                  // InstitucionEducativa
+                "Av. Principal 456",                    // Direccion
+                "Sector Sur",                           // SectorInst
+                "Sí",                                   // EducacionInclusiva
+                "Matutina",                             // Jornada
+                "Escuela",                              // TipodeInstitucion
+                "Octavo A",                             // Paralelo
+                "022222222",                            // TelefonoInst
+                "9° EGB",                               // AnioEGB_BGU
+                "Sí",                                   // DisponeInternet
+                "Laptop",                               // Dispositivo
+                "Fibra óptica",                         // TipodeInternet
+                "Consulta general",                     // MotivoConsulta
+                "Sin observaciones"                     // Observaciones
+        );
     
 
     /**
@@ -49,6 +82,7 @@ public class menuPrincipal extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
+        jButton5 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -84,6 +118,13 @@ public class menuPrincipal extends javax.swing.JFrame {
             }
         });
 
+        jButton5.setText("Editar");
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -91,13 +132,18 @@ public class menuPrincipal extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(57, 57, 57)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton2)
-                    .addComponent(jButton3))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 83, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton1)
-                    .addComponent(jButton4))
-                .addGap(34, 34, 34))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(jButton5)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jButton2)
+                            .addComponent(jButton3))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 83, Short.MAX_VALUE)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jButton1)
+                            .addComponent(jButton4))
+                        .addGap(34, 34, 34))))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -110,7 +156,9 @@ public class menuPrincipal extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton3)
                     .addComponent(jButton4))
-                .addContainerGap(198, Short.MAX_VALUE))
+                .addGap(56, 56, 56)
+                .addComponent(jButton5)
+                .addContainerGap(119, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -157,6 +205,13 @@ public class menuPrincipal extends javax.swing.JFrame {
         asignaciones.setVisible(true); // Mostrar el JFrame NuevoFrame
     }//GEN-LAST:event_jButton4ActionPerformed
 
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        // TODO add your handling code here:
+        Editar editar = new Editar(paciente);
+        editar.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE); // Establecer acción de cierre
+        editar.setVisible(true); // Mostrar el JFrame NuevoFrame
+    }//GEN-LAST:event_jButton5ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -197,6 +252,7 @@ public class menuPrincipal extends javax.swing.JFrame {
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButton5;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }
