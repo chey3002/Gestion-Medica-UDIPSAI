@@ -240,7 +240,7 @@ public class frm_RecuperarContra extends javax.swing.JFrame {
     }else if (txtNuevaContrasenia.getText().equals(txtVerificarContrasenia.getText())) {
         try {
             String updateQuery = "UPDATE especialista SET contraseña = ? WHERE cedula=?";
-            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/udipsai", "root", "Clases.2022");
+            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/udipsai", "root", "");
             pst = con.prepareStatement(updateQuery);
             pst.setString(1, txtVerificarContrasenia.getText());
             pst.setString(2, cedula);

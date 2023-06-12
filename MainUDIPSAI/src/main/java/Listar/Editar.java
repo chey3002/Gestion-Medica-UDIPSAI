@@ -6,6 +6,12 @@ package Listar;
 
 import RegistroPaciente.Registro_Principal.*;
 import comons.negocio.Paciente;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.text.SimpleDateFormat;
+import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
 /**
@@ -15,13 +21,18 @@ import javax.swing.table.DefaultTableModel;
 public class Editar extends javax.swing.JFrame {
 
     DefaultTableModel modelo = new DefaultTableModel();
+    Paciente mypaciente;
 
     public Editar(Paciente paciente) {
+        this.mypaciente = paciente;
         initComponents();
         this.setTitle("Ficha Unica");
         this.setSize(765, 850);
         this.setLocationRelativeTo(null);
-        btn_Guardar.setEnabled(false);
+        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+        String fechaNacimientoFormatted = dateFormat.format(paciente.fechanacimiento);
+        String fechaAperturaFormatted = dateFormat.format(paciente.FechaApertura);
+
         txt_AnioCursa.setText(String.valueOf(paciente.AnioEGB_BGU));
         txt_Barrio.setText(paciente.Barrio);
         txt_Cedula.setText(paciente.Cedula);
@@ -31,9 +42,9 @@ public class Editar extends javax.swing.JFrame {
         txt_Direccion.setText(paciente.Direccion);
         txt_Domicilio.setText(paciente.Domicilio);
         txt_EducaInclusi.setText(paciente.EducacionInclusiva);
-        txt_FechaApertura.setText(String.valueOf(paciente.FechaApertura));
+        txt_FechaApertura.setText(fechaAperturaFormatted);
         txt_Inst_educa.setText(paciente.InstitucionEducativa);
-        txt_LugaryFechaNacimiento.setText(String.valueOf(paciente.fechanacimiento));
+        txt_LugaryFechaNacimiento.setText(fechaNacimientoFormatted);
         txt_MotivoCons.setText(paciente.MotivoConsulta);
         txt_NombresApellidos.setText(paciente.Nombres);
         txt_NumeroFicha.setText(String.valueOf(paciente.id));
@@ -45,7 +56,13 @@ public class Editar extends javax.swing.JFrame {
         txt_TipoDisca.setText(paciente.Tipodediscapacidad);
         txt_edad.setText(paciente.Edad);
         txt_teleInst.setText(paciente.TelefonoInst);
-
+        cb_AccesoInter.setSelectedItem(paciente.TipodeInternet);
+        cb_Jornada.setSelectedItem(paciente.Jornada);
+        cb_PortaCarnet.setSelectedItem(paciente.PortadordelCarnet);
+        cb_PresentaDisca.setSelectedItem(paciente.PresentaDiscapacidad);
+        cb_TipoDispo.setSelectedItem(paciente.Dispositivo);
+        cb_TipoInst.setSelectedItem(paciente.TipodeInstitucion);
+        cb_TipoIntern.setSelectedItem(paciente.TipodeInternet);
     }
 
     private Editar() {
@@ -61,9 +78,7 @@ public class Editar extends javax.swing.JFrame {
                 && !txt_EducaInclusi.getText().isEmpty() && cb_Jornada.getSelectedItem() != null && cb_TipoInst.getSelectedItem() != null
                 && !txt_teleInst.getText().isEmpty() && !txt_Paralelo.getText().isEmpty() && !txt_AnioCursa.getText().isEmpty() && cb_AccesoInter.getSelectedItem() != null
                 && cb_TipoDispo.getSelectedItem() != null && cb_TipoInst.getSelectedItem() != null && !txt_MotivoCons.getText().isEmpty() && !txt_Observaciones.getText().isEmpty()) {
-            btn_Guardar.setEnabled(true);
         } else {
-            btn_Guardar.setEnabled(false);
         }
     }
 
@@ -71,6 +86,7 @@ public class Editar extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jMenuItem1 = new javax.swing.JMenuItem();
         jPanel9 = new javax.swing.JPanel();
         jPanel10 = new javax.swing.JPanel();
         jLabel9 = new javax.swing.JLabel();
@@ -140,7 +156,12 @@ public class Editar extends javax.swing.JFrame {
         jLabel34 = new javax.swing.JLabel();
         jLabel35 = new javax.swing.JLabel();
         txt_Paralelo = new javax.swing.JTextField();
-        btn_Guardar = new javax.swing.JButton();
+        jMenuBar1 = new javax.swing.JMenuBar();
+        jMenu1 = new javax.swing.JMenu();
+        jMenuItem2 = new javax.swing.JMenuItem();
+        jMenu2 = new javax.swing.JMenu();
+
+        jMenuItem1.setText("jMenuItem1");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -563,7 +584,22 @@ public class Editar extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        btn_Guardar.setText("Guardar");
+        jMenu1.setText("File");
+
+        jMenuItem2.setText("Actualizar");
+        jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem2ActionPerformed(evt);
+            }
+        });
+        jMenu1.add(jMenuItem2);
+
+        jMenuBar1.add(jMenu1);
+
+        jMenu2.setText("Edit");
+        jMenuBar1.add(jMenu2);
+
+        setJMenuBar(jMenuBar1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -593,10 +629,7 @@ public class Editar extends javax.swing.JFrame {
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 360, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jScrollPane2))))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(328, 328, 328)
-                        .addComponent(btn_Guardar)))
+                                .addComponent(jScrollPane2)))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -622,9 +655,7 @@ public class Editar extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(btn_Guardar)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(18, Short.MAX_VALUE))
         );
 
         pack();
@@ -662,6 +693,76 @@ public class Editar extends javax.swing.JFrame {
 
 
     }//GEN-LAST:event_txt_CedulaActionPerformed
+
+    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
+        // TODO add your handling code here:
+        Connection con = null;
+        ResultSet rs = null;
+        PreparedStatement pst = null;
+        try {
+            String updateQuery = "UPDATE paciente SET "
+                    + "fechaApertura = ?, "
+                    + "nombresApellidos = ?, "
+                    + "ciudad = ?, "
+                    + "fechaNacimiento = ?, "
+                    + "edad = ?, "
+                    + "cedula = ?, "
+                    + "domicilio = ?, "
+                    + "barrio = ?, "
+                    + "telefono = ?, "
+                    + "celular = ?, "
+                    + "institucionEducativa = ?, "
+                    + "tipoInstitucion = ?, "
+                    + "sector = ?, "
+                    + "jornada = ?, "
+                    + "telefonoInstitucion = ?, "
+                    + "anioEducacion = ?, "
+                    + "paralelo = ?, "
+                    + "perteneceInclusion = ?, "
+                    + "tieneDiscapacidad = ?, "
+                    + "portadorCarnet = ?, "
+                    //                    + "diagnostico = ?, "
+                    + "motivoConsulta = ?, "
+                    + "observaciones = ? "
+                    //                    + "nombreExaminador = ?, "
+                    //                    + "anotaciones = ? "
+                    + "WHERE id = ?";
+
+            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/udipsai", "root", "");
+            pst = con.prepareStatement(updateQuery);
+
+            pst.setDate(1, java.sql.Date.valueOf(txt_FechaApertura.getText()));
+            pst.setString(2, txt_NombresApellidos.getText());
+            pst.setString(3, txt_Ciudad.getText());
+            pst.setDate(4, java.sql.Date.valueOf(txt_LugaryFechaNacimiento.getText()));
+            pst.setString(5, txt_edad.getText());
+            pst.setString(6, txt_Cedula.getText());
+            pst.setString(7, txt_Domicilio.getText());
+            pst.setString(8, txt_Barrio.getText());
+            pst.setString(9, txt_Telefono.getText());
+            pst.setString(10, txt_Celular.getText());
+            pst.setString(11, txt_Inst_educa.getText());
+            pst.setString(12, cb_TipoInst.getSelectedItem().toString());
+            pst.setString(13, txt_Sector.getText());
+            pst.setString(14, cb_Jornada.getSelectedItem().toString());
+            pst.setString(15, txt_teleInst.getText());
+            pst.setString(16, txt_AnioCursa.getText());
+            pst.setString(17, txt_Paralelo.getText());
+            pst.setString(18, "No");
+            pst.setString(19, cb_PresentaDisca.getSelectedItem().toString());
+            pst.setString(20, cb_PortaCarnet.getSelectedItem().toString());
+            pst.setString(21, txt_MotivoCons.getText());
+            pst.setString(22, txt_Observaciones.getText());
+//            pst.setString(23, txt_NombreExaminador.getText());
+//            pst.setString(24, txt_Anotaciones.getText());
+            pst.setInt(23, Integer.parseInt(txt_NumeroFicha.getText()));
+
+            pst.executeUpdate();
+            JOptionPane.showMessageDialog(null, "Se actualizó el paciente con éxito");
+        } catch (Exception ex) {
+            JOptionPane.showMessageDialog(null, ex);
+        }
+    }//GEN-LAST:event_jMenuItem2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -702,7 +803,6 @@ public class Editar extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btn_Guardar;
     private javax.swing.JComboBox<String> cb_AccesoInter;
     private javax.swing.JComboBox<String> cb_Jornada;
     private javax.swing.JComboBox<String> cb_PortaCarnet;
@@ -741,6 +841,11 @@ public class Editar extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel9;
+    private javax.swing.JMenu jMenu1;
+    private javax.swing.JMenu jMenu2;
+    private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenuItem jMenuItem1;
+    private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JPanel jPanel10;
     private javax.swing.JPanel jPanel11;
     private javax.swing.JPanel jPanel12;

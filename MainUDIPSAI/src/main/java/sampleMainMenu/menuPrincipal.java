@@ -23,9 +23,9 @@ public class menuPrincipal extends javax.swing.JFrame {
     Especialista especialista = new Especialista();
     Paciente paciente = new Paciente(
                 new Date(),                             // FechaApertura
-                2,                              // NumeroFicha
+                666666,                                      // NumeroFicha
                 "Juan Pérez",                           // Nombres
-                new Date(1990, 5, 15),                   // lugaryfechanacimiento
+                new Date(1990-1900, 5-1, 15),                  // lugaryfechanacimiento
                 "Quito",                                // Ciudad
                 "Av. Principal 123",                    // Domicilio
                 "30 años",                              // Edad
@@ -35,21 +35,21 @@ public class menuPrincipal extends javax.swing.JFrame {
                 "022222222",                            // Telefono
                 "0999999999",                           // Celular
                 "juan.perez@example.com",               // Correo
-                "Sí",                                   // PresentaDiscapacidad
-                "No aplica",                            // PortadordelCarnet
+                "No",                                   // PresentaDiscapacidad
+                "No",                            // PortadordelCarnet
                 "Ninguna",                              // Tipodediscapacidad
-                "Unidad Educativa ABC",                  // InstitucionEducativa
+                "Unidad Educativa ABC",                 // InstitucionEducativa
                 "Av. Principal 456",                    // Direccion
                 "Sector Sur",                           // SectorInst
                 "Sí",                                   // EducacionInclusiva
                 "Matutina",                             // Jornada
-                "Escuela",                              // TipodeInstitucion
+                "Fiscal",                              // TipodeInstitucion
                 "Octavo A",                             // Paralelo
                 "022222222",                            // TelefonoInst
                 "9° EGB",                               // AnioEGB_BGU
                 "Sí",                                   // DisponeInternet
-                "Laptop",                               // Dispositivo
-                "Fibra óptica",                         // TipodeInternet
+                "Telefono Celular",                               // Dispositivo
+                "Plan de datos",                         // TipodeInternet
                 "Consulta general",                     // MotivoConsulta
                 "Sin observaciones"                     // Observaciones
         );
