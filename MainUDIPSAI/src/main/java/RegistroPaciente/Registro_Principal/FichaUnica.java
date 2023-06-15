@@ -74,8 +74,6 @@ public class FichaUnica extends javax.swing.JFrame {
         txt_Telefono = new javax.swing.JTextField();
         jLabel18 = new javax.swing.JLabel();
         txt_Celular = new javax.swing.JTextField();
-        jLabel19 = new javax.swing.JLabel();
-        txt_Correo = new javax.swing.JTextField();
         jLabel20 = new javax.swing.JLabel();
         txt_Barrio = new javax.swing.JTextField();
         jLabel32 = new javax.swing.JLabel();
@@ -194,8 +192,6 @@ public class FichaUnica extends javax.swing.JFrame {
 
         jLabel18.setText("Celular:");
 
-        jLabel19.setText("Correo Electronico:");
-
         jLabel20.setText("Barrio del domicilio:");
 
         javax.swing.GroupLayout jPanel9Layout = new javax.swing.GroupLayout(jPanel9);
@@ -241,23 +237,18 @@ public class FichaUnica extends javax.swing.JFrame {
                     .addComponent(jLabel12)
                     .addComponent(jLabel13)
                     .addComponent(jLabel16)
-                    .addComponent(jLabel20)
-                    .addComponent(jLabel19, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel20))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 22, Short.MAX_VALUE)
                 .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel9Layout.createSequentialGroup()
-                        .addComponent(txt_Correo, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel9Layout.createSequentialGroup()
+                        .addComponent(txt_edad, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(26, 26, 26))
-                    .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel9Layout.createSequentialGroup()
-                            .addComponent(txt_edad, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(26, 26, 26))
-                        .addGroup(jPanel9Layout.createSequentialGroup()
-                            .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(txt_Cedula, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(txt_Sector, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(txt_Barrio, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addContainerGap()))))
+                    .addGroup(jPanel9Layout.createSequentialGroup()
+                        .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txt_Cedula, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txt_Sector, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txt_Barrio, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addContainerGap())))
         );
         jPanel9Layout.setVerticalGroup(
             jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -291,14 +282,11 @@ public class FichaUnica extends javax.swing.JFrame {
                         .addComponent(jLabel14)
                         .addComponent(txt_Domicilio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(txt_Correo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jLabel17)
-                        .addComponent(txt_Telefono, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jLabel18)
-                        .addComponent(txt_Celular, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jLabel19)))
+                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel17)
+                    .addComponent(txt_Telefono, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel18)
+                    .addComponent(txt_Celular, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -563,7 +551,7 @@ public class FichaUnica extends javax.swing.JFrame {
                     .addComponent(jPanel13, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jPanel12, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jPanel9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(22, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -589,7 +577,7 @@ public class FichaUnica extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(30, Short.MAX_VALUE))
         );
 
         pack();
@@ -618,7 +606,7 @@ public class FichaUnica extends javax.swing.JFrame {
 
     private void btn_GuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_GuardarActionPerformed
         try {
-            mysql cc = new mysql("udipsai", "root", "Clases.2023");
+            mysql cc = new mysql("udipsai", "root", "");
             Connection cn = cc.conexion();
             // VALIDACION DE CEDULA 
             String cedula = txt_Cedula.getText();
@@ -694,31 +682,31 @@ public class FichaUnica extends javax.swing.JFrame {
             }
             try {
                 String telefono = txt_Telefono.getText();
-                if (telefono.isEmpty()) {
-                    throw new IllegalArgumentException("El campo de teléfono está vacío.");
-                }
-                if (!esNumero(telefono)) {
-                    throw new IllegalArgumentException("El valor del teléfono debe ser numérico.");
-
-                }
-                if (telefono.length() > 7) {
-                    throw new IllegalArgumentException("El teléfono debe tener máximo 7 dígitos.");
-                }
+//                if (telefono.isEmpty()) {
+//                    throw new IllegalArgumentException("El campo de teléfono está vacío.");
+//                }
+//                if (!esNumero(telefono)) {
+//                    throw new IllegalArgumentException("El valor del teléfono debe ser numérico.");
+//
+//                }
+//                if (telefono.length() > 7) {
+//                    throw new IllegalArgumentException("El teléfono debe tener máximo 7 dígitos.");
+//                }
                 ps.setString(9, telefono);
             } catch (IllegalArgumentException ex) {
                 JOptionPane.showMessageDialog(null, "Error: " + ex.getMessage(), "Error de teléfono", JOptionPane.ERROR_MESSAGE);
             }
             try {
                 String celular = txt_Celular.getText();
-                if (celular.isEmpty()) {
-                    throw new IllegalArgumentException("El campo de celular está vacío.");
-                }
-                if (!esNumero(celular)) {
-                    throw new IllegalArgumentException("El valor del celular debe ser numérico.");
-                }
-                if (celular.length() != 10) {
-                    throw new IllegalArgumentException("El celular debe tener 10 dígitos.");
-                }
+//                if (celular.isEmpty()) {
+//                    throw new IllegalArgumentException("El campo de celular está vacío.");
+//                }
+//                if (!esNumero(celular)) {
+//                    throw new IllegalArgumentException("El valor del celular debe ser numérico.");
+//                }
+//                if (celular.length() != 10) {
+//                    throw new IllegalArgumentException("El celular debe tener 10 dígitos.");
+//                }
                 ps.setString(10, celular);
             } catch (IllegalArgumentException ex) {
                 JOptionPane.showMessageDialog(null, "Error: " + ex.getMessage(), "Error de celular", JOptionPane.ERROR_MESSAGE);
@@ -745,15 +733,15 @@ public class FichaUnica extends javax.swing.JFrame {
             ps.setString(14, (String) cb_Jornada.getSelectedItem());
             try {
                 String teleInst = txt_teleInst.getText();
-                if (teleInst.isEmpty()) {
-                    throw new IllegalArgumentException("El campo de teléfono de la institución está vacío.");
-                }
-                if (!esNumero(teleInst)) {
-                    throw new IllegalArgumentException("El valor del teléfono de la institución debe ser numérico.");
-                }
-                if (!validarTelefono(teleInst)) {
-                    throw new IllegalArgumentException("El número de teléfono de la institución no es válido.");
-                }
+//                if (teleInst.isEmpty()) {
+//                    throw new IllegalArgumentException("El campo de teléfono de la institución está vacío.");
+//                }
+//                if (!esNumero(teleInst)) {
+//                    throw new IllegalArgumentException("El valor del teléfono de la institución debe ser numérico.");
+//                }
+//                if (!validarTelefono(teleInst)) {
+//                    throw new IllegalArgumentException("El número de teléfono de la institución no es válido.");
+//                }
                 ps.setString(15, teleInst);
             } catch (IllegalArgumentException ex) {
                 JOptionPane.showMessageDialog(null, "Error: " + ex.getMessage(), "Error de teléfono de la institución", JOptionPane.ERROR_MESSAGE);
@@ -903,6 +891,7 @@ public class FichaUnica extends javax.swing.JFrame {
     txt_edad.setText("");
     txt_Cedula.setText("");
     txt_Domicilio.setText("");
+    
     txt_Barrio.setText("");
     txt_Telefono.setText("");
     txt_Celular.setText("");
@@ -917,7 +906,7 @@ public class FichaUnica extends javax.swing.JFrame {
     txt_Observaciones.setText("");
     txt_examinador.setText("");
     txt_anotaciones.setText("");
-    txt_Correo.setText("");
+    txt_Direccion.setText("");
     
 }
 
@@ -980,7 +969,6 @@ public class FichaUnica extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
-    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel22;
@@ -1015,7 +1003,6 @@ public class FichaUnica extends javax.swing.JFrame {
     private javax.swing.JTextField txt_Cedula;
     private javax.swing.JTextField txt_Celular;
     private javax.swing.JTextField txt_Ciudad;
-    private javax.swing.JTextField txt_Correo;
     private javax.swing.JTextField txt_Direccion;
     private javax.swing.JTextField txt_Domicilio;
     private javax.swing.JTextField txt_EducaInclusi;
