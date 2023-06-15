@@ -11,81 +11,64 @@ import java.util.Date;
  * @author carlos
  */
 public class Paciente {
-    public Date FechaApertura;
+
     public Integer id;
-    public String Nombres;
-    public Date fechanacimiento;
-    public String Ciudad;
-    public String Domicilio;
-    public String Edad;
-    public String Cedula;
-    public String SectorEst;
-    public String Barrio;
-    public String Telefono;
-    public String Celular;
-    public String Correo;
-    public String PresentaDiscapacidad;
-    public String PortadordelCarnet;
-    public String Tipodediscapacidad;
-    public String InstitucionEducativa;
-    public String Direccion;
-    public String SectorInst;
-    public String EducacionInclusiva;
-    public String Jornada;
-    public String TipodeInstitucion;
-    public String Paralelo;
-    public String TelefonoInst;
-    public String AnioEGB_BGU;
-    public String DisponeInternet;
-    public String Dispositivo;
-    public String TipodeInternet;
-    public String MotivoConsulta;
-    public String Observaciones;
+    public Date fechaApertura;
+    public String nombresApellidos;
+    public String ciudad;
+    public Date fechaNacimiento;
+    public String edad;
+    public String cedula;
+    public String domicilio;
+    public String barrio;
+    public String telefono;
+    public String celular;
+    public String institucionEducativa;
+    public String tipoInstitucion;
+    public String sector;
+    public String jornada;
+    public String telefonoInstitucion;
+    public String anioEducacion;
+    public String paralelo;
+    public String perteneceInclusion;
+    public String tieneDiscapacidad;
+    public String portadorCarnet;
+    public String diagnostico;
+    public String motivoConsulta;
+    public String observaciones;
+    public String nombreExaminador;
+    public String anotaciones;
 
-    public Paciente(int id,String cedula, String nombres){
-        this.id=id;
-        this.Cedula=cedula;
-        this.Nombres=nombres;
+    public Paciente(Integer id, Date fechaApertura, String nombresApellidos, String ciudad, Date fechaNacimiento, String edad, String cedula, String domicilio, String barrio, String telefono, String celular, String institucionEducativa, String tipoInstitucion, String sector, String jornada, String telefonoInstitucion, String anioEducacion, String paralelo, String perteneceInclusion, String tieneDiscapacidad, String portadorCarnet, String diagnostico, String motivoConsulta, String observaciones, String nombreExaminador, String anotaciones) {
+        this.id = id;
+        this.fechaApertura = fechaApertura;
+        this.nombresApellidos = nombresApellidos;
+        this.ciudad = ciudad;
+        this.fechaNacimiento = fechaNacimiento;
+        this.edad = edad;
+        this.cedula = cedula;
+        this.domicilio = domicilio;
+        this.barrio = barrio;
+        this.telefono = telefono;
+        this.celular = celular;
+        this.institucionEducativa = institucionEducativa;
+        this.tipoInstitucion = tipoInstitucion;
+        this.sector = sector;
+        this.jornada = jornada;
+        this.telefonoInstitucion = telefonoInstitucion;
+        this.anioEducacion = anioEducacion;
+        this.paralelo = paralelo;
+        this.perteneceInclusion = perteneceInclusion;
+        this.tieneDiscapacidad = tieneDiscapacidad;
+        this.portadorCarnet = portadorCarnet;
+        this.diagnostico = diagnostico;
+        this.motivoConsulta = motivoConsulta;
+        this.observaciones = observaciones;
+        this.nombreExaminador = nombreExaminador;
+        this.anotaciones = anotaciones;
     }
-    public Paciente(Date FechaApertura, Integer NumeroFicha, String Nombres, Date lugaryfechanacimiento, String Ciudad, String Domicilio, String Edad, String Cedula, String SectorEst, String Barrio, String Telefono, String Celular, String Correo, String PresentaDiscapacidad, String PortadordelCarnet, String Tipodediscapacidad, String InstitucionEducativa, String Direccion, String SectorInst, String EducacionInclusiva, String Jornada, String TipodeInstitucion, String Paralelo, String TelefonoInst, String AnioEGB_BGU, String DisponeInternet, String Dispositivo, String TipodeInternet, String MotivoConsulta, String Observaciones) {
-        this.FechaApertura = FechaApertura;
-        this.id = NumeroFicha;
-        this.Nombres = Nombres;
-        this.fechanacimiento = lugaryfechanacimiento;
-        this.Ciudad = Ciudad;
-        this.Domicilio = Domicilio;
-        this.Edad = Edad;
-        this.Cedula = Cedula;
-        this.SectorEst = SectorEst;
-        this.Barrio = Barrio;
-        this.Telefono = Telefono;
-        this.Celular = Celular;
-        this.Correo = Correo;
-        this.PresentaDiscapacidad = PresentaDiscapacidad;
-        this.PortadordelCarnet = PortadordelCarnet;
-        this.Tipodediscapacidad = Tipodediscapacidad;
-        this.InstitucionEducativa = InstitucionEducativa;
-        this.Direccion = Direccion;
-        this.SectorInst = SectorInst;
-        this.EducacionInclusiva = EducacionInclusiva;
-        this.Jornada = Jornada;
-        this.TipodeInstitucion = TipodeInstitucion;
-        this.Paralelo = Paralelo;
-        this.TelefonoInst = TelefonoInst;
-        this.AnioEGB_BGU = AnioEGB_BGU;
-        this.DisponeInternet = DisponeInternet;
-        this.Dispositivo = Dispositivo;
-        this.TipodeInternet = TipodeInternet;
-        this.MotivoConsulta = MotivoConsulta;
-        this.Observaciones = Observaciones;
-    }
-
-    public Date getFechaApertura() {
-        return FechaApertura;
-    }
-
-    public void setFechaApertura(Date FechaApertura) {
-        this.FechaApertura = FechaApertura;
+    
+    public Paciente() {
     }
 
     public Integer getId() {
@@ -96,229 +79,204 @@ public class Paciente {
         this.id = id;
     }
 
-    public String getNombres() {
-        return Nombres;
+    public Date getFechaApertura() {
+        return fechaApertura;
     }
 
-    public void setNombres(String Nombres) {
-        this.Nombres = Nombres;
+    public void setFechaApertura(Date fechaApertura) {
+        this.fechaApertura = fechaApertura;
     }
 
-    public Date getFechanacimiento() {
-        return fechanacimiento;
+    public String getNombresApellidos() {
+        return nombresApellidos;
     }
 
-    public void setFechanacimiento(Date fechanacimiento) {
-        this.fechanacimiento = fechanacimiento;
+    public void setNombresApellidos(String nombresApellidos) {
+        this.nombresApellidos = nombresApellidos;
     }
 
     public String getCiudad() {
-        return Ciudad;
+        return ciudad;
     }
 
-    public void setCiudad(String Ciudad) {
-        this.Ciudad = Ciudad;
+    public void setCiudad(String ciudad) {
+        this.ciudad = ciudad;
     }
 
-    public String getDomicilio() {
-        return Domicilio;
+    public Date getFechaNacimiento() {
+        return fechaNacimiento;
     }
 
-    public void setDomicilio(String Domicilio) {
-        this.Domicilio = Domicilio;
+    public void setFechaNacimiento(Date fechaNacimiento) {
+        this.fechaNacimiento = fechaNacimiento;
     }
 
     public String getEdad() {
-        return Edad;
+        return edad;
     }
 
-    public void setEdad(String Edad) {
-        this.Edad = Edad;
+    public void setEdad(String edad) {
+        this.edad = edad;
     }
 
     public String getCedula() {
-        return Cedula;
+        return cedula;
     }
 
-    public void setCedula(String Cedula) {
-        this.Cedula = Cedula;
+    public void setCedula(String cedula) {
+        this.cedula = cedula;
     }
 
-    public String getSectorEst() {
-        return SectorEst;
+    public String getDomicilio() {
+        return domicilio;
     }
 
-    public void setSectorEst(String SectorEst) {
-        this.SectorEst = SectorEst;
+    public void setDomicilio(String domicilio) {
+        this.domicilio = domicilio;
     }
 
     public String getBarrio() {
-        return Barrio;
+        return barrio;
     }
 
-    public void setBarrio(String Barrio) {
-        this.Barrio = Barrio;
+    public void setBarrio(String barrio) {
+        this.barrio = barrio;
     }
 
     public String getTelefono() {
-        return Telefono;
+        return telefono;
     }
 
-    public void setTelefono(String Telefono) {
-        this.Telefono = Telefono;
+    public void setTelefono(String telefono) {
+        this.telefono = telefono;
     }
 
     public String getCelular() {
-        return Celular;
+        return celular;
     }
 
-    public void setCelular(String Celular) {
-        this.Celular = Celular;
-    }
-
-    public String getCorreo() {
-        return Correo;
-    }
-
-    public void setCorreo(String Correo) {
-        this.Correo = Correo;
-    }
-
-    public String getPresentaDiscapacidad() {
-        return PresentaDiscapacidad;
-    }
-
-    public void setPresentaDiscapacidad(String PresentaDiscapacidad) {
-        this.PresentaDiscapacidad = PresentaDiscapacidad;
-    }
-
-    public String getPortadordelCarnet() {
-        return PortadordelCarnet;
-    }
-
-    public void setPortadordelCarnet(String PortadordelCarnet) {
-        this.PortadordelCarnet = PortadordelCarnet;
-    }
-
-    public String getTipodediscapacidad() {
-        return Tipodediscapacidad;
-    }
-
-    public void setTipodediscapacidad(String Tipodediscapacidad) {
-        this.Tipodediscapacidad = Tipodediscapacidad;
+    public void setCelular(String celular) {
+        this.celular = celular;
     }
 
     public String getInstitucionEducativa() {
-        return InstitucionEducativa;
+        return institucionEducativa;
     }
 
-    public void setInstitucionEducativa(String InstitucionEducativa) {
-        this.InstitucionEducativa = InstitucionEducativa;
+    public void setInstitucionEducativa(String institucionEducativa) {
+        this.institucionEducativa = institucionEducativa;
     }
 
-    public String getDireccion() {
-        return Direccion;
+    public String getTipoInstitucion() {
+        return tipoInstitucion;
     }
 
-    public void setDireccion(String Direccion) {
-        this.Direccion = Direccion;
+    public void setTipoInstitucion(String tipoInstitucion) {
+        this.tipoInstitucion = tipoInstitucion;
     }
 
-    public String getSectorInst() {
-        return SectorInst;
+    public String getSector() {
+        return sector;
     }
 
-    public void setSectorInst(String SectorInst) {
-        this.SectorInst = SectorInst;
-    }
-
-    public String getEducacionInclusiva() {
-        return EducacionInclusiva;
-    }
-
-    public void setEducacionInclusiva(String EducacionInclusiva) {
-        this.EducacionInclusiva = EducacionInclusiva;
+    public void setSector(String sector) {
+        this.sector = sector;
     }
 
     public String getJornada() {
-        return Jornada;
+        return jornada;
     }
 
-    public void setJornada(String Jornada) {
-        this.Jornada = Jornada;
+    public void setJornada(String jornada) {
+        this.jornada = jornada;
     }
 
-    public String getTipodeInstitucion() {
-        return TipodeInstitucion;
+    public String getTelefonoInstitucion() {
+        return telefonoInstitucion;
     }
 
-    public void setTipodeInstitucion(String TipodeInstitucion) {
-        this.TipodeInstitucion = TipodeInstitucion;
+    public void setTelefonoInstitucion(String telefonoInstitucion) {
+        this.telefonoInstitucion = telefonoInstitucion;
+    }
+
+    public String getAnioEducacion() {
+        return anioEducacion;
+    }
+
+    public void setAnioEducacion(String anioEducacion) {
+        this.anioEducacion = anioEducacion;
     }
 
     public String getParalelo() {
-        return Paralelo;
+        return paralelo;
     }
 
-    public void setParalelo(String Paralelo) {
-        this.Paralelo = Paralelo;
+    public void setParalelo(String paralelo) {
+        this.paralelo = paralelo;
     }
 
-    public String getTelefonoInst() {
-        return TelefonoInst;
+    public String getPerteneceInclusion() {
+        return perteneceInclusion;
     }
 
-    public void setTelefonoInst(String TelefonoInst) {
-        this.TelefonoInst = TelefonoInst;
+    public void setPerteneceInclusion(String perteneceInclusion) {
+        this.perteneceInclusion = perteneceInclusion;
     }
 
-    public String getAnioEGB_BGU() {
-        return AnioEGB_BGU;
+    public String getTieneDiscapacidad() {
+        return tieneDiscapacidad;
     }
 
-    public void setAnioEGB_BGU(String AnioEGB_BGU) {
-        this.AnioEGB_BGU = AnioEGB_BGU;
+    public void setTieneDiscapacidad(String tieneDiscapacidad) {
+        this.tieneDiscapacidad = tieneDiscapacidad;
     }
 
-    public String getDisponeInternet() {
-        return DisponeInternet;
+    public String getPortadorCarnet() {
+        return portadorCarnet;
     }
 
-    public void setDisponeInternet(String DisponeInternet) {
-        this.DisponeInternet = DisponeInternet;
+    public void setPortadorCarnet(String portadorCarnet) {
+        this.portadorCarnet = portadorCarnet;
     }
 
-    public String getDispositivo() {
-        return Dispositivo;
+    public String getDiagnostico() {
+        return diagnostico;
     }
 
-    public void setDispositivo(String Dispositivo) {
-        this.Dispositivo = Dispositivo;
-    }
-
-    public String getTipodeInternet() {
-        return TipodeInternet;
-    }
-
-    public void setTipodeInternet(String TipodeInternet) {
-        this.TipodeInternet = TipodeInternet;
+    public void setDiagnostico(String diagnostico) {
+        this.diagnostico = diagnostico;
     }
 
     public String getMotivoConsulta() {
-        return MotivoConsulta;
+        return motivoConsulta;
     }
 
-    public void setMotivoConsulta(String MotivoConsulta) {
-        this.MotivoConsulta = MotivoConsulta;
+    public void setMotivoConsulta(String motivoConsulta) {
+        this.motivoConsulta = motivoConsulta;
     }
 
     public String getObservaciones() {
-        return Observaciones;
+        return observaciones;
     }
 
-    public void setObservaciones(String Observaciones) {
-        this.Observaciones = Observaciones;
+    public void setObservaciones(String observaciones) {
+        this.observaciones = observaciones;
     }
-    
-    
+
+    public String getNombreExaminador() {
+        return nombreExaminador;
+    }
+
+    public void setNombreExaminador(String nombreExaminador) {
+        this.nombreExaminador = nombreExaminador;
+    }
+
+    public String getAnotaciones() {
+        return anotaciones;
+    }
+
+    public void setAnotaciones(String anotaciones) {
+        this.anotaciones = anotaciones;
+    }
+
 }

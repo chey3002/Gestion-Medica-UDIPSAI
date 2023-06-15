@@ -55,7 +55,7 @@ public class Test_realizados extends javax.swing.JFrame {
         jTable1.setModel(tb);
         jTable1.setRowHeight(40);
         jTextField_CedulaPaciente.setText(paciente.getCedula());
-        jTextField_NombrePaciente.setText(paciente.getNombres());
+        jTextField_NombrePaciente.setText(paciente.getNombresApellidos());
         try {
             this.idList = getIdsFromResultSet(new GestorTest().getArchivosPDF(paciente.getId()));
         } catch (SQLException ex) {

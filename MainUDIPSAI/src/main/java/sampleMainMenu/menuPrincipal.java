@@ -21,38 +21,38 @@ import javax.swing.JFrame;
 public class menuPrincipal extends javax.swing.JFrame {
 
     Especialista especialista = new Especialista();
-    Paciente paciente = new Paciente(
-                new Date(),                             // FechaApertura
-                666666,                                      // NumeroFicha
-                "Juan Pérez",                           // Nombres
-                new Date(1990-1900, 5-1, 15),                  // lugaryfechanacimiento
-                "Quito",                                // Ciudad
-                "Av. Principal 123",                    // Domicilio
-                "30 años",                              // Edad
-                "1234567890",                           // Cedula
-                "Sector Norte",                         // SectorEst
-                "La Floresta",                          // Barrio
-                "022222222",                            // Telefono
-                "0999999999",                           // Celular
-                "juan.perez@example.com",               // Correo
-                "No",                                   // PresentaDiscapacidad
-                "No",                            // PortadordelCarnet
-                "Ninguna",                              // Tipodediscapacidad
-                "Unidad Educativa ABC",                 // InstitucionEducativa
-                "Av. Principal 456",                    // Direccion
-                "Sector Sur",                           // SectorInst
-                "Sí",                                   // EducacionInclusiva
-                "Matutina",                             // Jornada
-                "Fiscal",                              // TipodeInstitucion
-                "Octavo A",                             // Paralelo
-                "022222222",                            // TelefonoInst
-                "9° EGB",                               // AnioEGB_BGU
-                "Sí",                                   // DisponeInternet
-                "Telefono Celular",                               // Dispositivo
-                "Plan de datos",                         // TipodeInternet
-                "Consulta general",                     // MotivoConsulta
-                "Sin observaciones"                     // Observaciones
-        );
+Integer id = 1;
+        Date fechaApertura = new Date();
+        String nombresApellidos = "Juan Perez";
+        String ciudad = "Ciudad Ejemplo";
+        Date fechaNacimiento = new Date(1990-1900,5-1,15);
+        String edad = "30";
+        String cedula = "123456789";
+        String domicilio = "Calle Principal";
+        String barrio = "Barrio Ejemplo";
+        String telefono = "123456789";
+        String celular = "987654321";
+        String institucionEducativa = "Colegio Ejemplo";
+        String tipoInstitucion = "Fiscal";
+        String sector = "Sector Ejemplo";
+        String jornada = "Matutina";
+        String telefonoInstitucion = "987654321";
+        String anioEducacion = "10";
+        String paralelo = "A";
+        String perteneceInclusion = "Sí";
+        String tieneDiscapacidad = "Sí";
+        String portadorCarnet = "Sí";
+        String diagnostico = "Diagnóstico Ejemplo";
+        String motivoConsulta = "Motivo de consulta Ejemplo";
+        String observaciones = "Observaciones Ejemplo";
+        String nombreExaminador = "Examinador Ejemplo";
+        String anotaciones = "Anotaciones Ejemplo";
+
+        Paciente paciente = new Paciente(id, fechaApertura, nombresApellidos, ciudad, fechaNacimiento, edad, cedula,
+                domicilio, barrio, telefono, celular, institucionEducativa, tipoInstitucion, sector, jornada,
+                telefonoInstitucion, anioEducacion, paralelo, perteneceInclusion, tieneDiscapacidad, portadorCarnet,
+                diagnostico, motivoConsulta, observaciones, nombreExaminador, anotaciones);
+
     
 
     /**
