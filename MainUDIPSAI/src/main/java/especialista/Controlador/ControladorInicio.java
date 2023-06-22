@@ -4,14 +4,15 @@
  */
 package especialista.Controlador;
 
+import especialista.Vista.Eliminar;
+import especialista.Vista.Listar;
+import especialista.Vista.Actualizar;
+import especialista.Vista.Inicio;
 import especialista.Vista.Login;
 import especialista.Vista.Crear;
-import especialista.Vista.Listar;
-import especialista.Vista.Eliminar;
-import especialista.Vista.Inicio;
-import especialista.Vista.Actualizar;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import comons.datos.EspecialistaDao;
 import comons.negocio.Especialista;
 
 /**
@@ -26,23 +27,26 @@ public class ControladorInicio implements ActionListener {
     private Listar listar;
     private Actualizar actualizar;
     private Eliminar eliminar;
+    private EspecialistaDao especialistadao;
     Especialista especialista;
     
     
 
-    public ControladorInicio(Crear crear, Inicio inicio, Listar listar, Actualizar actualizar, Eliminar eliminar,Login login) {
+    public ControladorInicio(Crear crear, Inicio inicio, Listar listar, Actualizar actualizar, Eliminar eliminar,Login login,EspecialistaDao especialistadao) {
         this.crear = crear;
         this.inicio = inicio;
         this.listar = listar;
         this.login = login;
         this.actualizar = actualizar;
         this.eliminar = eliminar;
+        this.especialistadao = especialistadao;
         this.inicio.menugestion.addActionListener(this);
         this.inicio.menuver.addActionListener(this);
         this.inicio.menuitemcrear.addActionListener(this);
         this.login.btnIniciarsesion.addActionListener(this);
         this.inicio.menuactualizar.addActionListener(this);
         this.inicio.menueliminar.addActionListener(this);
+     
     }
 
     

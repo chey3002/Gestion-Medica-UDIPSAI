@@ -4,21 +4,23 @@
  */
 package especialista.MAIN;
 
+import especialista.Controlador.ControladorActualizar;
+import especialista.Controlador.ControladorLogin;
+import especialista.Controlador.CrearControlador;
+import especialista.Controlador.ControladorInicio;
+import especialista.Controlador.ControladorEliminar;
+import especialista.Controlador.ControladorListar;
+import especialista.Vista.Eliminar;
+import especialista.Vista.Listar;
+import especialista.Vista.Actualizar;
+import especialista.Vista.Inicio;
 import especialista.Vista.Login;
 import especialista.Vista.Crear;
-import especialista.Vista.Listar;
-import especialista.Vista.Eliminar;
-import especialista.Vista.Inicio;
-import especialista.Vista.Actualizar;
-import especialista.EspecialistaDao.EspecialidadesDao;
-import especialista.EspecialistaDao.EspecialistaDao;
-import especialista.Controlador.ControladorEliminar;
-import especialista.Controlador.ControladorInicio;
-import especialista.Controlador.ControladorLogin;
-import especialista.Controlador.ControladorListar;
-import especialista.Controlador.ControladorActualizar;
-import especialista.Controlador.CrearControlador;
+import comons.datos.EspecialidadesDao;
+import comons.datos.EspecialistaDao;
+import comons.negocio.Especialidades;
 import comons.negocio.Especialista;
+import java.awt.Color;
 import java.util.Date;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -26,6 +28,7 @@ import java.util.List;
 import javax.swing.JFrame;
 import javax.swing.JTextField;
 import javax.swing.SwingUtilities;
+import javax.swing.UIManager;
 import javax.swing.event.DocumentEvent;
 import javax.swing.event.DocumentListener;
 import javax.swing.text.AbstractDocument;
@@ -38,9 +41,12 @@ import javax.swing.text.DocumentFilter;
  *
  * @author Usuario
  */
-public class main  {
+public class EspecialistaMain  {
 
-    public static void main(String[] args) {
+    public EspecialistaMain() {
+    }
+
+    public void inicio() {
         
        
 
@@ -54,6 +60,12 @@ public class main  {
         Date fecha = new Date();
         String fechaconvertida = (String) fecha.toString();
         inicio.labelfechasistema.setText(fechaconvertida);
+        
+         
+        
+        
+        
+      
         
         //Instacias la clase especialista y especialistaDao
         Especialista especialista = new Especialista();
@@ -74,9 +86,9 @@ public class main  {
         //Instancias de los controladores
         ControladorListar cl = new ControladorListar(inicio, listar);
         CrearControlador cr = new CrearControlador(especialista, especialistadao, crear,especialidadesDao);
-        ControladorInicio ci = new ControladorInicio(crear, inicio, listar,actualizar,eliminar,login);
+        ControladorInicio ci = new ControladorInicio(crear, inicio, listar,actualizar,eliminar,login,especialistadao);
         ControladorEliminar ce = new ControladorEliminar(eliminar, especialistadao);
-        ControladorActualizar ca = new ControladorActualizar( actualizar,especialistadao,especialista);
+        ControladorActualizar ca = new ControladorActualizar( actualizar,especialistadao,especialista,especialidadesDao);
         ControladorLogin clo = new ControladorLogin(especialistadao, especialista, login, inicio);
         //Fin de las instancias de los controladores
         
@@ -84,12 +96,14 @@ public class main  {
         login.setTitle("UDIPSAI");
         login.setVisible(true);
         login.setSize(590,490);
+        login.setResizable(false);
         inicio.setSize(590, 490);
-        crear.setSize(610, 510);
-        listar.setSize(550, 390);
-        actualizar.setSize(650,500);
+        crear.setSize(680, 590);
+        listar.setSize(700, 450);
+        actualizar.setSize(850,590);
+        eliminar.setSize(700,450);
         
-     
+       
         
     }
         

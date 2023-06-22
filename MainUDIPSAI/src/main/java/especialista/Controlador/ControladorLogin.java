@@ -4,10 +4,10 @@
  */
 package especialista.Controlador;
 
-import especialista.Vista.Login;
 import especialista.Vista.Inicio;
+import especialista.Vista.Login;
 import comons.negocio.Especialista;
-import especialista.EspecialistaDao.EspecialistaDao;
+import comons.datos.EspecialistaDao;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
@@ -50,6 +50,7 @@ public class ControladorLogin implements ActionListener, KeyListener {
             if (!cedulaDigitada.isEmpty() && !contraseñaDigitada.isEmpty()) {
 
                 if (especialistadao.verificarCredenciales(cedulaDigitada, contraseñaDigitada) != null) {
+                    
                     Especialista especialista = especialistadao.verificarCredenciales(cedulaDigitada, contraseñaDigitada);
 
                     if (especialista.getId_especialidad() == 1) {
@@ -58,12 +59,13 @@ public class ControladorLogin implements ActionListener, KeyListener {
                         inicio.menuCitas.setVisible(false);
                         inicio.menuReportes.setVisible(false);
                     } else {
-                        
+                       
                     }
 
                     // Ocultar ventana de inicio de sesión y mostrar ventana de inicio
                     login.setVisible(false);
                     inicio.setVisible(true);
+                    inicio.labelEspecialista.setText("¡Bienvenido, " + especialista.getPrimerNombre() + " " + especialista.getPrimerApellido() + "!"); 
                     
                 } else {
                     JOptionPane.showMessageDialog(login, "Error: Credenciales incorrectas");

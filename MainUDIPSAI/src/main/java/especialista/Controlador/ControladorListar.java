@@ -6,7 +6,7 @@ package especialista.Controlador;
 
 import especialista.Vista.Listar;
 import especialista.Vista.Inicio;
-import especialista.EspecialistaDao.EspecialistaDao;
+import comons.datos.EspecialistaDao;
 import comons.negocio.Especialista;
 import comons.negocio.Especialista.*;
 import java.awt.event.ActionEvent;
@@ -30,6 +30,7 @@ public class ControladorListar implements ActionListener {
         this.listar = listar;
         this.inicio.menuver.addActionListener(this);
         this.inicio.menueliminar.addActionListener(this);
+        this.listar.itemSalir.addActionListener(this);
 
     }
 
@@ -54,6 +55,10 @@ public class ControladorListar implements ActionListener {
                 tabla.addRow(objeto);
             }
             listar.tablaespecialistas.setModel(tabla);
+        }
+        
+        if (e.getSource() == listar.itemSalir) {
+            listar.dispose();
         }
     }
 

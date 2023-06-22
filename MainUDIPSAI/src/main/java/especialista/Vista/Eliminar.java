@@ -34,13 +34,17 @@ public class Eliminar extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
-        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Accción", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Century Gothic", 1, 14))); // NOI18N
+        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Accción", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(181, 37, 26))); // NOI18N
 
-        btneliminar.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
+        btneliminar.setBackground(new java.awt.Color(181, 37, 26));
+        btneliminar.setForeground(new java.awt.Color(255, 255, 255));
         btneliminar.setText("Eliminar");
+        btneliminar.setBorder(null);
 
-        btnatras.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
+        btnatras.setBackground(new java.awt.Color(181, 37, 26));
+        btnatras.setForeground(new java.awt.Color(255, 255, 255));
         btnatras.setText("Atras");
+        btnatras.setBorder(null);
         btnatras.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnatrasActionPerformed(evt);
@@ -68,7 +72,7 @@ public class Eliminar extends javax.swing.JFrame {
                 .addGap(27, 27, 27))
         );
 
-        panelscroll.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Tabla Especialistas", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Century Gothic", 1, 14))); // NOI18N
+        panelscroll.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Tabla Especialistas", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(181, 37, 26))); // NOI18N
 
         tablaespecialistas.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -100,7 +104,7 @@ public class Eliminar extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(panelscroll, javax.swing.GroupLayout.DEFAULT_SIZE, 194, Short.MAX_VALUE)
+                .addComponent(panelscroll, javax.swing.GroupLayout.DEFAULT_SIZE, 199, Short.MAX_VALUE)
                 .addContainerGap())
         );
 

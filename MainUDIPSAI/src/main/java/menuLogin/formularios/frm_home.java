@@ -7,6 +7,7 @@ package menuLogin.formularios;
 import asignaciones.Asignar_Paciente;
 import comons.negocio.Especialista;
 import eliminarAsignacion.ListarAsignaciones;
+import especialista.MAIN.EspecialistaMain;
 import java.awt.Cursor;
 import javax.swing.JFrame;
 import menuLogin.modelo.usuarios;
@@ -130,8 +131,7 @@ public class frm_home extends javax.swing.JFrame {
         jMenu3 = new javax.swing.JMenu();
         jMenuItem2 = new javax.swing.JMenuItem();
         menuEspecialistas = new javax.swing.JMenu();
-        jMenuItem12 = new javax.swing.JMenuItem();
-        jMenuItem13 = new javax.swing.JMenuItem();
+        jMenuItem1 = new javax.swing.JMenuItem();
         menuAsignarPacientes = new javax.swing.JMenu();
         jMenuItem11 = new javax.swing.JMenuItem();
         menuEliminarAsignacion = new javax.swing.JMenu();
@@ -275,11 +275,13 @@ public class frm_home extends javax.swing.JFrame {
 
         menuEspecialistas.setText("Especialistas");
 
-        jMenuItem12.setText("Crear");
-        menuEspecialistas.add(jMenuItem12);
-
-        jMenuItem13.setText("Buscar");
-        menuEspecialistas.add(jMenuItem13);
+        jMenuItem1.setText("Gestor de Especialistas");
+        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem1ActionPerformed(evt);
+            }
+        });
+        menuEspecialistas.add(jMenuItem1);
 
         jMenuBar1.add(menuEspecialistas);
 
@@ -373,6 +375,12 @@ public class frm_home extends javax.swing.JFrame {
         asignaciones.setVisible(true); // Mostrar el JFrame NuevoFrame
     }//GEN-LAST:event_jMenuItem5ActionPerformed
 
+    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+        // TODO add your handling code here:
+        EspecialistaMain especialistaMain=new EspecialistaMain();
+        especialistaMain.inicio();
+    }//GEN-LAST:event_jMenuItem1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -417,9 +425,8 @@ public class frm_home extends javax.swing.JFrame {
     private javax.swing.JMenu jMenu3;
     private javax.swing.JMenu jMenu4;
     private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem11;
-    private javax.swing.JMenuItem jMenuItem12;
-    private javax.swing.JMenuItem jMenuItem13;
     private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenuItem jMenuItem4;
     private javax.swing.JMenuItem jMenuItem5;

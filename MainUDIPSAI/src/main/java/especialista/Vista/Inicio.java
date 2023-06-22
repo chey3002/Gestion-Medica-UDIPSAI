@@ -33,10 +33,10 @@ public class Inicio extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        txtareaprofesional = new javax.swing.JTextField();
         jPanel2 = new javax.swing.JPanel();
         labelhorasistema = new javax.swing.JLabel();
         labelfechasistema = new javax.swing.JLabel();
+        labelEspecialista = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         menuInicio = new javax.swing.JMenu();
         menugestion = new javax.swing.JMenu();
@@ -55,53 +55,34 @@ public class Inicio extends javax.swing.JFrame {
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(29, 29, 29)
-                .addComponent(txtareaprofesional, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGap(0, 0, Short.MAX_VALUE)
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(228, Short.MAX_VALUE)
-                .addComponent(txtareaprofesional, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(39, 39, 39))
+            .addGap(0, 305, Short.MAX_VALUE)
         );
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
         jPanel2.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         labelhorasistema.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
                 labelhorasistemaFocusGained(evt);
             }
         });
+        jPanel2.add(labelhorasistema, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 80, 13));
+        jPanel2.add(labelfechasistema, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 0, 190, 13));
+        jPanel2.add(labelEspecialista, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 0, 220, 13));
+        labelEspecialista.getAccessibleContext().setAccessibleDescription("");
 
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(25, 25, 25)
-                .addComponent(labelhorasistema, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(38, 38, 38)
-                .addComponent(labelfechasistema, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(191, Short.MAX_VALUE))
-        );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(labelfechasistema, javax.swing.GroupLayout.DEFAULT_SIZE, 13, Short.MAX_VALUE)
-                    .addComponent(labelhorasistema, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap())
-        );
+        jMenuBar1.setBackground(new java.awt.Color(181, 37, 26));
 
         menuInicio.setText("Inicio");
         menuInicio.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
         jMenuBar1.add(menuInicio);
 
+        menugestion.setForeground(new java.awt.Color(255, 255, 255));
         menugestion.setText("Gestión Especialistas");
         menugestion.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
 
@@ -158,7 +139,7 @@ public class Inicio extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 607, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -230,6 +211,7 @@ public class Inicio extends javax.swing.JFrame {
     public javax.swing.JMenuBar jMenuBar1;
     public javax.swing.JPanel jPanel1;
     public javax.swing.JPanel jPanel2;
+    public javax.swing.JLabel labelEspecialista;
     public javax.swing.JLabel labelfechasistema;
     public javax.swing.JLabel labelhorasistema;
     public javax.swing.JMenu menuCitas;
@@ -240,6 +222,5 @@ public class Inicio extends javax.swing.JFrame {
     public javax.swing.JMenu menugestion;
     public javax.swing.JMenuItem menuitemcrear;
     public javax.swing.JMenuItem menuver;
-    public javax.swing.JTextField txtareaprofesional;
     // End of variables declaration//GEN-END:variables
 }

@@ -5,10 +5,12 @@
  */
 package especialista.Controlador;
 
-import especialista.Vista.Inicio;
 import especialista.Vista.Actualizar;
+import especialista.Vista.Inicio;
 import static especialista.Controlador.CrearControlador.obtenerOpciones;
-import especialista.EspecialistaDao.EspecialistaDao;
+import comons.datos.EspecialidadesDao;
+import comons.datos.EspecialistaDao;
+import comons.negocio.Especialidades;
 import comons.negocio.Especialista;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -28,67 +30,74 @@ public class ControladorActualizar implements ActionListener {
     private Inicio inicio;
     private Actualizar actualizar;
     private EspecialistaDao especialistadao;
+    private EspecialidadesDao especialidadesdao;
     Especialista especialista = new Especialista();
     DefaultTableModel tabla = new DefaultTableModel();
 
-    public ControladorActualizar(Actualizar actualizar, EspecialistaDao especialistadao, Especialista especialista) {
+    public ControladorActualizar(Actualizar actualizar, EspecialistaDao especialistadao, Especialista especialista, EspecialidadesDao especialidadesdao) {
         this.inicio = inicio;
         this.actualizar = actualizar;
         this.especialistadao = especialistadao;
         this.especialista = especialista;
+        this.especialidadesdao = especialidadesdao;
         this.actualizar.btnactualizar.addActionListener(this);
         this.actualizar.btnguardar.addActionListener(this);
         this.actualizar.checkSi.addActionListener(this);
         this.actualizar.checkNo.addActionListener(this);
+        this.actualizar.checkActivoSi.addActionListener(this);
+        this.actualizar.checkActivoNo.addActionListener(this);
         this.actualizar.btnAtras.addActionListener(this);
         recuperardatostabla();
-        llenarComboBox();
         validarVentana();
     }
 
     @Override
     public void actionPerformed(ActionEvent e) {
-
         if (e.getSource() == actualizar.btnactualizar) {
             int fila = actualizar.tablaespecialistas.getSelectedRow();
             if (fila == -1) {
                 JOptionPane.showMessageDialog(actualizar, "Debe seleccionar una fila");
             } else {
-                verificarFoco();
+                limpiarCampos();
+                llenarComboBox();
                 String cedula = (String) actualizar.tablaespecialistas.getValueAt(fila, 0);
                 String pnombre = (String) actualizar.tablaespecialistas.getValueAt(fila, 1);
                 String snombre = (String) actualizar.tablaespecialistas.getValueAt(fila, 2);
                 String papellido = (String) actualizar.tablaespecialistas.getValueAt(fila, 3);
                 String sapellido = (String) actualizar.tablaespecialistas.getValueAt(fila, 4);
-                String area = (String) actualizar.tablaespecialistas.getValueAt(fila, 5);
+                int area = (int) actualizar.tablaespecialistas.getValueAt(fila, 5);
                 Object valor = actualizar.tablaespecialistas.getValueAt(fila, 6);
-                String especialistaResposable = (String) actualizar.tablaespecialistas.getValueAt(fila, 7);
+                String especialistaResponsable = (String) actualizar.tablaespecialistas.getValueAt(fila, 7);
                 String contraseña = (String) actualizar.tablaespecialistas.getValueAt(fila, 8);
-                
+                Object esActivo = actualizar.tablaespecialistas.getValueAt(fila, 9);
+
                 boolean esPsante = Boolean.parseBoolean(valor.toString());
+                boolean estaActivo = Boolean.parseBoolean(esActivo.toString());
                 actualizar.txtCedula.setText(cedula);
                 actualizar.txtPrimerNombre.setText(pnombre);
                 actualizar.txtSegundoNombre.setText(snombre);
                 actualizar.txtPrimerApellido.setText(papellido);
                 actualizar.txtSegundoApellido.setText(sapellido);
-                String areaEspecialidad = area;
-                llenarComboBox();
-                actualizar.comboEspecialidades.setSelectedItem(areaEspecialidad);
-                actualizar.txtEspeacilistaResponsable.setText(especialistaResposable);
+
+                String areaEspecialidad = especialidadesdao.obtenerNombreArea(area);
+                actualizar.txtEspeacilistaResponsable.setText(especialistaResponsable);
                 actualizar.txtContraseña.setText(contraseña);
-                
-           
-                if (esPsante == true) {
+
+                DefaultComboBoxModel modelo = (DefaultComboBoxModel) actualizar.comboEspecialidades.getModel();
+                modelo.setSelectedItem(areaEspecialidad);
+
+                if (esPsante) {
                     actualizar.checkSi.setSelected(true);
-
-                }
-                if (esPsante == false) {
+                } else {
                     actualizar.checkNo.setSelected(true);
-                } 
                 }
-                
 
-            
+                if (estaActivo) {
+                    actualizar.checkActivoSi.setSelected(true);
+                } else {
+                    actualizar.checkActivoNo.setSelected(true);
+                }
+            }
         }
 
         if (e.getSource() == actualizar.btnguardar) {
@@ -97,18 +106,25 @@ public class ControladorActualizar implements ActionListener {
                     && actualizar.txtSegundoNombre.getText().isEmpty()
                     && actualizar.txtPrimerApellido.getText().isEmpty()
                     && actualizar.txtSegundoApellido.getText().isEmpty()
-                    && actualizar.comboEspecialidades.getItemCount()==0) {
+                    && actualizar.comboEspecialidades.getItemCount() == 0
+                    && !actualizar.checkSi.isSelected()
+                    && !actualizar.checkActivoNo.isSelected()
+                    && actualizar.txtEspeacilistaResponsable.getText().isEmpty()
+                    && actualizar.txtContraseña.getText().isEmpty()
+                    && !actualizar.checkActivoSi.isSelected()
+                    && !actualizar.checkActivoNo.isSelected()) {
                 JOptionPane.showMessageDialog(actualizar, "Especialista no seleccionado");
             } else {
                 actualizar();
                 limpiarTabla();
                 recuperardatostabla();
                 limpiarCampos();
+                iniciarComboBox();
+
             }
 
         }
-        
-       
+
         //Evento boton atras
         if (e.getSource() == actualizar.btnAtras) {
 
@@ -117,7 +133,7 @@ public class ControladorActualizar implements ActionListener {
                     && actualizar.txtSegundoNombre.getText().isEmpty()
                     && actualizar.txtPrimerApellido.getText().isEmpty()
                     && actualizar.txtSegundoApellido.getText().isEmpty()
-                    && actualizar.comboEspecialidades.getItemCount()==0) {
+                    && actualizar.comboEspecialidades.getItemCount() == 0) {
                 actualizar.dispose();
 
             } else {
@@ -135,17 +151,30 @@ public class ControladorActualizar implements ActionListener {
                 }
             }
         }
-        
-         if (e.getSource() == actualizar.checkSi ) {
+
+        if (e.getSource() == actualizar.checkSi) {
 
             if (actualizar.checkSi.isSelected()) {
                 actualizar.checkNo.setSelected(false);
             }
         }
-        
-        if( e.getSource() == actualizar.checkNo){
+
+        if (e.getSource() == actualizar.checkNo) {
             if (actualizar.checkNo.isSelected()) {
                 actualizar.checkSi.setSelected(false);
+            }
+        }
+
+        if (e.getSource() == actualizar.checkActivoSi) {
+
+            if (actualizar.checkActivoSi.isSelected()) {
+                actualizar.checkActivoNo.setSelected(false);
+            }
+        }
+
+        if (e.getSource() == actualizar.checkActivoNo) {
+            if (actualizar.checkActivoNo.isSelected()) {
+                actualizar.checkActivoSi.setSelected(false);
             }
         }
 
@@ -153,41 +182,55 @@ public class ControladorActualizar implements ActionListener {
 
     public void actualizar() {
         try {
+            EspecialidadesDao especialidadesDao = new EspecialidadesDao();
             String cedula = actualizar.txtCedula.getText();
             String pnombre = actualizar.txtPrimerNombre.getText();
             String snombre = actualizar.txtSegundoNombre.getText();
             String papellido = actualizar.txtPrimerApellido.getText();
             String sapellido = actualizar.txtSegundoApellido.getText();
-            int area = (int) actualizar.comboEspecialidades.getSelectedItem();
-            String especialistaResponsable = actualizar.txtEspeacilistaResponsable.getText();
-            String contraseña = actualizar.txtContraseña.getText();
-            especialista.setCedula(cedula);
-            especialista.setPrimerNombre(pnombre);
-            especialista.setSegundoNombre(snombre);
-            especialista.setPrimerApellido(papellido);
-            especialista.setSegundoApellido(sapellido);
-            especialista.setId_especialidad(area);
-            especialista.setEsPasante(actualizar.checkSi.isSelected() == true || actualizar.checkNo.isSelected() == false);
-            especialista.setNombreEspecilistaResponsable(especialistaResponsable);
-            especialista.setContraseña(contraseña);
-            int objetoactualizado = 0;
-            objetoactualizado = especialistadao.modificar(especialista);
-            if (objetoactualizado == 1) {
-                JOptionPane.showMessageDialog(actualizar, "Especialista Actualizado con Exito");
+            Object especialidadSeleccionada = actualizar.comboEspecialidades.getSelectedItem();
+
+            if (especialidadSeleccionada instanceof Especialidades) {
+                Especialidades especialidad = (Especialidades) especialidadSeleccionada;
+                especialista.setId_especialidad(especialidad.getId_Especialidad());
+
+                // Resto del código para actualizar el especialista
+                String especialistaResponsable = actualizar.txtEspeacilistaResponsable.getText();
+                String contraseña = actualizar.txtContraseña.getText();
+
+                especialista.setCedula(cedula);
+                especialista.setPrimerNombre(pnombre);
+                especialista.setSegundoNombre(snombre);
+                especialista.setPrimerApellido(papellido);
+                especialista.setSegundoApellido(sapellido);
+                especialista.setNombreEspecilistaResponsable(especialistaResponsable);
+                especialista.setContraseña(contraseña);
+                especialista.setEstaActivo(actualizar.checkActivoSi.isSelected());
+                especialista.setEsPasante(actualizar.checkSi.isSelected());
+
+                int objetoactualizado = especialistadao.modificar(especialista);
+                if (objetoactualizado == 1) {
+                    JOptionPane.showMessageDialog(actualizar, "Especialista Actualizado con Exito");
+                } else {
+                    JOptionPane.showMessageDialog(actualizar, "Algo salió mal al actualizar el especialista");
+                }
             } else {
-                JOptionPane.showMessageDialog(actualizar, "Algo salio mal al actualizar especialista");
+                // Manejar el caso cuando no se encuentra la especialidad seleccionada
+                JOptionPane.showMessageDialog(actualizar, "La especialidad seleccionada no es válida");
             }
         } catch (Exception e) {
-            System.err.println("" + e);
+            System.err.println("Error al modificar el especialista");
+            System.err.println("Mensaje de error: " + e.getMessage());
+            System.err.println("Detalle del Error:");
+            e.printStackTrace();
         }
-
     }
 
     public void recuperardatostabla() {
 
         List<Especialista> especialistas = this.especialistadao.listar();
-        tabla.setColumnIdentifiers(new Object[]{"Cedula", "Primer Nombre ", "Segundo Nombre", "Primer Apellido", "Segundo Apellido", "Area Especialidad","Es Pasante", "Especialista Asignado", "Contraseña", });
-        Object[] objeto = new Object[9];
+        tabla.setColumnIdentifiers(new Object[]{"Cedula", "Primer Nombre ", "Segundo Nombre", "Primer Apellido", "Segundo Apellido", "Area Especialidad", "Es Pasante", "Especialista Asignado", "Contraseña", "Esta Activo"});
+        Object[] objeto = new Object[10];
         for (int i = 0; i < especialistas.size(); i++) {
             objeto[0] = especialistas.get(i).getCedula();
             objeto[1] = especialistas.get(i).getPrimerNombre();
@@ -198,18 +241,13 @@ public class ControladorActualizar implements ActionListener {
             objeto[6] = especialistas.get(i).isEsPasante();
             objeto[7] = especialistas.get(i).getNombreEspecilistaResponsable();
             objeto[8] = especialistas.get(i).getContraseña();
+            objeto[9] = especialistas.get(i).isEstaActivo();
             tabla.addRow(objeto);
         }
         actualizar.tablaespecialistas.setModel(tabla);
     }
-    
-    public void verificarFoco(){
-        if(!actualizar.txtCedula.getText().isEmpty()){
-            JOptionPane.showMessageDialog(actualizar, "Espealista ya seleccionado", "Advertencia", JOptionPane.WARNING_MESSAGE);
-        }
-    }
 
-    void limpiarTabla() {
+    public void limpiarTabla() {
         for (int i = 0; i < actualizar.tablaespecialistas.getRowCount(); i++) {
             tabla.removeRow(i);
             i = i - 1;
@@ -217,28 +255,16 @@ public class ControladorActualizar implements ActionListener {
         }
 
     }
-    
-    public static String[] obtenerOpciones() {
-        // Lógica para obtener las opciones desde algún origen de datos
-        String[] opciones = {"Seleccionar","Fonoaudiología", "Psicología Educativa", "Psicologia Social"};
-        return opciones;
-    }
-    
+
     public void llenarComboBox() {
+        EspecialidadesDao especialidadesDao = new EspecialidadesDao();
+        DefaultComboBoxModel modelo = new DefaultComboBoxModel(especialidadesDao.obtenerEspecialidades().toArray());
+        actualizar.comboEspecialidades.setModel(modelo);
+    }
 
-        DefaultComboBoxModel<String> comboBoxModel = new DefaultComboBoxModel<>();
-
-        // Llama a la función obtenerOpciones() para obtener el array de opciones
-        String[] opciones = obtenerOpciones();
-
-        // Agrega las opciones al modelo del ComboBox
-        for (String opcion : opciones) {
-            comboBoxModel.addElement(opcion);
-        }
-
-        // Asigna el modelo al ComboBox
-        actualizar.comboEspecialidades.setModel(comboBoxModel);
-
+    public void iniciarComboBox() {
+        DefaultComboBoxModel<String> modelo = new DefaultComboBoxModel<>();
+        actualizar.comboEspecialidades.setModel(modelo);
     }
 
     private void limpiarCampos() {
@@ -252,9 +278,11 @@ public class ControladorActualizar implements ActionListener {
         actualizar.txtContraseña.setText(null);
         actualizar.checkSi.setSelected(false);
         actualizar.checkNo.setSelected(false);
+        actualizar.checkActivoSi.setSelected(false);
+        actualizar.checkActivoNo.setSelected(false);
 
     }
-    
+
     void validarVentana() {
 
         actualizar.addWindowListener(new WindowAdapter() {

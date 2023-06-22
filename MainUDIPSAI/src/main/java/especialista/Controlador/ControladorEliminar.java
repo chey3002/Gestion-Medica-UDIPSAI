@@ -4,12 +4,12 @@
  */
 package especialista.Controlador;
 
+import especialista.Vista.Eliminar;
 import especialista.Vista.Listar;
 import especialista.Vista.Inicio;
-import especialista.Vista.Eliminar;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import especialista.EspecialistaDao.EspecialistaDao;
+import comons.datos.EspecialistaDao;
 import comons.negocio.Especialista;
 import javax.swing.JOptionPane;
 import java.util.List;
@@ -32,6 +32,7 @@ public class ControladorEliminar implements ActionListener {
         this.eliminar = eliminar;
         this.especialistadao = especialistadao;
         this.eliminar.btneliminar.addActionListener(this);
+        this.eliminar.btnatras.addActionListener(this);
         recuperardatostabla();
     }
 
@@ -57,13 +58,18 @@ public class ControladorEliminar implements ActionListener {
             System.out.println("" + ex);
         }
 
+        if (e.getSource() == eliminar.btnatras) {
+            eliminar.dispose();
+
+        }
+
     }
 
     public void recuperardatostabla() {
 
         List<Especialista> especialistas = this.especialistadao.listar();
-        tabla.setColumnIdentifiers(new Object[]{"Cedula", "Primer Nombre ", "Segundo Nombre", "Primer Apellido", "Segundo Apellido", "Area"});
-        Object[] objeto = new Object[6];
+        tabla.setColumnIdentifiers(new Object[]{"Cedula", "Primer Nombre ", "Segundo Nombre", "Primer Apellido", "Segundo Apellido", "Id Especialidad","Es Pasante","Especialista Asignado","Contraseña","Esta activo"});
+        Object[] objeto = new Object[10];
         for (int i = 0; i < especialistas.size(); i++) {
             objeto[0] = especialistas.get(i).getCedula();
             objeto[1] = especialistas.get(i).getPrimerNombre();
@@ -71,6 +77,10 @@ public class ControladorEliminar implements ActionListener {
             objeto[3] = especialistas.get(i).getPrimerApellido();
             objeto[4] = especialistas.get(i).getSegundoApellido();
             objeto[5] = especialistas.get(i).getId_especialidad();
+            objeto[6] = especialistas.get(i).isEsPasante();
+            objeto[7] = especialistas.get(i).getNombreEspecilistaResponsable();
+            objeto[8] = especialistas.get(i).getContraseña();
+            objeto[9] = especialistas.get(i).isEstaActivo();
             tabla.addRow(objeto);
         }
         eliminar.tablaespecialistas.setModel(tabla);

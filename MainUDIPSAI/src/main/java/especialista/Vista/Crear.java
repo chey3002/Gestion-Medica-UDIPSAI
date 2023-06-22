@@ -4,7 +4,8 @@
  */
 package especialista.Vista;
 import especialista.Controlador.CrearControlador;
-import especialista.EspecialistaDao.EspecialistaDao;
+
+import comons.datos.EspecialistaDao;
 import comons.negocio.Especialista;
 import especialista.Vista.Crear;
 import java.awt.event.ActionEvent;
@@ -75,28 +76,24 @@ public class Crear extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setBackground(new java.awt.Color(255, 0, 0));
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Crear Especialista", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Century Gothic", 1, 11))); // NOI18N
+        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Crear Especialista", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(181, 37, 26))); // NOI18N
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
         jLabel1.setText("Segundo Apellido:");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 195, -1, -1));
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(115, 195, -1, -1));
 
-        jLabel2.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
         jLabel2.setText("Primer Apellido:");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(118, 153, -1, -1));
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(115, 153, -1, -1));
 
-        jLabel3.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
         jLabel3.setText("Cédula:");
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(155, 28, 61, 20));
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(115, 28, 61, 20));
 
-        jLabel4.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
         jLabel4.setText("Segundo Nombre:");
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 108, -1, 25));
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(115, 108, -1, 25));
 
-        jLabel5.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
         jLabel5.setText("Primer Nombre:");
         jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(115, 70, 97, 19));
 
@@ -112,7 +109,7 @@ public class Crear extends javax.swing.JFrame {
                 txtCedulaKeyTyped(evt);
             }
         });
-        jPanel1.add(txtCedula, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 26, 250, 20));
+        jPanel1.add(txtCedula, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 26, 250, 20));
 
         txtPrimerNombre.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         txtPrimerNombre.setBorder(null);
@@ -121,55 +118,53 @@ public class Crear extends javax.swing.JFrame {
                 txtPrimerNombreActionPerformed(evt);
             }
         });
-        jPanel1.add(txtPrimerNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 64, 250, 20));
+        jPanel1.add(txtPrimerNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 64, 250, 20));
 
         txtSegundoNombre.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         txtSegundoNombre.setBorder(null);
-        jPanel1.add(txtSegundoNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 105, 250, 20));
+        jPanel1.add(txtSegundoNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 105, 250, 20));
 
         txtPrimerApellido.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         txtPrimerApellido.setBorder(null);
-        jPanel1.add(txtPrimerApellido, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 146, 250, 20));
+        jPanel1.add(txtPrimerApellido, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 146, 250, 20));
 
         txtSegundoApellido.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         txtSegundoApellido.setBorder(null);
-        jPanel1.add(txtSegundoApellido, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 190, 250, 20));
+        jPanel1.add(txtSegundoApellido, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 190, 250, 20));
 
-        btnCrear.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
+        btnCrear.setBackground(new java.awt.Color(181, 37, 26));
+        btnCrear.setForeground(new java.awt.Color(255, 255, 255));
         btnCrear.setText("Crear");
-        btnCrear.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        btnCrear.setBorder(null);
         btnCrear.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnCrearActionPerformed(evt);
             }
         });
-        jPanel1.add(btnCrear, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 440, 85, 32));
+        jPanel1.add(btnCrear, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 460, 85, 32));
 
-        jLabel7.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
         jLabel7.setText("Area:");
-        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(175, 242, 34, -1));
+        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(115, 242, 34, -1));
 
-        btnAtras.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
+        btnAtras.setBackground(new java.awt.Color(181, 37, 26));
+        btnAtras.setForeground(new java.awt.Color(255, 255, 255));
         btnAtras.setText("Atras");
-        jPanel1.add(btnAtras, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 440, 80, 30));
+        btnAtras.setBorder(null);
+        jPanel1.add(btnAtras, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 460, 80, 30));
 
-        checkBoxSi.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
         checkBoxSi.setText("Si");
         jPanel1.add(checkBoxSi, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 280, 40, -1));
 
-        jLabel6.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
         jLabel6.setText("Es Pasante:");
-        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(142, 280, -1, -1));
+        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(115, 280, -1, -1));
 
-        checkBoxNo.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
         checkBoxNo.setText("No");
         jPanel1.add(checkBoxNo, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 280, -1, -1));
 
-        jPanel1.add(comboEspecialidades, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 235, 250, -1));
+        jPanel1.add(comboEspecialidades, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 235, 250, -1));
 
-        jLabel8.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
         jLabel8.setText("Contraseña:");
-        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(133, 374, -1, -1));
+        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(115, 374, -1, -1));
 
         txtContraseña.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         txtContraseña.setBorder(null);
@@ -178,29 +173,42 @@ public class Crear extends javax.swing.JFrame {
                 txtContraseñaActionPerformed(evt);
             }
         });
-        jPanel1.add(txtContraseña, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 368, 250, 20));
+        jPanel1.add(txtContraseña, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 368, 250, 20));
 
-        jLabel9.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
-        jLabel9.setText("Especialista Responsable:");
-        jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 330, -1, -1));
+        jLabel9.setText("Cédula Responsable:");
+        jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(115, 330, -1, -1));
 
         txtEspecialistaResponsable.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         txtEspecialistaResponsable.setBorder(null);
-        jPanel1.add(txtEspecialistaResponsable, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 323, 250, 20));
-        jPanel1.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 47, 250, -1));
+        jPanel1.add(txtEspecialistaResponsable, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 323, 250, 20));
+
+        jSeparator1.setForeground(new java.awt.Color(181, 37, 26));
+        jPanel1.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 47, 250, -1));
         jPanel1.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 174, 250, 0));
         jPanel1.add(jSeparator4, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 160, 250, 0));
         jPanel1.add(jSeparator5, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 276, 250, 0));
         jPanel1.add(jSeparator6, new org.netbeans.lib.awtextra.AbsoluteConstraints(624, 356, 200, 0));
-        jPanel1.add(jSeparator11, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 85, 250, -1));
-        jPanel1.add(jSeparator10, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 127, 250, -1));
-        jPanel1.add(jSeparator12, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 167, 250, -1));
-        jPanel1.add(jSeparator13, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 212, 250, -1));
-        jPanel1.add(jSeparator14, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 345, 250, -1));
-        jPanel1.add(jSeparator15, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 390, 250, -1));
+
+        jSeparator11.setForeground(new java.awt.Color(181, 37, 26));
+        jPanel1.add(jSeparator11, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 85, 250, -1));
+
+        jSeparator10.setForeground(new java.awt.Color(181, 37, 26));
+        jPanel1.add(jSeparator10, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 127, 250, -1));
+
+        jSeparator12.setForeground(new java.awt.Color(181, 37, 26));
+        jPanel1.add(jSeparator12, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 167, 250, -1));
+
+        jSeparator13.setForeground(new java.awt.Color(181, 37, 26));
+        jPanel1.add(jSeparator13, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 212, 250, -1));
+
+        jSeparator14.setForeground(new java.awt.Color(181, 37, 26));
+        jPanel1.add(jSeparator14, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 345, 250, -1));
+
+        jSeparator15.setForeground(new java.awt.Color(181, 37, 26));
+        jPanel1.add(jSeparator15, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 390, 250, -1));
 
         jLabel10.setText("Esta Activo:");
-        jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 420, -1, -1));
+        jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(115, 420, -1, -1));
 
         checkEsActivoSi.setText("Si");
         jPanel1.add(checkEsActivoSi, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 410, -1, -1));
@@ -208,21 +216,7 @@ public class Crear extends javax.swing.JFrame {
         checkBoxEsActivoNo.setText("No");
         jPanel1.add(checkBoxEsActivoNo, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 410, -1, -1));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 508, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
-        );
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 11, 680, 590));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
