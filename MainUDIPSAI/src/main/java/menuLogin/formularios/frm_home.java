@@ -4,6 +4,8 @@
  */
 package menuLogin.formularios;
 
+import Listar.BuscarPacienteFinal;
+import RegistroPaciente.Registro_Principal.FichaUnica;
 import asignaciones.Asignar_Paciente;
 import comons.negocio.Especialista;
 import eliminarAsignacion.ListarAsignaciones;
@@ -262,6 +264,11 @@ public class frm_home extends javax.swing.JFrame {
         menuNuevoPaciente.setText("Nuevo paciente");
 
         jMenuItem4.setText("Agregar paciente");
+        jMenuItem4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem4ActionPerformed(evt);
+            }
+        });
         menuNuevoPaciente.add(jMenuItem4);
 
         jMenuBar1.add(menuNuevoPaciente);
@@ -269,6 +276,11 @@ public class frm_home extends javax.swing.JFrame {
         jMenu3.setText("Buscar Paciente");
 
         jMenuItem2.setText("Buscar Paciente");
+        jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem2ActionPerformed(evt);
+            }
+        });
         jMenu3.add(jMenuItem2);
 
         jMenuBar1.add(jMenu3);
@@ -380,6 +392,20 @@ public class frm_home extends javax.swing.JFrame {
         EspecialistaMain especialistaMain=new EspecialistaMain();
         especialistaMain.inicio();
     }//GEN-LAST:event_jMenuItem1ActionPerformed
+
+    private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
+        // TODO add your handling code here:
+        FichaUnica fichaUnica = new FichaUnica();
+        fichaUnica.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE); // Establecer acción de cierre
+        fichaUnica.setVisible(true); // Mostrar el JFrame NuevoFrame
+    }//GEN-LAST:event_jMenuItem4ActionPerformed
+
+    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
+        // TODO add your handling code here:
+         BuscarPacienteFinal buscarPacienteFinal = new BuscarPacienteFinal();
+        buscarPacienteFinal.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE); // Establecer acción de cierre
+        buscarPacienteFinal.setVisible(true); // Mostrar el JFrame NuevoFrame
+    }//GEN-LAST:event_jMenuItem2ActionPerformed
 
     /**
      * @param args the command line arguments
