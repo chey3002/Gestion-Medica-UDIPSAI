@@ -12,12 +12,15 @@ import comons.negocio.Paciente;
  * @author carlos
  */
 public class placeholderDavid extends javax.swing.JFrame {
+    
+    
 
     /**
      * Creates new form placeholderDavid
      */
     public placeholderDavid( Paciente paciente) {
         initComponents();
+        
     }
 
     private placeholderDavid() {

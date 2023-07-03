@@ -1,0 +1,1056 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
+  <NonVisualComponents>
+    <Menu class="javax.swing.JMenuBar" name="jMenuBar1">
+      <SubComponents>
+        <Menu class="javax.swing.JMenu" name="menu">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Menu"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="menuActionPerformed"/>
+          </Events>
+          <SubComponents>
+            <MenuItem class="javax.swing.JMenuItem" name="menuActualiza">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Actualizar"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="menuActualizaActionPerformed"/>
+              </Events>
+            </MenuItem>
+          </SubComponents>
+        </Menu>
+      </SubComponents>
+    </Menu>
+  </NonVisualComponents>
+  <Properties>
+    <Property name="defaultCloseOperation" type="int" value="3"/>
+  </Properties>
+  <SyntheticProperties>
+    <SyntheticProperty name="menuBar" type="java.lang.String" value="jMenuBar1"/>
+    <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
+    <SyntheticProperty name="generateCenter" type="boolean" value="false"/>
+  </SyntheticProperties>
+  <AuxValues>
+    <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_generateFQN" type="java.lang.Boolean" value="true"/>
+    <AuxValue name="FormSettings_generateMnemonicsCode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_i18nAutoMode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_layoutCodeTarget" type="java.lang.Integer" value="1"/>
+    <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
+  </AuxValues>
+
+  <Layout>
+    <DimensionLayout dim="0">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="jLabel20" alignment="0" min="-2" pref="147" max="-2" attributes="0"/>
+                  <Component id="jLabel2" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabel4" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabel6" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabel1" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabel3" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabel5" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Group type="102" alignment="0" attributes="0">
+                      <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                          <Group type="102" alignment="1" attributes="0">
+                              <Component id="jLabel32" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="32767" attributes="0"/>
+                              <Component id="cbFormaRelacion" min="-2" pref="345" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="1" attributes="0">
+                              <Component id="jLabel31" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="32767" attributes="0"/>
+                              <Component id="cbAspectos" min="-2" pref="345" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="1" attributes="0">
+                              <Component id="jLabel29" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="106" max="-2" attributes="0"/>
+                              <Component id="cbHabitosPersonales" min="-2" pref="345" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="1" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="103" alignment="1" groupAlignment="0" attributes="0">
+                                      <Group type="103" alignment="1" groupAlignment="0" attributes="0">
+                                          <Group type="103" alignment="1" groupAlignment="0" attributes="0">
+                                              <Group type="102" alignment="1" attributes="0">
+                                                  <Component id="jLabel7" min="-2" max="-2" attributes="0"/>
+                                                  <EmptySpace min="-2" pref="76" max="-2" attributes="0"/>
+                                              </Group>
+                                              <Group type="102" alignment="0" attributes="0">
+                                                  <Component id="jLabel23" min="-2" max="-2" attributes="0"/>
+                                                  <EmptySpace min="-2" pref="99" max="-2" attributes="0"/>
+                                              </Group>
+                                          </Group>
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <Component id="jLabel24" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace min="-2" pref="168" max="-2" attributes="0"/>
+                                          </Group>
+                                      </Group>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Component id="jLabel25" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="107" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="jLabel26" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="109" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Component id="txtAdaptacionSexual" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="cbConductaPreocupante" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="txtAnamnesis" alignment="1" max="32767" attributes="0"/>
+                                  <Component id="txtHabitosSueno" alignment="1" max="32767" attributes="0"/>
+                                  <Component id="txtHabitosOralidad" alignment="1" max="32767" attributes="0"/>
+                                  <Component id="txtEvolutivosDesarrollo" alignment="1" max="32767" attributes="0"/>
+                                  <Component id="txtInformacionPersonal" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="cbOrientacionSexual" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="cbGenero" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="cbSexoNacimiento" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="txtIdPaciente" alignment="0" min="-2" pref="346" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <Group type="102" alignment="1" attributes="0">
+                              <Component id="jLabel30" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="32767" attributes="0"/>
+                              <Component id="cbActividadesIntelectivas" min="-2" pref="345" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="1" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="jLabel34" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabel35" alignment="0" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="32767" attributes="0"/>
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Component id="cbSexoOpuesto" alignment="0" min="-2" pref="345" max="-2" attributes="0"/>
+                                  <Component id="cbHumor" alignment="0" min="-2" pref="345" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <Group type="102" alignment="1" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="jLabel28" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabel27" alignment="0" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="22" max="32767" attributes="0"/>
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Component id="cbExpresionLenguaje" alignment="0" min="-2" pref="345" max="-2" attributes="0"/>
+                                  <Component id="txtObservacionesPsicosexual" alignment="0" min="-2" pref="345" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                      </Group>
+                      <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="jLabel15" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="32767" attributes="0"/>
+                              <Component id="txtDiagnostico" min="-2" pref="297" max="-2" attributes="0"/>
+                          </Group>
+                          <Component id="jLabel16" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabel17" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabel18" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabel19" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabel21" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="jLabel8" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabel9" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabel10" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabel11" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabel12" alignment="0" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="32767" attributes="0"/>
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Component id="cbMemoria" alignment="1" max="32767" attributes="0"/>
+                                  <Component id="cbSensopercepcion" alignment="1" max="32767" attributes="0"/>
+                                  <Component id="cbConductaMotora" alignment="0" min="-2" pref="297" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <Component id="jLabel37" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabel33" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabel36" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Group type="102" alignment="1" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="jLabel13" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabel14" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabel22" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabel39" alignment="0" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="32767" attributes="0"/>
+                              <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                                  <Component id="txtConclusiones" alignment="1" min="-2" pref="297" max="-2" attributes="0"/>
+                                  <Component id="cbJuicio" alignment="0" min="-2" pref="297" max="-2" attributes="0"/>
+                                  <Component id="cbEstructuraPensamiento" alignment="0" min="-2" pref="297" max="-2" attributes="0"/>
+                                  <Component id="txtDerivacion" alignment="0" min="-2" pref="297" max="-2" attributes="0"/>
+                                  <Component id="txtObjetivo" alignment="1" min="-2" pref="297" max="-2" attributes="0"/>
+                                  <Component id="txtEstrategiasIntervencio" alignment="1" min="-2" pref="297" max="-2" attributes="0"/>
+                                  <Component id="txtLogro" alignment="1" min="-2" pref="297" max="-2" attributes="0"/>
+                                  <Component id="txtTiempo" alignment="1" min="-2" pref="297" max="-2" attributes="0"/>
+                                  <Component id="txtIdEspecialista" alignment="1" min="-2" pref="297" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <Group type="103" alignment="0" groupAlignment="1" attributes="0">
+                              <Group type="102" alignment="1" attributes="0">
+                                  <Component id="jLabel38" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                      <Component id="cbActividades" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="cbComportamiento" alignment="0" pref="0" max="32767" attributes="0"/>
+                                      <Component id="cbAfectividad" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="txtObservacionesEvaluacionFinal" alignment="0" min="-2" pref="297" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <Group type="103" alignment="1" groupAlignment="0" attributes="0">
+                                  <Component id="cbAtencion" alignment="0" min="-2" pref="297" max="-2" attributes="0"/>
+                                  <Component id="cbEstadoConciencia" alignment="1" min="-2" pref="297" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                      </Group>
+                  </Group>
+              </Group>
+              <EmptySpace max="32767" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+    <DimensionLayout dim="1">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="jLabel20" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="103" alignment="0" groupAlignment="3" attributes="0">
+                      <Component id="txtIdPaciente" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="103" alignment="1" groupAlignment="3" attributes="0">
+                      <Component id="jLabel33" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="cbActividades" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtAnamnesis" alignment="3" min="-2" pref="49" max="-2" attributes="0"/>
+                  <Component id="jLabel36" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="cbComportamiento" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="txtInformacionPersonal" alignment="3" min="-2" pref="50" max="-2" attributes="0"/>
+                  <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabel37" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="cbAfectividad" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="jLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtEvolutivosDesarrollo" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabel38" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtObservacionesEvaluacionFinal" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="txtHabitosOralidad" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabel5" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabel8" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="cbEstadoConciencia" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="txtHabitosSueno" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Group type="103" alignment="0" groupAlignment="3" attributes="0">
+                      <Component id="jLabel6" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabel9" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="cbAtencion" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="jLabel10" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="cbSensopercepcion" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabel7" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="cbConductaPreocupante" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="jLabel11" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="cbMemoria" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabel23" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="cbSexoNacimiento" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="jLabel12" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="cbConductaMotora" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabel24" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="cbGenero" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="jLabel13" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="cbEstructuraPensamiento" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabel25" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="cbOrientacionSexual" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="jLabel14" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="cbJuicio" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabel26" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtAdaptacionSexual" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="txtObservacionesPsicosexual" alignment="3" min="-2" pref="50" max="-2" attributes="0"/>
+                  <Component id="jLabel15" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabel27" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtDiagnostico" alignment="3" min="-2" pref="50" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="jLabel16" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtDerivacion" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabel28" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="cbExpresionLenguaje" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="jLabel29" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="cbHabitosPersonales" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabel17" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtObjetivo" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="cbActividadesIntelectivas" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabel30" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabel18" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtEstrategiasIntervencio" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="1" attributes="0">
+                  <Group type="103" alignment="1" groupAlignment="3" attributes="0">
+                      <Component id="cbAspectos" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabel19" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="txtLogro" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <Component id="jLabel31" alignment="1" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="cbFormaRelacion" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabel32" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabel21" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtTiempo" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="cbSexoOpuesto" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabel34" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabel22" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtConclusiones" alignment="3" min="-2" pref="50" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="jLabel35" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="cbHumor" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabel39" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtIdEspecialista" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace pref="7" max="32767" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+  </Layout>
+  <SubComponents>
+    <Component class="javax.swing.JLabel" name="jLabel29">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="H&#xe1;bitos personales:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel30">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Actividades intelectivas:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="txtAnamnesis">
+    </Component>
+    <Component class="javax.swing.JTextField" name="txtInformacionPersonal">
+    </Component>
+    <Component class="javax.swing.JTextField" name="txtEvolutivosDesarrollo">
+    </Component>
+    <Component class="javax.swing.JTextField" name="txtHabitosOralidad">
+    </Component>
+    <Component class="javax.swing.JComboBox" name="cbSexoOpuesto">
+      <Properties>
+        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+          <StringArray count="6">
+            <StringItem index="0" value="Atento"/>
+            <StringItem index="1" value="Seductor"/>
+            <StringItem index="2" value="Evita conversar"/>
+            <StringItem index="3" value="Impulsivo"/>
+            <StringItem index="4" value="Bromista"/>
+            <StringItem index="5" value="Tosco y descort&#xe9;s"/>
+          </StringArray>
+        </Property>
+      </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+      </AuxValues>
+    </Component>
+    <Component class="javax.swing.JComboBox" name="cbHumor">
+      <Properties>
+        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+          <StringArray count="10">
+            <StringItem index="0" value="Triste"/>
+            <StringItem index="1" value="Irritable"/>
+            <StringItem index="2" value="Propenso a ri&#xf1;as"/>
+            <StringItem index="3" value="Suave y afable"/>
+            <StringItem index="4" value="Indiferente"/>
+            <StringItem index="5" value="Preocupado y pensativo"/>
+            <StringItem index="6" value="Tendencia al llanto"/>
+            <StringItem index="7" value="Alegre"/>
+            <StringItem index="8" value="Euf&#xf3;rico"/>
+            <StringItem index="9" value="L&#xe1;bil de humor"/>
+          </StringArray>
+        </Property>
+      </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+      </AuxValues>
+    </Component>
+    <Component class="javax.swing.JComboBox" name="cbActividades">
+      <Properties>
+        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+          <StringArray count="19">
+            <StringItem index="0" value="Inactivo"/>
+            <StringItem index="1" value="Perezoso"/>
+            <StringItem index="2" value="S&#xf3;lo hace cosas indispensables"/>
+            <StringItem index="3" value="Realiza s&#xf3;lo un tipo de trabajo"/>
+            <StringItem index="4" value="Dedicado a varias actividades"/>
+            <StringItem index="5" value="Apraxia"/>
+            <StringItem index="6" value="Catatonia"/>
+            <StringItem index="7" value="Agitaci&#xf3;n"/>
+            <StringItem index="8" value="Amaneramiento"/>
+            <StringItem index="9" value="Estereotipias"/>
+            <StringItem index="10" value="Ecopraxia"/>
+            <StringItem index="11" value="Obediencia"/>
+            <StringItem index="12" value="Autom&#xe1;tica"/>
+            <StringItem index="13" value="Negativismo"/>
+            <StringItem index="14" value="Interceptaci&#xf3;n motriz"/>
+            <StringItem index="15" value="Dispraxias"/>
+            <StringItem index="16" value="Actos impulsivos"/>
+            <StringItem index="17" value="Actos obsesivos"/>
+            <StringItem index="18" value="Tics"/>
+          </StringArray>
+        </Property>
+      </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+      </AuxValues>
+    </Component>
+    <Component class="javax.swing.JComboBox" name="cbComportamiento">
+      <Properties>
+        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+          <StringArray count="26">
+            <StringItem index="0" value="Liderazgo"/>
+            <StringItem index="1" value="Sociabilidad"/>
+            <StringItem index="2" value="Responsabilidad"/>
+            <StringItem index="3" value="Tolerancia normal"/>
+            <StringItem index="4" value="Baja"/>
+            <StringItem index="5" value="Colaboraci&#xf3;n"/>
+            <StringItem index="6" value="Inquietud"/>
+            <StringItem index="7" value="Acata &#xf3;rdenes verbales"/>
+            <StringItem index="8" value="Agresivo"/>
+            <StringItem index="9" value="Extravagante"/>
+            <StringItem index="10" value="Antisocial"/>
+            <StringItem index="11" value="Impulsivo"/>
+            <StringItem index="12" value="Reflexivo"/>
+            <StringItem index="13" value="Pasivo"/>
+            <StringItem index="14" value="Ap&#xe1;tico"/>
+            <StringItem index="15" value="Dependiente"/>
+            <StringItem index="16" value="Dominante"/>
+            <StringItem index="17" value="Cauteloso"/>
+            <StringItem index="18" value="Quejoso"/>
+            <StringItem index="19" value="Temoroso"/>
+            <StringItem index="20" value="Teatral"/>
+            <StringItem index="21" value="Ritualista"/>
+            <StringItem index="22" value="Aislamiento"/>
+            <StringItem index="23" value="Ataques de p&#xe1;nico"/>
+            <StringItem index="24" value="Incapacidad de realizaci&#xf3;n de actividades productivas"/>
+            <StringItem index="25" value="Riesgos o potencial suicida"/>
+          </StringArray>
+        </Property>
+      </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+      </AuxValues>
+    </Component>
+    <Component class="javax.swing.JComboBox" name="cbAfectividad">
+      <Properties>
+        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+          <StringArray count="29">
+            <StringItem index="0" value="Inhibici&#xf3;n"/>
+            <StringItem index="1" value="Apat&#xed;a"/>
+            <StringItem index="2" value="Humor variable"/>
+            <StringItem index="3" value="Alta sensibilidad"/>
+            <StringItem index="4" value="Agresividad"/>
+            <StringItem index="5" value="Sumisi&#xf3;n"/>
+            <StringItem index="6" value="Rabietas"/>
+            <StringItem index="7" value="Solidaridad"/>
+            <StringItem index="8" value="Generosidad"/>
+            <StringItem index="9" value="Afectuoso"/>
+            <StringItem index="10" value="Angustia"/>
+            <StringItem index="11" value="Ansiedad situacional"/>
+            <StringItem index="12" value="Timidez"/>
+            <StringItem index="13" value="Ansedad expectante"/>
+            <StringItem index="14" value="Depresi&#xf3;n"/>
+            <StringItem index="15" value="P&#xe9;rdida reciente de inter&#xe9;s"/>
+            <StringItem index="16" value="Desesperaci&#xf3;n"/>
+            <StringItem index="17" value="Euforia"/>
+            <StringItem index="18" value="Indiferencia"/>
+            <StringItem index="19" value="Aplanamiento"/>
+            <StringItem index="20" value="Ambivalencia"/>
+            <StringItem index="21" value="Irritabilidad"/>
+            <StringItem index="22" value="Labilidad"/>
+            <StringItem index="23" value="Tenacidad"/>
+            <StringItem index="24" value="Incontinencia"/>
+            <StringItem index="25" value="Sentimientos inadecuados"/>
+            <StringItem index="26" value="Neotimia"/>
+            <StringItem index="27" value="Disociaci&#xf3;n ideo-afectiva"/>
+            <StringItem index="28" value="Anhedonia"/>
+          </StringArray>
+        </Property>
+      </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+      </AuxValues>
+    </Component>
+    <Component class="javax.swing.JComboBox" name="cbEstadoConciencia">
+      <Properties>
+        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+          <StringArray count="10">
+            <StringItem index="0" value="Lucidez"/>
+            <StringItem index="1" value="Obnubilaci&#xf3;n"/>
+            <StringItem index="2" value="Estupor"/>
+            <StringItem index="3" value="Coma"/>
+            <StringItem index="4" value="Hipervigilancia"/>
+            <StringItem index="5" value="Confusi&#xf3;n"/>
+            <StringItem index="6" value="Estado crepuscular"/>
+            <StringItem index="7" value="Onirismo"/>
+            <StringItem index="8" value="Sonambulismo"/>
+            <StringItem index="9" value=" "/>
+          </StringArray>
+        </Property>
+      </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+      </AuxValues>
+    </Component>
+    <Component class="javax.swing.JComboBox" name="cbAtencion">
+      <Properties>
+        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+          <StringArray count="5">
+            <StringItem index="0" value="Hipercepci&#xf3;n"/>
+            <StringItem index="1" value="Hipoprosexia"/>
+            <StringItem index="2" value="Disposexia"/>
+            <StringItem index="3" value="Distraibilidad"/>
+            <StringItem index="4" value="Sin alteraci&#xf3;n"/>
+          </StringArray>
+        </Property>
+      </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+      </AuxValues>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel31">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Aspectos:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JComboBox" name="cbSensopercepcion">
+      <Properties>
+        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+          <StringArray count="8">
+            <StringItem index="0" value="Hipercepci&#xf3;n"/>
+            <StringItem index="1" value="Ilusiones"/>
+            <StringItem index="2" value="Seudoalucinaciones"/>
+            <StringItem index="3" value="Alusinosis"/>
+            <StringItem index="4" value="Macropsias"/>
+            <StringItem index="5" value="Micropsias"/>
+            <StringItem index="6" value="No presenta"/>
+            <StringItem index="7" value="Alucinaciones"/>
+          </StringArray>
+        </Property>
+      </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+      </AuxValues>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel32">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Forma de relaci&#xf3;n:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JComboBox" name="cbMemoria">
+      <Properties>
+        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+          <StringArray count="8">
+            <StringItem index="0" value="Hipermnecia"/>
+            <StringItem index="1" value="Amneisa de fijaci&#xf3;n"/>
+            <StringItem index="2" value="Amnesia de evocaci&#xf3;n"/>
+            <StringItem index="3" value="Mixta"/>
+            <StringItem index="4" value="Lacunar"/>
+            <StringItem index="5" value="Dismensia"/>
+            <StringItem index="6" value="Paramnesias"/>
+            <StringItem index="7" value="Sin alteraci&#xf3;n"/>
+          </StringArray>
+        </Property>
+      </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+      </AuxValues>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel33">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Actividades:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JComboBox" name="cbConductaMotora">
+      <Properties>
+        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+          <StringArray count="6">
+            <StringItem index="0" value="Enlentecimiento"/>
+            <StringItem index="1" value="Excitaci&#xf3;n psicomotriz"/>
+            <StringItem index="2" value="Catatonia"/>
+            <StringItem index="3" value="Actitudes anormales"/>
+            <StringItem index="4" value="Alteraciones de la marcha"/>
+            <StringItem index="5" value="Inquietud"/>
+          </StringArray>
+        </Property>
+      </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+      </AuxValues>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel34">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Comportamiento con el sexo opuesto:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="txtHabitosSueno">
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel35">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Humor:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel9">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Atenci&#xf3;n:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel36">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Comportamiento:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel10">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Sensopercepci&#xf3;n:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel37">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Afectividad:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel11">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Memoria:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel38">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Observaciones evaluaci&#xf3;n funcional:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel12">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Conducta motora:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="txtObservacionesEvaluacionFinal">
+    </Component>
+    <Component class="javax.swing.JTextField" name="txtObservacionesPsicosexual">
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel39">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Id del Especialista:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel13">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Estructura del pensamiento:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="txtDerivacion">
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel14">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Juicio:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="txtObjetivo">
+    </Component>
+    <Component class="javax.swing.JComboBox" name="cbEstructuraPensamiento">
+      <Properties>
+        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+          <StringArray count="8">
+            <StringItem index="0" value="Incoherencia"/>
+            <StringItem index="1" value="Bloqueos"/>
+            <StringItem index="2" value="Perseveraci&#xf3;n"/>
+            <StringItem index="3" value="Prolijidad"/>
+            <StringItem index="4" value="Desgragaci&#xf3;n"/>
+            <StringItem index="5" value="Estereotipias"/>
+            <StringItem index="6" value="Neologismos"/>
+            <StringItem index="7" value="Musitaci&#xf3;n"/>
+          </StringArray>
+        </Property>
+      </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+      </AuxValues>
+    </Component>
+    <Component class="javax.swing.JComboBox" name="cbJuicio">
+      <Properties>
+        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+          <StringArray count="4">
+            <StringItem index="0" value="Capacidad de autocr&#xed;tica"/>
+            <StringItem index="1" value="Heterocr&#xed;tica"/>
+            <StringItem index="2" value="Proyectos futuros"/>
+            <StringItem index="3" value="Conciencia de la enfermedad"/>
+          </StringArray>
+        </Property>
+      </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+      </AuxValues>
+    </Component>
+    <Component class="javax.swing.JTextField" name="txtDiagnostico">
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel15">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Impresi&#xf3;n diagn&#xf3;stica:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="txtEstrategiasIntervencio">
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel16">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Derivaci&#xf3;n interconsulta:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="txtLogro">
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel17">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Objetivo:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel18">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Estrategias de intervenci&#xf3;n:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel1">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Id del paciente:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel2">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Anamnesis Familiar:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel3">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Informacion Personal:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel4">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Momentos evolutivos y desarrollo:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel5">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="H&#xe1;bitos de oralidad:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel6">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="H&#xe1;bitos de sue&#xf1;o:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel7">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Conductas preocupantes:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel8">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Estado de conciencia:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel20">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Asignaci&#xf3;n de Paciente"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel19">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Indicador de logro:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="txtIdPaciente">
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel21">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Tiempo estimado:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="txtTiempo">
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel22">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Conclusiones de la evaluaci&#xf3;n:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="txtIdEspecialista">
+    </Component>
+    <Component class="javax.swing.JComboBox" name="cbSexoNacimiento">
+      <Properties>
+        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+          <StringArray count="2">
+            <StringItem index="0" value="Masculino"/>
+            <StringItem index="1" value="Femenino"/>
+          </StringArray>
+        </Property>
+      </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+      </AuxValues>
+    </Component>
+    <Component class="javax.swing.JComboBox" name="cbGenero">
+      <Properties>
+        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+          <StringArray count="3">
+            <StringItem index="0" value="Masculino"/>
+            <StringItem index="1" value="Femenino"/>
+            <StringItem index="2" value="Transg&#xe9;nero"/>
+          </StringArray>
+        </Property>
+      </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+      </AuxValues>
+    </Component>
+    <Component class="javax.swing.JComboBox" name="cbOrientacionSexual">
+      <Properties>
+        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+          <StringArray count="4">
+            <StringItem index="0" value="Heterosexual"/>
+            <StringItem index="1" value="Homosexual"/>
+            <StringItem index="2" value="Bisexual"/>
+            <StringItem index="3" value="Asexual"/>
+          </StringArray>
+        </Property>
+      </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+      </AuxValues>
+    </Component>
+    <Component class="javax.swing.JComboBox" name="cbConductaPreocupante">
+      <Properties>
+        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+          <StringArray count="11">
+            <StringItem index="0" value="Temores"/>
+            <StringItem index="1" value="Destructividad"/>
+            <StringItem index="2" value="Nerviosismos"/>
+            <StringItem index="3" value="Irritabilidad"/>
+            <StringItem index="4" value="Egocentrismo"/>
+            <StringItem index="5" value="Regresiones"/>
+            <StringItem index="6" value="Tics"/>
+            <StringItem index="7" value="Hurto"/>
+            <StringItem index="8" value="Mentira"/>
+            <StringItem index="9" value="Cuidado Personal"/>
+            <StringItem index="10" value="Otros"/>
+          </StringArray>
+        </Property>
+      </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+      </AuxValues>
+    </Component>
+    <Component class="javax.swing.JComboBox" name="cbExpresionLenguaje">
+      <Properties>
+        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+          <StringArray count="24">
+            <StringItem index="0" value="Palabras raras"/>
+            <StringItem index="1" value="L&#xf3;gico y claro"/>
+            <StringItem index="2" value="Voz mon&#xf3;tona"/>
+            <StringItem index="3" value="Mal hablado"/>
+            <StringItem index="4" value="Lento y teatral"/>
+            <StringItem index="5" value="Pesimista"/>
+            <StringItem index="6" value="Hiriente"/>
+            <StringItem index="7" value="Charlat&#xe1;n"/>
+            <StringItem index="8" value="Incoherente"/>
+            <StringItem index="9" value="Verborrea"/>
+            <StringItem index="10" value="Abatimiento"/>
+            <StringItem index="11" value="Tensi&#xf3;n"/>
+            <StringItem index="12" value="Perplejidad"/>
+            <StringItem index="13" value="Suspicacia"/>
+            <StringItem index="14" value="Enfado"/>
+            <StringItem index="15" value="Preocupaci&#xf3;n"/>
+            <StringItem index="16" value="Obscenidad"/>
+            <StringItem index="17" value="Disartria"/>
+            <StringItem index="18" value="Afasia expresiva"/>
+            <StringItem index="19" value="Afasia receptiva"/>
+            <StringItem index="20" value="Afasia an&#xf3;mica"/>
+            <StringItem index="21" value="Afasia global"/>
+            <StringItem index="22" value="Ecolalia"/>
+            <StringItem index="23" value="Palilalia"/>
+          </StringArray>
+        </Property>
+      </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+      </AuxValues>
+    </Component>
+    <Component class="javax.swing.JComboBox" name="cbHabitosPersonales">
+      <Properties>
+        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+          <StringArray count="6">
+            <StringItem index="0" value="Esimismado"/>
+            <StringItem index="1" value="Hay que guiarlo"/>
+            <StringItem index="2" value="Molestoso"/>
+            <StringItem index="3" value="Lento"/>
+            <StringItem index="4" value="No desea hacer nada"/>
+            <StringItem index="5" value="Hace cosas extra&#xf1;as"/>
+          </StringArray>
+        </Property>
+      </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+      </AuxValues>
+    </Component>
+    <Component class="javax.swing.JTextField" name="txtConclusiones">
+    </Component>
+    <Component class="javax.swing.JComboBox" name="cbActividadesIntelectivas">
+      <Properties>
+        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+          <StringArray count="8">
+            <StringItem index="0" value="Confuso"/>
+            <StringItem index="1" value="Centrado en s&#xed; mismo"/>
+            <StringItem index="2" value="Olvidadizo"/>
+            <StringItem index="3" value="Piensa y responde bien"/>
+            <StringItem index="4" value="Pocos pensamientos"/>
+            <StringItem index="5" value="No ve los errores"/>
+            <StringItem index="6" value="Act&#xfa;a infantilmente"/>
+            <StringItem index="7" value="Desconf&#xed;a"/>
+          </StringArray>
+        </Property>
+      </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+      </AuxValues>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel23">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Sexo de Nacimiento:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JComboBox" name="cbAspectos">
+      <Properties>
+        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+          <StringArray count="10">
+            <StringItem index="0" value="Hosco"/>
+            <StringItem index="1" value="Fastidiado"/>
+            <StringItem index="2" value="Cansado"/>
+            <StringItem index="3" value="Viste raramente"/>
+            <StringItem index="4" value="Desordenado"/>
+            <StringItem index="5" value="Mugroso y fachoso"/>
+            <StringItem index="6" value="Exceso de ropas"/>
+            <StringItem index="7" value="Dram&#xe1;tico y teatral"/>
+            <StringItem index="8" value="Viste normalmente"/>
+            <StringItem index="9" value="Impecable"/>
+          </StringArray>
+        </Property>
+      </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+      </AuxValues>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel24">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Genero:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JComboBox" name="cbFormaRelacion">
+      <Properties>
+        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+          <StringArray count="14">
+            <StringItem index="0" value="Duda de todos"/>
+            <StringItem index="1" value="Pasa aislado"/>
+            <StringItem index="2" value="Dice estar bien"/>
+            <StringItem index="3" value="Gusta de hace da&#xf1;o a los dem&#xe1;s"/>
+            <StringItem index="4" value="Tiene iniciativas"/>
+            <StringItem index="5" value="Colabora"/>
+            <StringItem index="6" value="Reticencia"/>
+            <StringItem index="7" value="Rechazo"/>
+            <StringItem index="8" value="Mutismo"/>
+            <StringItem index="9" value="Negativismo"/>
+            <StringItem index="10" value="Agresividad"/>
+            <StringItem index="11" value="Sarcasmo"/>
+            <StringItem index="12" value="Pegajosidad"/>
+            <StringItem index="13" value="Colaboraci&#xf3;n excesiva"/>
+          </StringArray>
+        </Property>
+      </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+      </AuxValues>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel25">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Orientacion Sexual:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel26">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Adaptaci&#xf3;n sexual:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="txtAdaptacionSexual">
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel27">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Observaciones aspecto psicosexual:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel28">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Expresi&#xf3;n y lenguaje:"/>
+      </Properties>
+    </Component>
+  </SubComponents>
+</Form>

@@ -5,8 +5,10 @@
  */
 package Listar;
 
+import FichasMedicas.Resultados;
 import Tests.presentacion.RenderTable;
 import comons.datos.mysql;
+import comons.negocio.Especialista;
 import comons.negocio.Paciente;
 import javax.swing.table.DefaultTableModel;
 import java.sql.*;
@@ -30,7 +32,7 @@ public class BuscarPacienteFinal extends javax.swing.JFrame {
     ResultSet rs;  //el result set es el resultado de la consulta que mandamos por sql
     Object[][] M_datos;  //iniciamos una matriz donde pasaremos los datos de sql
 
-    mysql cc = new mysql("udipsai", "root", "");
+    mysql cc = new mysql("Udipsai", "root", "");
     Connection cn = cc.conexion();
     //Conectar cc = new Conectar();   //iniciamos un objeto que se encargara de la conexion de datos
     // Connection cn = cc.conectar();
@@ -38,7 +40,9 @@ public class BuscarPacienteFinal extends javax.swing.JFrame {
     /**
      * Creates new form vista1
      */
-    public BuscarPacienteFinal() {
+    Especialista especialista;
+    public BuscarPacienteFinal(Especialista especialista) {
+        this.especialista=especialista;
         initComponents();
         datos_tabla(); //iniciamos el metodo para mostrar los datos en la tabla
         //jtable_datos.setDefaultRenderer(Object.class, new RenderTable());
@@ -47,6 +51,10 @@ public class BuscarPacienteFinal extends javax.swing.JFrame {
     }
     String cedula = "0105886949";
     //0105706105
+
+    private BuscarPacienteFinal() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 
     private void datos_tabla() {
         if (cedula.equals("0105886949")) {
@@ -133,6 +141,7 @@ public class BuscarPacienteFinal extends javax.swing.JFrame {
             jtable_datos.setModel(dtm_datos); //ahora el modelo que ya tiene tanto los datos como los titulos lo agregamos a la tabla
             trs = new TableRowSorter<>(dtm_datos); //iniciamos el table row sorter para ordenar los datos (esto es si gustan)
             jtable_datos.setRowSorter(trs); //y lo agregamos al jtable
+            
         }//
     }//
 
@@ -487,7 +496,7 @@ public class BuscarPacienteFinal extends javax.swing.JFrame {
 
                     Paciente paciente = new Paciente(id, fechaApertura, nombresApellidos, ciudad, fechaNacimiento, edad, pacientecedula, domicilio, barrio, telefono, celular, institucionEducativa, tipoInstitucion, sector, jornada, telefonoInstitucion, anioEducacion, paralelo, perteneceInclusion, tieneDiscapacidad, portadorCarnet, diagnostico, motivoConsulta, observaciones, nombreExaminador, anotaciones);
 
-                    placeholderDavid editarPaciente = new placeholderDavid(paciente);
+                    Resultados editarPaciente = new Resultados(paciente,this.especialista);
                     editarPaciente.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE); // Establecer acción de cierre
                     editarPaciente.setVisible(true); // Mostrar el JFrame NuevoFrame
                 } else {

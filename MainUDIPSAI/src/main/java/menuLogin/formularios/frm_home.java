@@ -402,7 +402,7 @@ public class frm_home extends javax.swing.JFrame {
 
     private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
         // TODO add your handling code here:
-         BuscarPacienteFinal buscarPacienteFinal = new BuscarPacienteFinal();
+         BuscarPacienteFinal buscarPacienteFinal = new BuscarPacienteFinal(this.mod);
         buscarPacienteFinal.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE); // Establecer acción de cierre
         buscarPacienteFinal.setVisible(true); // Mostrar el JFrame NuevoFrame
     }//GEN-LAST:event_jMenuItem2ActionPerformed
