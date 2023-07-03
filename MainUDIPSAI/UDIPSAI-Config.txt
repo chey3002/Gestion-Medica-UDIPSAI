@@ -1,0 +1,4 @@
+database:udipsai
+user:root
+pass:
+ip:localhost
