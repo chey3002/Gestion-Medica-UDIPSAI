@@ -6,6 +6,7 @@
 package Listar;
 
 import comons.datos.mysql;
+import configReader.ConfigReader;
 import javax.swing.table.DefaultTableModel;
 import java.sql.*;
 import java.util.logging.Level;
@@ -25,7 +26,8 @@ public class vista1 extends javax.swing.JFrame {
     ResultSet rs;  //el result set es el resultado de la consulta que mandamos por sql
     String[][] M_datos;  //iniciamos una matriz donde pasaremos los datos de sql
 
-    mysql cc = new mysql("udipsai", "root", "");
+    ConfigReader configReader = new ConfigReader();
+    mysql cc = new mysql(configReader.getDatabase(), configReader.getUser(), configReader.getPass());
     Connection cn = cc.conexion();
     //Conectar cc = new Conectar();   //iniciamos un objeto que se encargara de la conexion de datos
     // Connection cn = cc.conectar();

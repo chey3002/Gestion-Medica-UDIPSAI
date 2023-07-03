@@ -4,6 +4,7 @@
  */
 package comons.datos;
 
+import configReader.ConfigReader;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import javax.swing.JOptionPane;
@@ -33,26 +34,27 @@ import javax.swing.JOptionPane;
             }
         return conectar;
     }*/
-    public class Conexion_2 {
-    Connection conectar = null;
-    String usuario="root";
-    String contrasenia="";
-    String bd= "udipsai";
-    String ip="localhost";
-    String puerto="3306";
-    
-    String cadena = "jdbc:mysql://"+ip+":"+puerto+"/"+bd;
-   
+public class Conexion_2 {
 
-    public Connection establecerConexion(){
-        try{
+    Connection conectar = null;
+    ConfigReader configReader = new ConfigReader();
+
+    String usuario = configReader.getUser();
+    String contrasenia =configReader.getPass();
+    String bd = configReader.getDatabase();
+    String ip = configReader.getIp();
+    String puerto = "3306";
+
+    String cadena = "jdbc:mysql://" + ip + ":" + puerto + "/" + bd;
+
+    public Connection establecerConexion() {
+        try {
             Class.forName("com.mysql.jdbc.Driver");
-            conectar = DriverManager.getConnection(cadena,usuario,contrasenia);
+            conectar = DriverManager.getConnection(cadena, usuario, contrasenia);
             //JOptionPane.showMessageDialog(null, "Se conecto a la base de datos");
-        }catch(Exception e){
-            JOptionPane.showMessageDialog(null, "No se conecto a la base de datos, error" +e.toString());
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "No se conecto a la base de datos, error" + e.toString());
         }
         return conectar;
     }
 }
-

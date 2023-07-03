@@ -10,6 +10,7 @@ import Tests.presentacion.RenderTable;
 import comons.datos.mysql;
 import comons.negocio.Especialista;
 import comons.negocio.Paciente;
+import configReader.ConfigReader;
 import javax.swing.table.DefaultTableModel;
 import java.sql.*;
 import java.util.logging.Level;
@@ -31,8 +32,8 @@ public class BuscarPacienteFinal extends javax.swing.JFrame {
     TableRowSorter<TableModel> trs; //Hacemos el table row sorter para poder ordenar la tabla al presionar los encabezados de la misma
     ResultSet rs;  //el result set es el resultado de la consulta que mandamos por sql
     Object[][] M_datos;  //iniciamos una matriz donde pasaremos los datos de sql
-
-    mysql cc = new mysql("Udipsai", "root", "");
+ConfigReader configReader = new ConfigReader();
+    mysql cc = new mysql(configReader.getDatabase(), configReader.getUser(), configReader.getPass());
     Connection cn = cc.conexion();
     //Conectar cc = new Conectar();   //iniciamos un objeto que se encargara de la conexion de datos
     // Connection cn = cc.conectar();

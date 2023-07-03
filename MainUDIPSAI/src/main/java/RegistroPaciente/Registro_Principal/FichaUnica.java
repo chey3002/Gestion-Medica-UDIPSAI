@@ -6,6 +6,7 @@ package RegistroPaciente.Registro_Principal;
 
 import RegistroPaciente.Registro_Principal.FichaUnica;
 import comons.datos.mysql;
+import configReader.ConfigReader;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
@@ -33,7 +34,8 @@ public class FichaUnica extends javax.swing.JFrame {
         this.setLocationRelativeTo(null);
         btn_Guardar.setEnabled(true);
     }
-private boolean validarCedula(String cedula) {
+
+    private boolean validarCedula(String cedula) {
         if (cedula.length() != 10) {
             return false;
         }
@@ -72,36 +74,38 @@ private boolean validarCedula(String cedula) {
         // Verificar si hay una coincidencia entre el número de teléfono y el patrón
         return matcher.matches();
     }
+
     private void LimpiarCampos() {
-    // Limpiar los campos de texto
-    // fechaApertura,nombresApellidos,ciudad,fechaNacimiento,edad,cedula,domicilio,barrio,telefono,celular,institucionEducativa,tipoInstitucion,"
-    // + "sector,jornada,telefonoInstitucion,anioEducacion,paralelo,perteneceInclusion,tieneDiscapacidad,portadorCarnet,diagnostico,motivoConsulta,observaciones,nombreExaminador,anotaciones)
-    txt_Cedula.setText("");
-    txt_NombresApellidos.setText("");
-    txt_Ciudad.setText("");
-    txt_FechaNacimiento.setText("");
-    txt_edad.setText("");
-    txt_Cedula.setText("");
-    txt_Domicilio.setText("");
-    txt_FechaApertura.setText("");
-    txt_SectorInst.setText("");
-    txt_Barrio.setText("");
-    txt_Telefono.setText("");
-    txt_Celular.setText("");
-    txt_Inst_educa.setText("");
-    txt_Sectorpaciente.setText("");
-    txt_teleInst.setText("");
-    txt_AnioCursa.setText("");
-    txt_Paralelo.setText("");
-    txt_EducaInclusi.setText("");
-    txt_TipoDisca3.setText("");
-    txt_MotivoCons.setText("");
-    txt_Observaciones.setText("");
-    txt_examinador1.setText("");
-    txt_anotaciones1.setText("");
-    txt_Direccion.setText("");
-    
-}
+        // Limpiar los campos de texto
+        // fechaApertura,nombresApellidos,ciudad,fechaNacimiento,edad,cedula,domicilio,barrio,telefono,celular,institucionEducativa,tipoInstitucion,"
+        // + "sector,jornada,telefonoInstitucion,anioEducacion,paralelo,perteneceInclusion,tieneDiscapacidad,portadorCarnet,diagnostico,motivoConsulta,observaciones,nombreExaminador,anotaciones)
+        txt_Cedula.setText("");
+        txt_NombresApellidos.setText("");
+        txt_Ciudad.setText("");
+        txt_FechaNacimiento.setText("");
+        txt_edad.setText("");
+        txt_Cedula.setText("");
+        txt_Domicilio.setText("");
+        txt_FechaApertura.setText("");
+        txt_SectorInst.setText("");
+        txt_Barrio.setText("");
+        txt_Telefono.setText("");
+        txt_Celular.setText("");
+        txt_Inst_educa.setText("");
+        txt_Sectorpaciente.setText("");
+        txt_teleInst.setText("");
+        txt_AnioCursa.setText("");
+        txt_Paralelo.setText("");
+        txt_EducaInclusi.setText("");
+        txt_TipoDisca3.setText("");
+        txt_MotivoCons.setText("");
+        txt_Observaciones.setText("");
+        txt_examinador1.setText("");
+        txt_anotaciones1.setText("");
+        txt_Direccion.setText("");
+
+    }
+
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -811,7 +815,8 @@ private boolean validarCedula(String cedula) {
 
     private void btn_GuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_GuardarActionPerformed
         try {
-            mysql cc = new mysql("udipsai", "root", "");
+            ConfigReader configReader = new ConfigReader();
+            mysql cc = new mysql(configReader.getDatabase(), configReader.getUser(), configReader.getPass());
             Connection cn = cc.conexion();
             // VALIDACION DE CEDULA
             String cedula = txt_Cedula.getText();

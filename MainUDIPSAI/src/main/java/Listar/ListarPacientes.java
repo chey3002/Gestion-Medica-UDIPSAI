@@ -5,6 +5,7 @@
 package Listar;
 
 import comons.datos.mysql;
+import configReader.ConfigReader;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -26,7 +27,8 @@ public class ListarPacientes extends javax.swing.JFrame {
     TableRowSorter<TableModel> trs; //Hacemos el table row sorter para poder ordenar la tabla al presionar los encabezados de la misma
     ResultSet rs;  //el result set es el resultado de la consulta que mandamos por sql
     String[][] M_datos;  //iniciamos una matriz donde pasaremos los datos de sql
-    mysql cc = new mysql("udipsai", "root", "");
+    ConfigReader configReader = new ConfigReader();
+    mysql cc = new mysql(configReader.getDatabase(), configReader.getUser(), configReader.getPass());
     //iniciamos un objeto que se encargara de la conexion de datos
     Connection cn = cc.conexion();
 

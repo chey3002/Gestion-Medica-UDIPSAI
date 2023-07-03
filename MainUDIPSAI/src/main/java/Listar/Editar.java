@@ -5,7 +5,9 @@
 package Listar;
 
 import RegistroPaciente.Registro_Principal.*;
+import comons.datos.mysql;
 import comons.negocio.Paciente;
+import configReader.ConfigReader;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -33,10 +35,9 @@ public class Editar extends javax.swing.JFrame {
         String fechaNacimientoFormatted = dateFormat.format(paciente.fechaNacimiento);
         String fechaAperturaFormatted = dateFormat.format(paciente.fechaApertura);
 
-        
         txt_NumeroFicha.setEnabled(false); //Desactivamos para que no se pueda editar
         txt_FechaApertura.setEnabled(false); //Desactivamos para que no se pueda editar
-                
+
         txt_AnioCursa.setText(paciente.anioEducacion);
         txt_Barrio.setText(paciente.barrio);
         txt_Cedula.setText(paciente.cedula);
@@ -796,8 +797,8 @@ public class Editar extends javax.swing.JFrame {
                     + "nombreExaminador = ?, "
                     + "anotaciones = ? "
                     + "WHERE id = ?";
-
-            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/udipsai", "root", "");
+            ConfigReader configReader = new ConfigReader();
+            con = DriverManager.getConnection("jdbc:mysql://"+configReader.getIp()+":3306/" + configReader.getDatabase(), configReader.getUser(), configReader.getPass());
             pst = con.prepareStatement(updateQuery);
 
             pst.setDate(1, java.sql.Date.valueOf(txt_FechaApertura.getText()));

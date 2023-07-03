@@ -4,6 +4,8 @@
  */
 package asignaciones;
 
+import comons.datos.mysql;
+import configReader.ConfigReader;
 import java.awt.HeadlessException;
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -20,10 +22,10 @@ import javax.swing.JOptionPane;
  * @author Maria Mercedes Encalada Arévalo
  */
 public class Asignar_Paciente extends javax.swing.JFrame {
-
-    public static final String url = "jdbc:mysql://localhost:3306/udipsai";
-    public static final String usuario = "root";
-    public static final String contrasena = "";//Preguntar
+    ConfigReader configReader = new ConfigReader();
+    public String url = "jdbc:mysql://"+configReader.getIp()+":3306/"+configReader.getDatabase();
+    public String usuario = configReader.getUser();
+    public String contrasena = configReader.getPass();//Preguntar
     PreparedStatement ps;
     ResultSet rs;
 

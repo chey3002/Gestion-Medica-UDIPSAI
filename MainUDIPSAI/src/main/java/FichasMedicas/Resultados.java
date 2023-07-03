@@ -9,6 +9,7 @@ import Tests.presentacion.AgregarTest;
 import asignaciones.Asignar_Paciente;
 import comons.negocio.Especialista;
 import comons.negocio.Paciente;
+import configReader.ConfigReader;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -1320,9 +1321,10 @@ public class Resultados extends javax.swing.JFrame {
         seguimientos.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE); // Establecer acción de cierre
         seguimientos.setVisible(true); // Mostrar el JFrame NuevoFrame
     }//GEN-LAST:event_jMenuItem6ActionPerformed
-    public static final String url = "jdbc:mysql://localhost:3306/udipsai";
-    public static final String usuario = "root";
-    public static final String contrasena = "";//Preguntar
+    ConfigReader configReader=new ConfigReader();
+    public String url = "jdbc:mysql://"+configReader.getIp()+":3306/"+configReader.getDatabase();
+    public String usuario = configReader.getUser();
+    public String contrasena = configReader.getPass();//Preguntar
     PreparedStatement ps;
     ResultSet rs;
 

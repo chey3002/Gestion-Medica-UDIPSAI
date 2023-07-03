@@ -5,6 +5,7 @@
 package Seguimiento.negocio;
 
 import comons.datos.mysql;
+import configReader.ConfigReader;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -27,7 +28,8 @@ import javax.swing.table.TableModel;
 public class GestorSeguimiento {
 
     public void nuevoSeguimiento(Seguimiento seguimiento) {
-        mysql cn = new mysql("udipsai", "root", "");
+        ConfigReader configReader = new ConfigReader();
+        mysql cn = new mysql(configReader.getDatabase(), configReader.getUser(), configReader.getPass());
 
         String observacion = seguimiento.getObservacion();
         int paciente_id = seguimiento.getIdPaciente();
@@ -61,7 +63,8 @@ public class GestorSeguimiento {
 
     public void eliminarSeguimiento(int id) {
         try {
-            mysql cn = new mysql("udipsai", "root", "");
+            ConfigReader configReader = new ConfigReader();
+        mysql cn = new mysql(configReader.getDatabase(), configReader.getUser(), configReader.getPass());
             Connection conexion = cn.conexion();
             PreparedStatement ps = conexion.prepareStatement("DELETE FROM seguimiento WHERE id = ?");
             ps.setInt(1, id);
@@ -79,7 +82,8 @@ public class GestorSeguimiento {
         ResultSet rs = null;
 
         try {
-            mysql cn = new mysql("udipsai", "root", "");
+            ConfigReader configReader = new ConfigReader();
+        mysql cn = new mysql(configReader.getDatabase(), configReader.getUser(), configReader.getPass());
             conexion = cn.conexion();
             ps = conexion.prepareStatement("SELECT s.id AS id,"
                     + "CONCAT(e.primerNombre, ' ', e.primerApellido) AS Especialista,"

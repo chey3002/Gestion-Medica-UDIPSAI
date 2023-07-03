@@ -5,6 +5,7 @@
 package Listar;
 
 import comons.datos.mysql;
+import configReader.ConfigReader;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -66,7 +67,8 @@ public class Prueba extends javax.swing.JFrame {
                 + "WHERE e.cedula = 0105706105";
 
         Statement st;
-        mysql con = new mysql("udipsai", "root", "");
+        ConfigReader configReader = new ConfigReader();
+    mysql con = new mysql(configReader.getDatabase(), configReader.getUser(), configReader.getPass());
         Connection conexion = con.conexion();
 
         DefaultTableModel model = new DefaultTableModel();
@@ -126,7 +128,8 @@ public class Prueba extends javax.swing.JFrame {
           + "WHERE (p.nombresApellidos like ? or p.cedula like ?) and e.cedula = 0105706105";
    // String sql = "SELECT * FROM  paciente WHERE cedula LIKE ? OR nombresApellidos LIKE ?";
     PreparedStatement pst;
-    mysql con = new mysql("udipsai", "root", "");
+    ConfigReader configReader = new ConfigReader();
+    mysql con = new mysql(configReader.getDatabase(), configReader.getUser(), configReader.getPass());
     Connection conexion = con.conexion();
 
     DefaultTableModel model = new DefaultTableModel();

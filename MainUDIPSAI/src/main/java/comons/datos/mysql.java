@@ -8,6 +8,7 @@ package comons.datos;
  *
  * @author carlos
  */
+import configReader.ConfigReader;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
@@ -29,7 +30,9 @@ public class mysql {
         setNombreBaseDatos(nombreBaseDatos);
         setUsuario(usuario);
         setContrasena(contrasena);
-        setUrl("jdbc:mysql://localhost:3306/" + this.nombreBaseDatos);
+            ConfigReader configReader = new ConfigReader();
+
+        setUrl("jdbc:mysql://"+configReader.getIp()+":3306/" + this.nombreBaseDatos);
     }
 
     public Connection conexion() {

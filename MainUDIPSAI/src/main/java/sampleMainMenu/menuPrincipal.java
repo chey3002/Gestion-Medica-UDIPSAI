@@ -10,6 +10,7 @@ import Tests.presentacion.AgregarTest;
 import asignaciones.Asignar_Paciente;
 import comons.negocio.Especialista;
 import comons.negocio.Paciente;
+import configReader.ConfigReader;
 import eliminarAsignacion.ListarAsignaciones;
 import java.util.Date;
 import javax.swing.JFrame;
@@ -19,9 +20,11 @@ import javax.swing.JFrame;
  * @author carlos
  */
 public class menuPrincipal extends javax.swing.JFrame {
+    
+    
 
     Especialista especialista = new Especialista();
-Integer id = 1;
+    Integer id = 1;
         Date fechaApertura = new Date();
         String nombresApellidos = "Juan Perez";
         String ciudad = "Ciudad Ejemplo";
@@ -59,6 +62,7 @@ Integer id = 1;
      * Creates new form menuPrincipal
      */
     public menuPrincipal() {
+        
         especialista.setCedula("0105706105");
        especialista.setPrimerNombre("Dayana");
        especialista.setSegundoNombre("");

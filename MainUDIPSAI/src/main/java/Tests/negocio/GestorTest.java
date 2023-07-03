@@ -5,6 +5,7 @@
 package Tests.negocio;
 
 import comons.datos.mysql;
+import configReader.ConfigReader;
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
 import java.io.File;
@@ -37,7 +38,8 @@ public class GestorTest {
 
     public void eliminarTest(int id) {
         try {
-            mysql cn = new mysql("udipsai", "root", "");
+            ConfigReader configReader = new ConfigReader();
+        mysql cn = new mysql(configReader.getDatabase(), configReader.getUser(), configReader.getPass());
             Connection conexion = cn.conexion();
             PreparedStatement ps = conexion.prepareStatement("DELETE FROM tests WHERE id = ?");
             ps.setInt(1, id);
@@ -50,7 +52,8 @@ public class GestorTest {
     }
 
     public void GuardarPDF(ArchivoPDF pdfFile) {
-        mysql cn = new mysql("udipsai", "root", "");
+        ConfigReader configReader = new ConfigReader();
+        mysql cn = new mysql(configReader.getDatabase(), configReader.getUser(), configReader.getPass());
 
         File archivo = pdfFile.getContenido();
         String nombre = pdfFile.getNombre();
@@ -126,7 +129,8 @@ public class GestorTest {
 
     public void DescargarPDF(int id) throws IOException {
         try {
-            mysql cn = new mysql("udipsai", "root", "");
+            ConfigReader configReader = new ConfigReader();
+        mysql cn = new mysql(configReader.getDatabase(), configReader.getUser(), configReader.getPass());
             Statement st = cn.conexion().createStatement();
             ResultSet rs = st.executeQuery("select * from tests where id = '" + id + "'");
             while (rs.next()) {
@@ -147,7 +151,8 @@ public class GestorTest {
         ResultSet rs = null;
 
         try {
-            mysql cn = new mysql("udipsai", "root", "");
+            ConfigReader configReader = new ConfigReader();
+        mysql cn = new mysql(configReader.getDatabase(), configReader.getUser(), configReader.getPass());
             conexion = cn.conexion();
             ps = conexion.prepareStatement("SELECT tests.id AS id, CONCAT(especialista.primerNombre, ' ', especialista.primerApellido) AS Especialista, tests.nombre AS Nombre, tests.fecha AS Fecha "
                     + "FROM tests "

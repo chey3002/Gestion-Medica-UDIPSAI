@@ -3,6 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package comons.datos;
+import configReader.ConfigReader;
 import java.sql.Connection;
 import java.sql.DriverManager;
 /**
@@ -16,7 +17,9 @@ public class Conexion {
     public Conexion(){
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
-            con=DriverManager.getConnection("jdbc:mysql://localhost:3306/udipsai","root","");
+                ConfigReader configReader = new ConfigReader();
+
+            con=DriverManager.getConnection("jdbc:mysql://"+configReader.getIp()+":3306/"+configReader.getDatabase(),configReader.getUser(),configReader.getPass());
             if(con!=null){
                 System.out.println("Conexión Exitosa");
             }

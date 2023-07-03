@@ -4,6 +4,7 @@
  */
 package menuLogin.formularios;
 
+import configReader.ConfigReader;
 import java.awt.Cursor;
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -240,7 +241,9 @@ public class frm_RecuperarContra extends javax.swing.JFrame {
     }else if (txtNuevaContrasenia.getText().equals(txtVerificarContrasenia.getText())) {
         try {
             String updateQuery = "UPDATE especialista SET contraseña = ? WHERE cedula=?";
-            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/udipsai", "root", "");
+                            ConfigReader configReader = new ConfigReader();
+
+            con = DriverManager.getConnection("jdbc:mysql://"+configReader.getIp()+":3306/"+configReader.getDatabase(), configReader.getUser(),configReader.getPass());
             pst = con.prepareStatement(updateQuery);
             pst.setString(1, txtVerificarContrasenia.getText());
             pst.setString(2, cedula);
