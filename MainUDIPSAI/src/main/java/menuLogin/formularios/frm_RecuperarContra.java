@@ -70,7 +70,7 @@ public class frm_RecuperarContra extends javax.swing.JFrame {
 
         jLabel23.setFont(new java.awt.Font("Lucida Sans", 1, 14)); // NOI18N
         jLabel23.setForeground(new java.awt.Color(58, 69, 75));
-        jLabel23.setText("Cedula:");
+        jLabel23.setText("Cédula:");
 
         txtCedula.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         txtCedula.setForeground(new java.awt.Color(58, 69, 75));
@@ -171,13 +171,13 @@ public class frm_RecuperarContra extends javax.swing.JFrame {
                                 .addComponent(lblPass3))
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGap(53, 53, 53)
-                                .addComponent(lblPass4))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(109, 109, 109)
-                                .addComponent(jLabel23))))
+                                .addComponent(lblPass4))))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(183, 183, 183)
-                        .addComponent(btnCambiar)))
+                        .addComponent(btnCambiar))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(232, 232, 232)
+                        .addComponent(jLabel23)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(

@@ -76,26 +76,33 @@ public class Crear extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setBackground(new java.awt.Color(255, 0, 0));
+        setMinimumSize(new java.awt.Dimension(700, 601));
+        setPreferredSize(new java.awt.Dimension(700, 601));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Crear Especialista", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(181, 37, 26))); // NOI18N
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel1.setText("Segundo Apellido:");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(115, 195, -1, -1));
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 200, 120, -1));
 
+        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel2.setText("Primer Apellido:");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(115, 153, -1, -1));
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 150, 120, -1));
 
+        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel3.setText("Cédula:");
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(115, 28, 61, 20));
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 30, 120, 20));
 
+        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel4.setText("Segundo Nombre:");
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(115, 108, -1, 25));
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 110, 120, 25));
 
+        jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel5.setText("Primer Nombre:");
-        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(115, 70, 97, 19));
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 70, 120, 19));
 
         txtCedula.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         txtCedula.setBorder(null);
@@ -143,8 +150,9 @@ public class Crear extends javax.swing.JFrame {
         });
         jPanel1.add(btnCrear, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 460, 85, 32));
 
-        jLabel7.setText("Area:");
-        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(115, 242, 34, -1));
+        jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel7.setText("Área:");
+        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 240, 120, -1));
 
         btnAtras.setBackground(new java.awt.Color(181, 37, 26));
         btnAtras.setForeground(new java.awt.Color(255, 255, 255));
@@ -155,16 +163,18 @@ public class Crear extends javax.swing.JFrame {
         checkBoxSi.setText("Si");
         jPanel1.add(checkBoxSi, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 280, 40, -1));
 
+        jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel6.setText("Es Pasante:");
-        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(115, 280, -1, -1));
+        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 280, 120, -1));
 
         checkBoxNo.setText("No");
         jPanel1.add(checkBoxNo, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 280, -1, -1));
 
         jPanel1.add(comboEspecialidades, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 235, 250, -1));
 
+        jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel8.setText("Contraseña:");
-        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(115, 374, -1, -1));
+        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 380, 120, -1));
 
         txtContraseña.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         txtContraseña.setBorder(null);
@@ -175,8 +185,9 @@ public class Crear extends javax.swing.JFrame {
         });
         jPanel1.add(txtContraseña, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 368, 250, 20));
 
+        jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel9.setText("Cédula Responsable:");
-        jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(115, 330, -1, -1));
+        jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 330, 120, -1));
 
         txtEspecialistaResponsable.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         txtEspecialistaResponsable.setBorder(null);
@@ -207,14 +218,15 @@ public class Crear extends javax.swing.JFrame {
         jSeparator15.setForeground(new java.awt.Color(181, 37, 26));
         jPanel1.add(jSeparator15, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 390, 250, -1));
 
+        jLabel10.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel10.setText("Esta Activo:");
-        jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(115, 420, -1, -1));
+        jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 420, 120, -1));
 
         checkEsActivoSi.setText("Si");
-        jPanel1.add(checkEsActivoSi, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 410, -1, -1));
+        jPanel1.add(checkEsActivoSi, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 410, -1, 30));
 
         checkBoxEsActivoNo.setText("No");
-        jPanel1.add(checkBoxEsActivoNo, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 410, -1, -1));
+        jPanel1.add(checkBoxEsActivoNo, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 410, -1, 30));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 11, 680, 590));
 
@@ -295,7 +307,7 @@ public class Crear extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     public javax.swing.JPanel jPanel1;
-    public javax.swing.JSeparator jSeparator1;
+    private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator10;
     private javax.swing.JSeparator jSeparator11;
     private javax.swing.JSeparator jSeparator12;

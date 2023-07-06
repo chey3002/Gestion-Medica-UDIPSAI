@@ -82,7 +82,6 @@ public class Inicio extends javax.swing.JFrame {
         menuInicio.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
         jMenuBar1.add(menuInicio);
 
-        menugestion.setForeground(new java.awt.Color(255, 255, 255));
         menugestion.setText("Gestión Especialistas");
         menugestion.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
 

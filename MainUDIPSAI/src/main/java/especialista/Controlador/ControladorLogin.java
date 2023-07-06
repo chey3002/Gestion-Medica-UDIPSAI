@@ -53,14 +53,12 @@ public class ControladorLogin implements ActionListener, KeyListener {
                     
                     Especialista especialista = especialistadao.verificarCredenciales(cedulaDigitada, contraseñaDigitada);
 
-                    if (especialista.getId_especialidad() == 1) {
+                    
                         // Realizar acciones para el administrador
                         inicio.menuInicio.setVisible(false);
                         inicio.menuCitas.setVisible(false);
                         inicio.menuReportes.setVisible(false);
-                    } else {
-                       
-                    }
+                    
 
                     // Ocultar ventana de inicio de sesión y mostrar ventana de inicio
                     login.setVisible(false);
