@@ -201,6 +201,11 @@ public class PiscologiaEducativa extends javax.swing.JFrame {
         cbpa.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "si", "no", " " }));
 
         cbep.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "si", "no", " " }));
+        cbep.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbepActionPerformed(evt);
+            }
+        });
 
         cbrt.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "si", "no", " " }));
 
@@ -576,6 +581,10 @@ public class PiscologiaEducativa extends javax.swing.JFrame {
     private void txtNombrePacienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNombrePacienteActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtNombrePacienteActionPerformed
+
+    private void cbepActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbepActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cbepActionPerformed
 
     /**
      * @param args the command line arguments
