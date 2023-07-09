@@ -18,10 +18,10 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de datos: `udipsai`
+-- Base de datos: `udipsai2`
 --
-CREATE DATABASE IF NOT EXISTS `udipsai` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
-USE `udipsai`;
+CREATE DATABASE IF NOT EXISTS `udipsai2` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+USE `udipsai2`;
 
 -- --------------------------------------------------------
 
@@ -42,9 +42,9 @@ CREATE TABLE `asignaciones` (
 --
 
 CREATE TABLE `datos_personales` (
-  `id` int(11) NOT NULL,
+  `id` int NOT NULL AUTO_INCREMENT,
   `idEspecialista` varchar(10) DEFAULT NULL,
-  `idPaciente` int(11) DEFAULT NULL,
+  `idPaciente` int DEFAULT NULL,
   `lugarNacimiento` varchar(255) DEFAULT NULL,
   `discapacidad` varchar(255) DEFAULT NULL,
   `grado` varchar(255) DEFAULT NULL,
@@ -89,7 +89,7 @@ CREATE TABLE `datos_personales` (
   `primerasPalabras` varchar(255) DEFAULT NULL,
   `oraciones` varchar(255) DEFAULT NULL,
   `formulacionLinguisticaCompleta` varchar(255) DEFAULT NULL,
-  `numeroTotalDePalabras` int(11) DEFAULT NULL,
+  `numeroTotalDePalabras` int DEFAULT NULL,
   `tipoAntecedente` varchar(255) DEFAULT NULL,
   `descripcion` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -158,8 +158,8 @@ INSERT INTO `especialista` (`cedula`, `primerNombre`, `segundoNombre`, `primerAp
 --
 
 CREATE TABLE `historia_fonoaudiologia` (
-  `id` int(11) NOT NULL,
-  `idPaciente` int(11) DEFAULT NULL,
+  `id` int NOT NULL AUTO_INCREMENT,
+  `idPaciente` int DEFAULT NULL,
   `tonoVoz` varchar(255) DEFAULT NULL,
   `respiracion` varchar(255) DEFAULT NULL,
   `situacionesAlteracionVoz` varchar(255) DEFAULT NULL,
@@ -173,11 +173,12 @@ CREATE TABLE `historia_fonoaudiologia` (
   `reconoceFuenteSonora` varchar(255) DEFAULT NULL,
   `preferenciaComunicacion` varchar(255) DEFAULT NULL,
   `examenAudiologico` varchar(255) DEFAULT NULL,
-  `diagnostico` text DEFAULT NULL,
+  `diagnostico` text,
   `perdidaAudicion` varchar(255) DEFAULT NULL,
   `infeccionesOido` varchar(255) DEFAULT NULL,
-  `edad` int(11) DEFAULT NULL,
-  `idEspecialista` varchar(10) DEFAULT NULL
+  `edad` int DEFAULT NULL,
+  `idEspecialista` varchar(10) DEFAULT NULL,
+  `diagnosticoEvaluacion` varchar(45) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -187,8 +188,8 @@ CREATE TABLE `historia_fonoaudiologia` (
 --
 
 CREATE TABLE `historia_psicologia_clinica` (
-  `idEvaluacion` int(11) NOT NULL,
-  `idPaciente` int(11) DEFAULT NULL,
+  `idEvaluacion` int NOT NULL AUTO_INCREMENT,
+  `idPaciente` int DEFAULT NULL,
   `anamnesisFamiliar` varchar(255) DEFAULT NULL,
   `personal` varchar(255) DEFAULT NULL,
   `momentosEvolutivosDesarrollo` varchar(255) DEFAULT NULL,
@@ -200,6 +201,9 @@ CREATE TABLE `historia_psicologia_clinica` (
   `sensopercepsion` varchar(255) DEFAULT NULL,
   `memoria` varchar(255) DEFAULT NULL,
   `conductaMotora` varchar(255) DEFAULT NULL,
+  `contenidodelpensamiento` varchar(255) DEFAULT NULL,
+  `orientacionfunciones` varchar(255) DEFAULT NULL,
+  `observacionesguiaobservacion` varchar(255) DEFAULT NULL,
   `estructuraDelPensamiento` varchar(255) DEFAULT NULL,
   `juicio` varchar(255) DEFAULT NULL,
   `impresionDiagnostica` varchar(255) DEFAULT NULL,
@@ -224,19 +228,21 @@ CREATE TABLE `historia_psicologia_clinica` (
   `actividades` varchar(255) DEFAULT NULL,
   `comportamiento` varchar(255) DEFAULT NULL,
   `afectividad` varchar(255) DEFAULT NULL,
-  `observacionesEvaluacionFuncional` varchar(255) DEFAULT NULL,
-  `idEspecialista` varchar(10) DEFAULT NULL
+  `idEspecialista` varchar(10) DEFAULT NULL,
+  `observacionesconductaspreocupantes` varchar(255) DEFAULT NULL,
+  `observacioneshabitossueno` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
+INSERT INTO `historia_psicologia_clinica` VALUES (3,1,'adios','adio','adios','adios','adios|||adios|||Mixto|||Acompañado(a)|||adios|||adios|||Hipersomnia,Sonambulismo','Destructividad,Mentira','Estupor,Coma','Disprosexia,Distraibilidad','Seudoalucinaciones','Amnesia de evocación,Paramnesias','Enlentecimiento,Actitudes anormales,Alteraciones de la marcha','Difusos,Grandeza','','adios','','Conciencia de la enfermedad,Proyectos futuros','adios','adios','adios','adios','adios','adios','adios','Femenino','Femenino','Bisexual','adios','adios','Lógico y claro,Afasia expresiva','Callado,Es violento','Olvidadizo,Pocos pensamientos','Viste raramente,Mugroso y fachoso','Pasa aislado,Rechazo,Pegajosidad','Tosco y descortés','Alegre,Lábil de humor','Inactivo,Realiza sólo un tipo de trabajo,Ecopraxia,Actos obsesivos','Baja,Aislamiento,Acata órdenes verbales,Agresivo,Cauteloso','Timidez,Alta sensibilidad,Tenacidad','0301758868','adios','adios'),(5,2,'tyj','tyj','tyj','tym','jyt|||tyjjyt|||Diurno|||Acompañado(a)|||jytj|||tj|||Dificultad de conciliar el sueño,Hipersomnia|||','Nerviosismos,Irritabilidad','Lucidez,Estupor,Hipervigilancia,Onirismo','Disprosexia,Hipoprosexia','Hipercepción,Alusinosis,Macropsias,No presenta','Amnesia de fijación,Dismensia','Enlentecimiento,Catatonia,Alteraciones de la marcha','Obsesivas,Otros,Suicidio,Enfermedad grave','0|||1|||2|||3|||','jtjthj','','Heterocrítica,Proyectos futuros','ytjh','ty','tyh','tyh','tyh','tyh','tyh','Masculino','Masculino','Heterosexual','','','Mal hablado,Incoherente,Afasia expresiva,Ecolalia,Abatimiento,Tensión','Ensimismado,Nervioso,Participa en grupos','Centrado en sí mismo,Pocos pensamientos,Actúa infantilmente','Hosco,Desordenado,Dramático y teatral,Impecable','Pasa aislado,Reticencia,Sarcasmo','Atento,Bromista,Impulsivo','Irritable,Triste,Indiferente','Sólo hace cosas indispensables,Realiza sólo un tipo de trabajo,Amaneramiento,Actos impulsivos','Responsabilidad,Impulsivo,Teatral','Ansiedad situacional,Apatía,Sentimientos inadecuados','0103159067','jhty','jtyj'),(6,3,'crack','crack','crack','crack','crack|||crack|||Nocturno|||Sólo(a)|||crack|||creack|||Hipersomnia,Despertar prematuro','Destructividad,Nerviosismos,Hurto','Estupor,Hipervigilancia,Onirismo','Sin alteración,Hipoprosexia,Distraibilidad','Hipercepción,Seudoalucinaciones,Macropsias,No presenta','Mixta,Lacunar','Enlentecimiento,Catatonia,Alteraciones de la marcha','Necesidad de ayuda,Desconfiazas,Daño','1|||2|||3|||1','crack','1|||2|||3|||1|||2|||3|||1|||2|||Mutismo','Capacidad de autocrítica,Conciencia de la enfermedad','crack','crack','crack','crack','crack','crack','crack','Masculino','Masculino','Heterosexual','','','Mal hablado,Charlatán,Perplejidad,Afasia anómica','Molestoso,Nervioso,Es violento','Centrado en sí mismo,Pocos pensamientos,Desconfía','Fastidiado,Desordenado,Impecable','Gusta de hacer daño a los démas,Colaboración excesiva','Evita conversar,Tosco y descortés','Indiferente,Tendencia al llanto,Propenso a riñas','Inactivo,Ecopraxia','Extravagante,Agresivo,Riesgos o potencial suicida','Agresividad,Ambivalencia,Ansiedad expectante','0301758868','crack','crack');
 
 --
 -- Estructura de tabla para la tabla `historia_psicologia_educativa`
 --
 
 CREATE TABLE `historia_psicologia_educativa` (
-  `idInformacion` int(11) NOT NULL,
-  `idPaciente` int(11) DEFAULT NULL,
+ `idInformacion` int NOT NULL AUTO_INCREMENT,
+  `idPaciente` int DEFAULT NULL,
   `nombre` varchar(255) DEFAULT NULL,
   `ci` varchar(255) DEFAULT NULL,
   `asignaturasPreferidas` varchar(255) DEFAULT NULL,
@@ -249,13 +255,13 @@ CREATE TABLE `historia_psicologia_educativa` (
   `gradoAdaptacion` varchar(255) DEFAULT NULL,
   `especificarAsignaturas` varchar(255) DEFAULT NULL,
   `cdi` varchar(255) DEFAULT NULL,
-  `cdiEdad` int(11) DEFAULT NULL,
+  `cdiEdad` int DEFAULT NULL,
   `inicial1` varchar(255) DEFAULT NULL,
-  `edadInicial1` int(11) DEFAULT NULL,
+  `edadInicial1` int DEFAULT NULL,
   `inicial2` varchar(255) DEFAULT NULL,
-  `edadInicial2` int(11) DEFAULT NULL,
+  `edadInicial2` int DEFAULT NULL,
   `egb1` varchar(255) DEFAULT NULL,
-  `edadEGB1` int(11) DEFAULT NULL,
+  `edadEGB1` int DEFAULT NULL,
   `perdidaCurso` varchar(255) DEFAULT NULL,
   `causaPerdida` varchar(255) DEFAULT NULL,
   `desercionEscolar` varchar(255) DEFAULT NULL,
