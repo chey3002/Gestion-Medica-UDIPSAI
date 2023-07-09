@@ -18,10 +18,10 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de datos: `udipsai2`
+-- Base de datos: `udipsai`
 --
-CREATE DATABASE IF NOT EXISTS `udipsai2` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
-USE `udipsai2`;
+CREATE DATABASE IF NOT EXISTS `udipsai` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+USE `udipsai`;
 
 -- --------------------------------------------------------
 
