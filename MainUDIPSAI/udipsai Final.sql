@@ -42,7 +42,7 @@ CREATE TABLE `asignaciones` (
 --
 
 CREATE TABLE `datos_personales` (
-  `id` int NOT NULL AUTO_INCREMENT,
+  `id`  int DEFAULT NULL,
   `idEspecialista` varchar(10) DEFAULT NULL,
   `idPaciente` int DEFAULT NULL,
   `lugarNacimiento` varchar(255) DEFAULT NULL,
@@ -158,7 +158,7 @@ INSERT INTO `especialista` (`cedula`, `primerNombre`, `segundoNombre`, `primerAp
 --
 
 CREATE TABLE `historia_fonoaudiologia` (
-  `id` int NOT NULL AUTO_INCREMENT,
+  `id`  int DEFAULT NULL,
   `idPaciente` int DEFAULT NULL,
   `tonoVoz` varchar(255) DEFAULT NULL,
   `respiracion` varchar(255) DEFAULT NULL,
@@ -188,7 +188,7 @@ CREATE TABLE `historia_fonoaudiologia` (
 --
 
 CREATE TABLE `historia_psicologia_clinica` (
-  `idEvaluacion` int NOT NULL AUTO_INCREMENT,
+  `idEvaluacion`  int DEFAULT NULL,
   `idPaciente` int DEFAULT NULL,
   `anamnesisFamiliar` varchar(255) DEFAULT NULL,
   `personal` varchar(255) DEFAULT NULL,
@@ -241,7 +241,7 @@ INSERT INTO `historia_psicologia_clinica` VALUES (3,1,'adios','adio','adios','ad
 --
 
 CREATE TABLE `historia_psicologia_educativa` (
- `idInformacion` int NOT NULL AUTO_INCREMENT,
+ `idInformacion`  int DEFAULT NULL,
   `idPaciente` int DEFAULT NULL,
   `nombre` varchar(255) DEFAULT NULL,
   `ci` varchar(255) DEFAULT NULL,
