@@ -221,7 +221,7 @@ public class Test_realizados extends javax.swing.JFrame {
     private void jTable1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable1MouseClicked
         int col = jTable1.columnAtPoint(evt.getPoint());
         int row = jTable1.rowAtPoint(evt.getPoint());
-        
+        //dowload file
         if (col == 3) {
             try {
                 new GestorTest().DescargarPDF(idList[row]);
@@ -231,7 +231,16 @@ public class Test_realizados extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, "Error al descargar el archivo: " + ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
             }
         }
+        //open File
         if (col == 4) {
+            try{
+                new GestorTest().AbrirPDF(idList[row]);
+            }catch(Exception e){
+                JOptionPane.showMessageDialog(null, "Error al abrir el archivo: " + e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+            }
+        }
+        //Delete file
+        if (col == 5) {
             int opcion = JOptionPane.showOptionDialog(
                     null,
                     "¿Desea eleminar este test?",
@@ -252,6 +261,7 @@ public class Test_realizados extends javax.swing.JFrame {
 
             }
         }
+        
 
 
     }//GEN-LAST:event_jTable1MouseClicked

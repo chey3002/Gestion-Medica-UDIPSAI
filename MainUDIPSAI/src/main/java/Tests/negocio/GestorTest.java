@@ -6,6 +6,7 @@ package Tests.negocio;
 
 import comons.datos.mysql;
 import configReader.ConfigReader;
+import java.awt.Desktop;
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
 import java.io.File;
@@ -39,7 +40,7 @@ public class GestorTest {
     public void eliminarTest(int id) {
         try {
             ConfigReader configReader = new ConfigReader();
-        mysql cn = new mysql(configReader.getDatabase(), configReader.getUser(), configReader.getPass());
+            mysql cn = new mysql(configReader.getDatabase(), configReader.getUser(), configReader.getPass());
             Connection conexion = cn.conexion();
             PreparedStatement ps = conexion.prepareStatement("DELETE FROM tests WHERE id = ?");
             ps.setInt(1, id);
@@ -79,20 +80,20 @@ public class GestorTest {
 
         } catch (SQLException e) {
             JOptionPane.showMessageDialog(null, "Error al guardar el archivo: " + e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
-            
+
         } finally {
             if (conexion != null) {
                 try {
                     conexion.close();
                 } catch (SQLException e) {
-                                JOptionPane.showMessageDialog(null, "Error al guardar el archivo: " + e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+                    JOptionPane.showMessageDialog(null, "Error al guardar el archivo: " + e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
 
                 }
             }
         }
     }
 
-    public static void guardarTestDiscoDuro(InputStream x, String name) throws IOException {
+    public static void guardarTestDiscoDuro(InputStream x, String name, String idPaciente) throws IOException {
         String desktopPath = System.getProperty("user.home") + "\\Documents\\";
         String folderName = "Descargas UDIPSAI";
         String folderPath = desktopPath + folderName;
@@ -103,7 +104,7 @@ public class GestorTest {
             // Crear la carpeta y sus subdirectorios si no existen
             folder.mkdirs();
         }
-        File fichero = new File(folderPath + "\\" + name + ".pdf");
+        File fichero = new File(folderPath + "\\" + name + "-" + idPaciente + ".pdf");
         BufferedInputStream in = new BufferedInputStream(x);
         try {
             BufferedOutputStream out = new BufferedOutputStream(new FileOutputStream(fichero));
@@ -117,27 +118,68 @@ public class GestorTest {
             in.close();
 
         } catch (FileNotFoundException e) {
-                        JOptionPane.showMessageDialog(null, "Error al guardar el archivo: " + e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(null, "Error al guardar el archivo: " + e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
 
         } catch (IOException e) {
 
-                        JOptionPane.showMessageDialog(null, "Error al guardar el archivo: " + e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(null, "Error al guardar el archivo: " + e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
 
         }
 
     }
 
-    public void DescargarPDF(int id) throws IOException {
+    public void AbrirPDF(int id) throws IOException {
         try {
             ConfigReader configReader = new ConfigReader();
-        mysql cn = new mysql(configReader.getDatabase(), configReader.getUser(), configReader.getPass());
+            mysql cn = new mysql(configReader.getDatabase(), configReader.getUser(), configReader.getPass());
             Statement st = cn.conexion().createStatement();
             ResultSet rs = st.executeQuery("select * from tests where id = '" + id + "'");
             while (rs.next()) {
                 Blob blob = rs.getBlob("contenido");
                 String name = rs.getString("nombre");
+                String idPaciente = rs.getString("idPaciente");
                 InputStream is = blob.getBinaryStream();
-                guardarTestDiscoDuro(is, name);
+                String desktopPath = System.getProperty("user.home") + "\\Documents\\";
+                String folderName = "Descargas UDIPSAI";
+                String folderPath = desktopPath + folderName;
+                // Crear el objeto File para representar la carpeta
+                File folder = new File(folderPath);
+                // Verificar si la carpeta existe
+                if (!folder.exists()) {
+                    // Crear la carpeta y sus subdirectorios si no existen
+                    folder.mkdirs();
+                }
+                File fichero = new File(folderPath + "\\" + name + "-" + idPaciente + ".pdf");
+                if (fichero.exists()) {
+                    if (Desktop.isDesktopSupported()) {
+                        Desktop.getDesktop().open(fichero);
+                    } else {
+                        JOptionPane.showMessageDialog(null, "Archivo no soportado", "Error", JOptionPane.ERROR_MESSAGE);
+                    }
+                } else {
+                    guardarTestDiscoDuro(is, name, idPaciente);
+                    AbrirPDF(id);
+                }
+            }
+            st.close();
+        } catch (SQLException ex) {
+            JOptionPane.showMessageDialog(null, "Error al descargar el archivo: " + ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+        }
+    }
+
+    public void DescargarPDF(int id) throws IOException {
+        try {
+            ConfigReader configReader = new ConfigReader();
+            mysql cn = new mysql(configReader.getDatabase(), configReader.getUser(), configReader.getPass());
+            Statement st = cn.conexion().createStatement();
+            ResultSet rs = st.executeQuery("select * from tests where id = '" + id + "'");
+            while (rs.next()) {
+                Blob blob = rs.getBlob("contenido");
+                String name = rs.getString("nombre");
+                String idPaciente = rs.getString("idPaciente");
+
+                InputStream is = blob.getBinaryStream();
+                guardarTestDiscoDuro(is, name,idPaciente);
             }
             st.close();
         } catch (SQLException ex) {
@@ -152,7 +194,7 @@ public class GestorTest {
 
         try {
             ConfigReader configReader = new ConfigReader();
-        mysql cn = new mysql(configReader.getDatabase(), configReader.getUser(), configReader.getPass());
+            mysql cn = new mysql(configReader.getDatabase(), configReader.getUser(), configReader.getPass());
             conexion = cn.conexion();
             ps = conexion.prepareStatement("SELECT tests.id AS id, CONCAT(especialista.primerNombre, ' ', especialista.primerApellido) AS Especialista, tests.nombre AS Nombre, tests.fecha AS Fecha "
                     + "FROM tests "
@@ -181,6 +223,7 @@ public class GestorTest {
                 columnNames.addElement(metaData.getColumnLabel(column));
             }
             columnNames.addElement("Descargar");
+            columnNames.addElement("Abrir");
             columnNames.addElement("Eliminar");
 
             // Obtener todas las filas
@@ -193,6 +236,7 @@ public class GestorTest {
                     newRow.addElement(rs.getObject(i));
                 }
                 newRow.addElement(new JButton("↓"));
+                newRow.addElement(new JButton("Abrir"));
                 newRow.addElement(new JButton("X"));
                 rows.addElement(newRow);
             }
