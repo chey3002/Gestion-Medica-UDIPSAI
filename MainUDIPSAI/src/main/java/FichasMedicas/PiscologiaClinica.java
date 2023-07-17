@@ -82,7 +82,6 @@ public class PiscologiaClinica extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        jLabel20 = new javax.swing.JLabel();
         txtIdPaciente = new javax.swing.JTextField();
         txtIdEspecialista = new javax.swing.JTextField();
         txtAnamnesis = new javax.swing.JTextField();
@@ -429,9 +428,8 @@ public class PiscologiaClinica extends javax.swing.JFrame {
         jCheckBox251 = new javax.swing.JCheckBox();
         jCheckBox252 = new javax.swing.JCheckBox();
         jCheckBox253 = new javax.swing.JCheckBox();
-        jMenuBar1 = new javax.swing.JMenuBar();
-        menu = new javax.swing.JMenu();
-        menuActualiza = new javax.swing.JMenuItem();
+        jPanel6 = new javax.swing.JPanel();
+        jLabel20 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -634,8 +632,6 @@ public class PiscologiaClinica extends javax.swing.JFrame {
 
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel5.setText("Hábitos de oralidad:");
-
-        jLabel20.setText("Asignación de Paciente");
 
         panelConductasPreocupantes.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
@@ -1507,7 +1503,7 @@ public class PiscologiaClinica extends javax.swing.JFrame {
                                     .addComponent(jCheckBox120)
                                     .addComponent(jCheckBox118)
                                     .addComponent(jCheckBox121))))))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(98, Short.MAX_VALUE))
         );
         panelActividadesLayout.setVerticalGroup(
             panelActividadesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2654,12 +2650,10 @@ public class PiscologiaClinica extends javax.swing.JFrame {
                         .addGroup(panelEstructuraPensamientoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jLabel57, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jLabel58, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addGroup(panelEstructuraPensamientoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addComponent(jLabel54, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jLabel53, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                            .addGroup(panelEstructuraPensamientoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addComponent(jLabel56, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jLabel55, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(jLabel54, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLabel53, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLabel56, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLabel55, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jLabel59, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jLabel60, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -2733,6 +2727,29 @@ public class PiscologiaClinica extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
+        jPanel6.setBackground(new java.awt.Color(181, 37, 26));
+
+        jLabel20.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel20.setForeground(new java.awt.Color(240, 240, 240));
+        jLabel20.setText("Asignación de Paciente");
+
+        javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
+        jPanel6.setLayout(jPanel6Layout);
+        jPanel6Layout.setHorizontalGroup(
+            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel6Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel20, javax.swing.GroupLayout.PREFERRED_SIZE, 923, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(246, Short.MAX_VALUE))
+        );
+        jPanel6Layout.setVerticalGroup(
+            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel6Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel20)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -2753,21 +2770,18 @@ public class PiscologiaClinica extends javax.swing.JFrame {
                                 .addComponent(txtAnamnesis, javax.swing.GroupLayout.Alignment.LEADING)
                                 .addComponent(txtIdPaciente, javax.swing.GroupLayout.Alignment.LEADING)
                                 .addComponent(txtEvolutivosDesarrollo, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 352, Short.MAX_VALUE))
-                            .addComponent(txtHabitosOralidad, javax.swing.GroupLayout.DEFAULT_SIZE, 352, Short.MAX_VALUE)))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(panelHumor, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(panelSexoOpuesto, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(panelFormaRelacion, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(panelAspectos, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(panelActividadesIntelectivas, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(panelHabitosPersonales, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(panelExpresionLenguaje, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(panelAspectoPsicosexual, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel20, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(panelConductasPreocupantes, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(panelHabitosSueno, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addGap(0, 0, Short.MAX_VALUE))
+                            .addComponent(txtHabitosOralidad)))
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addComponent(panelHumor, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(panelSexoOpuesto, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(panelFormaRelacion, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(panelAspectos, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(panelActividadesIntelectivas, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(panelHabitosPersonales, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(panelExpresionLenguaje, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(panelAspectoPsicosexual, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(panelConductasPreocupantes, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(panelHabitosSueno, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addComponent(panelActividades, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2792,7 +2806,8 @@ public class PiscologiaClinica extends javax.swing.JFrame {
                                     .addComponent(panelContenidoPensamiento, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addComponent(panelTratamientoIndividual, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jPanel20, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(jPanel20, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(2347, 2347, 2347))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                             .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
@@ -2807,15 +2822,16 @@ public class PiscologiaClinica extends javax.swing.JFrame {
                             .addComponent(panelComportamiento, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(panelConductaMotora, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(panelEstructuraPensamiento, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addGap(2347, 2347, 2347))
+                        .addGap(0, 0, Short.MAX_VALUE))))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel20)
-                .addGap(18, 18, 18)
+                .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(panelComportamiento, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -2903,45 +2919,26 @@ public class PiscologiaClinica extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(txtIdEspecialista, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel39))
-                .addContainerGap(95, Short.MAX_VALUE))
+                .addContainerGap(85, Short.MAX_VALUE))
         );
 
         jScrollPane1.setViewportView(jPanel1);
-
-        menu.setText("Menu");
-        menu.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                menuActionPerformed(evt);
-            }
-        });
-
-        menuActualiza.setText("Actualizar");
-        menuActualiza.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                menuActualizaActionPerformed(evt);
-            }
-        });
-        menu.add(menuActualiza);
-
-        jMenuBar1.add(menu);
-
-        setJMenuBar(jMenuBar1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1146, Short.MAX_VALUE)
+            .addGap(0, 1200, Short.MAX_VALUE)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 1146, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 1200, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 2490, Short.MAX_VALUE)
+            .addGap(0, 650, Short.MAX_VALUE)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 2490, Short.MAX_VALUE))
+                .addGroup(layout.createSequentialGroup()
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 650, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
         );
 
         pack();
@@ -3474,156 +3471,6 @@ public class PiscologiaClinica extends javax.swing.JFrame {
         return sb.toString();
     }
 
-    private void menuActualizaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuActualizaActionPerformed
-        // TODO add your handling code here:
-
-        // TODO add your handling code here:
-        // Obtener los valores ingresados en los campos de texto
-        // Obtener los valores ingresados en los campos de texto
-        int idPaciente = Integer.parseInt(txtIdPaciente.getText());
-        String anamnesisFamiliar = txtAnamnesis.getText();
-        String informacionPersonal = txtInformacionPersonal.getText();
-        String evolutivosYDesarrollo = txtEvolutivosDesarrollo.getText();
-        String habitosOralidad = txtHabitosOralidad.getText();
-        String observacionesSueno = txtObseravacionSueno.getText();
-        String observacionesConductaPreocupante = txtObservacionesConductasPreocupantes.getText();
-        String adaptacionSexual = txtAdaptacionSexual.getText();
-        String observacionesPsicosexual = txtObservacionesPsicosexual.getText();
-        String observacionesguiaObservacion = txtObservacionesguiaObservacion.getText();
-        String diagnostico = txtDiagnostico.getText();
-        String derivacionInterconsulta = txtDerivacion.getText();
-        String objetivo = txtObjetivo.getText();
-        String estrategiasIntervencion = txtEstrategiasIntervencio.getText();
-        String logro = txtLogro.getText();
-        String tiempo = txtTiempo.getText();
-        String conclusiones = txtEvaluacionConclusiones.getText();
-        String idespecialista = txtIdEspecialista.getText();
-
-        // Obtener los valores seleccionados de los JComboBox
-        String sexoNacimiento = cbSexoNacimiento.getSelectedItem().toString();
-        String genero = cbGenero.getSelectedItem().toString();
-        String orientacionSexual = cbOrientacionSexual.getSelectedItem().toString();
-
-        // Obtener los valores seleccionados de los JCheckBox y convertirlos en una cadena separada por comas
-        String conductasPreocupantes = obtenerValoresSeleccionados(panelConductasPreocupantes);
-        String estadoConciencia = obtenerValoresSeleccionados(panelEstadoConciencia);
-        String atencion = obtenerValoresSeleccionados(panelAtencion);
-        String sensopercepcion = obtenerValoresSeleccionados(panelSensopercepcion);
-        String memoria = obtenerValoresSeleccionados(panelMemoria);
-        String conductaMotora = obtenerValoresSeleccionados(panelConductaMotora);
-        String contenidoPensamiento = obtenerValoresSeleccionados(panelContenidoPensamiento);
-        String juicio = obtenerValoresSeleccionados(panelJuicio);
-        String expresionLenguaje = obtenerValoresSeleccionados(panelExpresionLenguaje);
-        String habitosPersonales = obtenerValoresSeleccionados(panelHabitosPersonales);
-        String actividadesIntelectivas = obtenerValoresSeleccionados(panelActividadesIntelectivas);
-        String aspectos = obtenerValoresSeleccionados(panelAspectos);
-        String formaRelacion = obtenerValoresSeleccionados(panelFormaRelacion);
-        String sexoOpuesto = obtenerValoresSeleccionados(panelSexoOpuesto);
-        String humor = obtenerValoresSeleccionados(panelHumor);
-        String actividades = obtenerValoresSeleccionados(panelActividades);
-        String comportamiento = obtenerValoresSeleccionados(panelComportamiento);
-        String afectividad = obtenerValoresSeleccionados(panelAfectividad);
-
-        // Obtener los valores concatenados de los campos específicos
-        String horario = txtHorario.getText();
-        String horario2 = txtHorario2.getText();
-        String cbHorarioValue = cbHorario.getSelectedItem().toString();
-        String cbDuermeValue = cbDuerme.getSelectedItem().toString();
-        String conQuien = txtConQuien.getText();
-        String edad = txtEdad.getText();
-
-        String habitosSeleccionados = obtenerHabitosSuenoSeleccionados(); // Método para obtener las opciones seleccionadas de los JCheckBox
-
-        String valoresConcatenados = horario + "|||" + horario2 + "|||" + cbHorarioValue + "|||" + cbDuermeValue + "|||" + conQuien + "|||" + edad + "|||" + habitosSeleccionados;
-
-        String incoherencia = cbincoherencia.getSelectedItem().toString();
-        String bloqueos = cbbloquelos.getSelectedItem().toString();
-        String Perseveracion = cbPerseveracion.getSelectedItem().toString();
-        String Prolijidad = cbProlijidad.getSelectedItem().toString();
-        String Desgragacion = cbDesgragacion.getSelectedItem().toString();
-        String Estereotipias = cbEstereotipias.getSelectedItem().toString();
-        String Neologismos = cbNeologismos.getSelectedItem().toString();
-        String Musitacion = cbMusitacion.getSelectedItem().toString();
-
-        String estructurapensamientoSeleccionados = obtenerEstruscturaPensamiento(); // Método para obtener las opciones seleccionadas de los JCheckBox
-
-        String valoresConcatenados2 = incoherencia + "|||" + bloqueos + "|||" + Perseveracion + "|||" + Prolijidad + "|||" + Desgragacion + "|||" + Estereotipias + "|||" + Neologismos + "|||" + Musitacion + "|||" + estructurapensamientoSeleccionados;
-
-        String Desorientacion = cbDesorientacion.getSelectedItem().toString();
-        String Espacio = cbEspacio.getSelectedItem().toString();
-        String RespectoSiMismo = cbRespectoSiMismo.getSelectedItem().toString();
-        String RespectoOtrasPersonas = cbRespectoOtrasPersonas.getSelectedItem().toString();
-
-        String valoresConcatenados3 = Desorientacion + "|||" + Espacio + "|||" + RespectoSiMismo + "|||" + RespectoOtrasPersonas;
-
-        // Realizar la actualización en la base de datos con los valores obtenidos
-        Connection con = null;
-
-        try {
-            con = conexion();
-
-            PreparedStatement ps = con.prepareStatement("UPDATE historia_psicologia_clinica SET anamnesisFamiliar=?, personal=?, momentosEvolutivosDesarrollo=?, habitosOralidad=?, habitosSueño=?, observacioneshabitossueno=?, observacionesconductaspreocupantes=?, adaptacionSexual=?, observacionesAspectoPsicosexual=?, observacionesguiaobservacion=?, estructuraDelPensamiento=?, impresionDiagnostica=?, derivacionInterconsulta=?, objetivo=?, estrategiasIntervencion=?, indicadorLogro=?, tiempoEstimado=?, evaluacionConclusiones=?, sexoNacimiento=?, genero=?, orientacion=?, idEspecialista=?, conductasPreocupantes=?, estadoConciencia=?, atencion=?, sensopercepsion=?, memoria=?, conductaMotora=?, contenidodelpensamiento=?, orientacionfunciones=?, juicio=?, expresionYLenguaje=?, habitosPersonales=?, actividadesIntelectivas=?, aspectos=?, formaRelacion=?, comportamientoSexoOpuesto=?, humor=?, actividades=?, comportamiento=?, afectividad=? WHERE idPaciente=?");
-
-            ps.setString(1, anamnesisFamiliar);
-            ps.setString(2, informacionPersonal);
-            ps.setString(3, evolutivosYDesarrollo);
-            ps.setString(4, habitosOralidad);
-            ps.setString(5, valoresConcatenados);
-            ps.setString(6, observacionesSueno);
-            ps.setString(7, observacionesConductaPreocupante);
-            ps.setString(8, adaptacionSexual);
-            ps.setString(9, observacionesPsicosexual);
-            ps.setString(10, observacionesguiaObservacion);
-            ps.setString(11, valoresConcatenados2);
-            ps.setString(12, diagnostico);
-            ps.setString(13, derivacionInterconsulta);
-            ps.setString(14, objetivo);
-            ps.setString(15, estrategiasIntervencion);
-            ps.setString(16, logro);
-            ps.setString(17, tiempo);
-            ps.setString(18, conclusiones);
-            ps.setString(19, sexoNacimiento);
-            ps.setString(20, genero);
-            ps.setString(21, orientacionSexual);
-            ps.setString(22, idespecialista);
-            ps.setString(23, conductasPreocupantes);
-            ps.setString(24, estadoConciencia);
-            ps.setString(25, atencion);
-            ps.setString(26, sensopercepcion);
-            ps.setString(27, memoria);
-            ps.setString(28, conductaMotora);
-            ps.setString(29, contenidoPensamiento);
-            ps.setString(30, valoresConcatenados3);
-            ps.setString(31, juicio);
-            ps.setString(32, expresionLenguaje);
-            ps.setString(33, habitosPersonales);
-            ps.setString(34, actividadesIntelectivas);
-            ps.setString(35, aspectos);
-            ps.setString(36, formaRelacion);
-            ps.setString(37, sexoOpuesto);
-            ps.setString(38, humor);
-            ps.setString(39, actividades);
-            ps.setString(40, comportamiento);
-            ps.setString(41, afectividad);
-            ps.setInt(42, idPaciente);
-
-            int rowsAffected = ps.executeUpdate();
-
-            if (rowsAffected > 0) {
-                JOptionPane.showMessageDialog(null, "Los datos se han actualizado correctamente");
-            } else {
-                JOptionPane.showMessageDialog(null, "No se pudo actualizar los datos");
-            }
-        } catch (SQLException ex) {
-            Logger.getLogger(Asignar_Paciente.class.getName()).log(Level.SEVERE, null, ex);
-        }
-
-    }//GEN-LAST:event_menuActualizaActionPerformed
-
-    private void menuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_menuActionPerformed
-
     private void jCheckBox14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox14ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jCheckBox14ActionPerformed
@@ -4011,15 +3858,21 @@ public class PiscologiaClinica extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel63;
     private javax.swing.JLabel jLabel64;
     private javax.swing.JLabel jLabel65;
+    private javax.swing.JLabel jLabel66;
+    private javax.swing.JLabel jLabel67;
+    private javax.swing.JLabel jLabel68;
+    private javax.swing.JLabel jLabel69;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel20;
+    private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel4;
+    private javax.swing.JPanel jPanel5;
+    private javax.swing.JPanel jPanel6;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JMenu menu;
-    private javax.swing.JMenuItem menuActualiza;
     private javax.swing.JPanel panelActividades;
     private javax.swing.JPanel panelActividadesIntelectivas;
     private javax.swing.JPanel panelAfectividad;
