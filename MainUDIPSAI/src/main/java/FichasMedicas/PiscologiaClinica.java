@@ -428,27 +428,37 @@ public class PiscologiaClinica extends javax.swing.JFrame {
         jCheckBox251 = new javax.swing.JCheckBox();
         jCheckBox252 = new javax.swing.JCheckBox();
         jCheckBox253 = new javax.swing.JCheckBox();
-        jPanel6 = new javax.swing.JPanel();
-        jLabel20 = new javax.swing.JLabel();
+        jLabel68 = new javax.swing.JLabel();
+        jPanel2 = new javax.swing.JPanel();
+        jLabel66 = new javax.swing.JLabel();
+        jPanel4 = new javax.swing.JPanel();
+        jLabel67 = new javax.swing.JLabel();
+        jMenuBar1 = new javax.swing.JMenuBar();
+        menu = new javax.swing.JMenu();
+        menuActualiza = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jScrollPane1.setMaximumSize(new java.awt.Dimension(500, 500));
         jScrollPane1.setMinimumSize(new java.awt.Dimension(500, 500));
-        jScrollPane1.setPreferredSize(new java.awt.Dimension(2459, 2459));
+        jScrollPane1.setPreferredSize(new java.awt.Dimension(2474, 2474));
 
         jPanel1.setMaximumSize(new java.awt.Dimension(500, 500));
         jPanel1.setMinimumSize(new java.awt.Dimension(500, 500));
-        jPanel1.setPreferredSize(new java.awt.Dimension(2495, 2495));
+        jPanel1.setPreferredSize(new java.awt.Dimension(2479, 2479));
 
+        jLabel15.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel15.setText("Impresión diagnóstica:");
 
         panelExpresionLenguaje.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
+        jLabel28.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel28.setText("Expresión y lenguaje:");
 
+        jCheckBox13.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox13.setText("Palabras raras");
 
+        jCheckBox14.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox14.setText("Lógico y claro");
         jCheckBox14.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -456,32 +466,46 @@ public class PiscologiaClinica extends javax.swing.JFrame {
             }
         });
 
+        jCheckBox15.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox15.setText("Voz monótona");
 
+        jCheckBox16.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox16.setText("Mal hablado");
 
+        jCheckBox17.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox17.setText("Lento y teatral");
 
+        jCheckBox18.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox18.setText("Pesimista");
 
+        jCheckBox19.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox19.setText("Hiriente");
 
+        jCheckBox20.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox20.setText("Charlatán");
 
+        jCheckBox21.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox21.setText("Incoherente");
 
+        jCheckBox22.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox22.setText("Verborrea");
 
+        jCheckBox23.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox23.setText("Abatimiento");
 
+        jCheckBox24.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox24.setText("Tensión");
 
+        jCheckBox25.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox25.setText("Perplejidad");
 
+        jCheckBox26.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox26.setText("Suspicacia");
 
+        jCheckBox27.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox27.setText("Enfado");
 
+        jCheckBox28.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox28.setText("Preocupación");
         jCheckBox28.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -489,20 +513,28 @@ public class PiscologiaClinica extends javax.swing.JFrame {
             }
         });
 
+        jCheckBox29.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox29.setText("Obscenidad");
 
+        jCheckBox30.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox30.setText("Disartria");
 
+        jCheckBox31.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox31.setText("Afasia expresiva");
 
+        jCheckBox32.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox32.setText("Afasia receptiva");
 
+        jCheckBox33.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox33.setText("Afasia anómica");
 
+        jCheckBox34.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox34.setText("Afasia global");
 
+        jCheckBox35.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox35.setText("Ecolalia");
 
+        jCheckBox36.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox36.setText("Palilalia");
 
         javax.swing.GroupLayout panelExpresionLenguajeLayout = new javax.swing.GroupLayout(panelExpresionLenguaje);
@@ -515,19 +547,19 @@ public class PiscologiaClinica extends javax.swing.JFrame {
                     .addGroup(panelExpresionLenguajeLayout.createSequentialGroup()
                         .addContainerGap()
                         .addGroup(panelExpresionLenguajeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jCheckBox16, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jCheckBox15)
                             .addGroup(panelExpresionLenguajeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                                 .addComponent(jCheckBox13, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(jCheckBox14, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                            .addComponent(jCheckBox17))
+                            .addComponent(jCheckBox17)
+                            .addComponent(jCheckBox16))
                         .addGap(8, 8, 8)
-                        .addGroup(panelExpresionLenguajeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jCheckBox19, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jCheckBox18, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jCheckBox20, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jCheckBox21, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jCheckBox22))
+                        .addGroup(panelExpresionLenguajeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jCheckBox18, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jCheckBox22)
+                            .addComponent(jCheckBox19)
+                            .addComponent(jCheckBox21, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jCheckBox20))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(panelExpresionLenguajeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(panelExpresionLenguajeLayout.createSequentialGroup()
@@ -541,13 +573,10 @@ public class PiscologiaClinica extends javax.swing.JFrame {
                                         .addGroup(panelExpresionLenguajeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addComponent(jCheckBox32)
                                             .addComponent(jCheckBox31))))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(panelExpresionLenguajeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(panelExpresionLenguajeLayout.createSequentialGroup()
-                                        .addGap(3, 3, 3)
-                                        .addComponent(jCheckBox35))
-                                    .addGroup(panelExpresionLenguajeLayout.createSequentialGroup()
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jCheckBox36, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                    .addComponent(jCheckBox36, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jCheckBox35)))
                             .addGroup(panelExpresionLenguajeLayout.createSequentialGroup()
                                 .addGroup(panelExpresionLenguajeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(panelExpresionLenguajeLayout.createSequentialGroup()
@@ -558,13 +587,15 @@ public class PiscologiaClinica extends javax.swing.JFrame {
                                             .addComponent(jCheckBox29)))
                                     .addGroup(panelExpresionLenguajeLayout.createSequentialGroup()
                                         .addComponent(jCheckBox23, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addComponent(jCheckBox28)))
-                                .addGap(16, 16, 16)
+                                .addGap(6, 6, 6)
                                 .addGroup(panelExpresionLenguajeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jCheckBox33)
-                                    .addComponent(jCheckBox34))))))
-                .addGap(0, 14, Short.MAX_VALUE))
+                                    .addGroup(panelExpresionLenguajeLayout.createSequentialGroup()
+                                        .addGap(19, 19, 19)
+                                        .addComponent(jCheckBox34))
+                                    .addComponent(jCheckBox33))))))
+                .addGap(0, 30, Short.MAX_VALUE))
         );
         panelExpresionLenguajeLayout.setVerticalGroup(
             panelExpresionLenguajeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -616,45 +647,62 @@ public class PiscologiaClinica extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
+        jLabel16.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel16.setText("Derivación interconsulta:");
 
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel1.setText("Id del paciente:");
 
+        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel2.setText("Anamnesis Familiar:");
 
+        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel3.setText("Informacion Personal:");
 
+        jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel4.setText("Momentos evolutivos y desarrollo:");
 
+        jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel5.setText("Hábitos de oralidad:");
 
         panelConductasPreocupantes.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
+        jLabel40.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel40.setText("Conductas preocupantes:");
 
+        jCheckBox2.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox2.setText("Temores");
 
+        jCheckBox3.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox3.setText("Destructividad");
 
+        jCheckBox4.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox4.setText("Nerviosismos");
 
+        jCheckBox5.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox5.setText("Irritabilidad");
 
+        jCheckBox6.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox6.setText("Egocentrismo");
 
+        jCheckBox7.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox7.setText("Regresiones");
 
+        jCheckBox8.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox8.setText("Tics");
 
+        jCheckBox9.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox9.setText("Hurto");
 
+        jCheckBox10.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox10.setText("Mentira");
 
+        jCheckBox11.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox11.setText("Cuidado personal");
         jCheckBox11.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -662,8 +710,10 @@ public class PiscologiaClinica extends javax.swing.JFrame {
             }
         });
 
+        jCheckBox12.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox12.setText("Otros");
 
+        jLabel48.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel48.setText("Observaciones:");
 
         javax.swing.GroupLayout panelConductasPreocupantesLayout = new javax.swing.GroupLayout(panelConductasPreocupantes);
@@ -682,7 +732,7 @@ public class PiscologiaClinica extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(panelConductasPreocupantesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jCheckBox4)
-                            .addComponent(jCheckBox5, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jCheckBox5))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(panelConductasPreocupantesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jCheckBox6)
@@ -702,7 +752,7 @@ public class PiscologiaClinica extends javax.swing.JFrame {
                                 .addComponent(jCheckBox12))))
                     .addComponent(jLabel48)
                     .addComponent(txtObservacionesConductasPreocupantes, javax.swing.GroupLayout.PREFERRED_SIZE, 429, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(14, Short.MAX_VALUE))
         );
         panelConductasPreocupantesLayout.setVerticalGroup(
             panelConductasPreocupantesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -727,48 +777,67 @@ public class PiscologiaClinica extends javax.swing.JFrame {
                 .addComponent(jLabel48)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(txtObservacionesConductasPreocupantes, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(31, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
+        jLabel38.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel38.setText("Observaciones guia observación:");
 
+        jLabel39.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel39.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel39.setText("Id del Especialista:");
 
         panelHabitosPersonales.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
+        jLabel29.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel29.setText("Hábitos personales:");
 
+        jCheckBox1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox1.setText("Ensimismado");
 
+        jCheckBox37.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox37.setText("Hay que guiarlo");
 
+        jCheckBox38.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox38.setText("Molestoso");
 
+        jCheckBox39.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox39.setText("Lento");
 
+        jCheckBox40.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox40.setText("No desea hacer nada");
 
+        jCheckBox41.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox41.setText("Hace cosas extrañas");
 
+        jLabel7.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel7.setText("Conducta social:");
 
+        jCheckBox42.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox42.setText("Aislado");
 
+        jCheckBox43.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox43.setText("Participa en grupos");
 
+        jCheckBox44.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox44.setText("Es violento");
 
+        jCheckBox45.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox45.setText("Callado");
 
+        jCheckBox46.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox46.setText("Amigable y cooperador");
 
+        jCheckBox47.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox47.setText("Adaptable");
 
+        jCheckBox48.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox48.setText("Inquieto");
 
+        jCheckBox49.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox49.setText("Nervioso");
 
+        jCheckBox50.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox50.setText("Tiene amigos íntimos");
 
         javax.swing.GroupLayout panelHabitosPersonalesLayout = new javax.swing.GroupLayout(panelHabitosPersonales);
@@ -779,11 +848,11 @@ public class PiscologiaClinica extends javax.swing.JFrame {
                 .addGroup(panelHabitosPersonalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel29)
                     .addComponent(jCheckBox37)
-                    .addComponent(jCheckBox38, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jCheckBox1)
                     .addComponent(jCheckBox39)
                     .addComponent(jCheckBox40)
-                    .addComponent(jCheckBox41))
+                    .addComponent(jCheckBox41)
+                    .addComponent(jCheckBox38))
                 .addGap(64, 64, 64)
                 .addGroup(panelHabitosPersonalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(panelHabitosPersonalesLayout.createSequentialGroup()
@@ -797,7 +866,7 @@ public class PiscologiaClinica extends javax.swing.JFrame {
                                     .addComponent(jCheckBox50)
                                     .addComponent(jCheckBox48, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jCheckBox47, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                        .addGap(0, 0, Short.MAX_VALUE))
+                        .addGap(0, 67, Short.MAX_VALUE))
                     .addGroup(panelHabitosPersonalesLayout.createSequentialGroup()
                         .addGroup(panelHabitosPersonalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jCheckBox42, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -844,22 +913,31 @@ public class PiscologiaClinica extends javax.swing.JFrame {
 
         panelActividadesIntelectivas.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
+        jLabel30.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel30.setText("Actividades intelectivas:");
 
+        jCheckBox51.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox51.setText("Confuso");
 
+        jCheckBox52.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox52.setText("Centrado en sí mismo");
 
+        jCheckBox53.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox53.setText("Olvidadizo");
 
+        jCheckBox54.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox54.setText("Piensa y responde bien");
 
+        jCheckBox55.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox55.setText("Pocos pensamientos");
 
+        jCheckBox56.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox56.setText("No ve los errores");
 
+        jCheckBox57.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox57.setText("Actúa infantilmente");
 
+        jCheckBox58.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox58.setText("Desconfía");
 
         javax.swing.GroupLayout panelActividadesIntelectivasLayout = new javax.swing.GroupLayout(panelActividadesIntelectivas);
@@ -911,26 +989,37 @@ public class PiscologiaClinica extends javax.swing.JFrame {
 
         panelAspectos.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
+        jLabel31.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel31.setText("Aspectos:");
 
+        jCheckBox59.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox59.setText("Hosco");
 
+        jCheckBox60.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox60.setText("Fastidiado");
 
+        jCheckBox61.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox61.setText("Cansado");
 
+        jCheckBox62.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox62.setText("Viste raramente");
 
+        jCheckBox63.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox63.setText("Desordenado");
 
+        jCheckBox64.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox64.setText("Mugroso y fachoso");
 
+        jCheckBox65.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox65.setText("Exceso de ropas");
 
+        jCheckBox66.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox66.setText("Dramático y teatral");
 
+        jCheckBox67.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox67.setText("Viste normalmente");
 
+        jCheckBox68.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox68.setText("Impecable");
 
         javax.swing.GroupLayout panelAspectosLayout = new javax.swing.GroupLayout(panelAspectos);
@@ -991,36 +1080,49 @@ public class PiscologiaClinica extends javax.swing.JFrame {
 
         panelHabitosSueno.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
+        jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel6.setText("Hábitos de sueño:");
 
+        jLabel41.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel41.setText("Alteraciones del sueño:");
 
+        jLabel42.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel42.setText("Observaciones:");
 
+        jCheckBox69.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox69.setText("Hipersomnia");
 
+        jCheckBox70.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox70.setText("Dificultad de conciliar el sueño");
 
+        jCheckBox71.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox71.setText("Despertar frecuente");
 
+        jCheckBox72.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox72.setText("Despertar prematuro");
 
+        jCheckBox73.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox73.setText("Sonambulismo");
 
+        jLabel43.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel43.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel43.setText("Duerme: ");
 
         cbDuerme.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Sólo(a)", "Acompañado(a)" }));
 
+        jLabel44.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel44.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel44.setText("Con quién:");
 
+        jLabel45.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel45.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel45.setText("Edad:");
 
+        jLabel46.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel46.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel46.setText("Horario de:");
 
+        jLabel47.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel47.setText("a");
 
         cbHorario.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Nocturno", "Diurno", "Mixto" }));
@@ -1040,7 +1142,7 @@ public class PiscologiaClinica extends javax.swing.JFrame {
                     .addGroup(panelHabitosSuenoLayout.createSequentialGroup()
                         .addGroup(panelHabitosSuenoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jCheckBox70)
-                            .addComponent(jCheckBox69, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jCheckBox69))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(panelHabitosSuenoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(panelHabitosSuenoLayout.createSequentialGroup()
@@ -1075,7 +1177,7 @@ public class PiscologiaClinica extends javax.swing.JFrame {
                         .addGroup(panelHabitosSuenoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(txtConQuien)
                             .addComponent(txtEdad))))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(114, Short.MAX_VALUE))
         );
         panelHabitosSuenoLayout.setVerticalGroup(
             panelHabitosSuenoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1121,26 +1223,32 @@ public class PiscologiaClinica extends javax.swing.JFrame {
 
         panelAspectoPsicosexual.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
+        jLabel49.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel49.setText("Aspecto Psicosexual");
 
+        jLabel23.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel23.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel23.setText("Sexo de Nacimiento:");
 
         cbSexoNacimiento.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Masculino", "Femenino" }));
 
+        jLabel24.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel24.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel24.setText("Genero:");
 
         cbGenero.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Masculino", "Femenino", "Transgénero" }));
 
+        jLabel25.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel25.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel25.setText("Orientacion Sexual:");
 
         cbOrientacionSexual.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Heterosexual", "Homosexual", "Bisexual", "Asexual" }));
 
+        jLabel26.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel26.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel26.setText("Adaptación sexual:");
 
+        jLabel27.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel27.setText("Observaciones aspecto psicosexual:");
 
         javax.swing.GroupLayout panelAspectoPsicosexualLayout = new javax.swing.GroupLayout(panelAspectoPsicosexual);
@@ -1202,34 +1310,49 @@ public class PiscologiaClinica extends javax.swing.JFrame {
 
         panelFormaRelacion.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
+        jLabel32.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel32.setText("Forma de relación:");
 
+        jCheckBox74.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox74.setText("Duda de todos");
 
+        jCheckBox75.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox75.setText("Pasa aislado");
 
+        jCheckBox76.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox76.setText("Dice estar bien");
 
+        jCheckBox77.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox77.setText("Gusta de hacer daño a los démas");
 
+        jCheckBox78.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox78.setText("Tiene iniciativas");
 
+        jCheckBox79.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox79.setText("Colabora");
 
+        jCheckBox80.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox80.setText("Reticencia");
 
+        jCheckBox81.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox81.setText("Rechazo");
 
+        jCheckBox82.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox82.setText("Mutismo");
 
+        jCheckBox83.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox83.setText("Negativismo");
 
+        jCheckBox84.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox84.setText("Agresividad");
 
+        jCheckBox85.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox85.setText("Sarcasmo");
 
+        jCheckBox86.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox86.setText("Pegajosidad");
 
+        jCheckBox87.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox87.setText("Colaboración excesiva");
 
         javax.swing.GroupLayout panelFormaRelacionLayout = new javax.swing.GroupLayout(panelFormaRelacion);
@@ -1257,17 +1380,21 @@ public class PiscologiaClinica extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jCheckBox84, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(panelFormaRelacionLayout.createSequentialGroup()
-                                .addGroup(panelFormaRelacionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(jCheckBox81, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jCheckBox82, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jCheckBox83, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(panelFormaRelacionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(panelFormaRelacionLayout.createSequentialGroup()
+                                        .addGroup(panelFormaRelacionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                            .addComponent(jCheckBox81, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(jCheckBox82, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelFormaRelacionLayout.createSequentialGroup()
+                                        .addComponent(jCheckBox83)
+                                        .addGap(3, 3, 3)))
                                 .addGroup(panelFormaRelacionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jCheckBox87)
                                     .addComponent(jCheckBox86, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                     .addComponent(jCheckBox77)
                     .addComponent(jCheckBox78))
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addGap(0, 116, Short.MAX_VALUE))
         );
         panelFormaRelacionLayout.setVerticalGroup(
             panelFormaRelacionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1303,18 +1430,25 @@ public class PiscologiaClinica extends javax.swing.JFrame {
 
         panelSexoOpuesto.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
+        jLabel34.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel34.setText("Comportamiento con el sexo opuesto:");
 
+        jCheckBox88.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox88.setText("Atento");
 
+        jCheckBox89.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox89.setText("Seductor");
 
+        jCheckBox90.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox90.setText("Evita conversar");
 
+        jCheckBox91.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox91.setText("Impulsivo");
 
+        jCheckBox92.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox92.setText("Bromista");
 
+        jCheckBox93.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox93.setText("Tosco y descortés");
 
         javax.swing.GroupLayout panelSexoOpuestoLayout = new javax.swing.GroupLayout(panelSexoOpuesto);
@@ -1325,18 +1459,20 @@ public class PiscologiaClinica extends javax.swing.JFrame {
                 .addGroup(panelSexoOpuestoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel34)
                     .addGroup(panelSexoOpuestoLayout.createSequentialGroup()
-                        .addComponent(jCheckBox88, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(panelSexoOpuestoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(panelSexoOpuestoLayout.createSequentialGroup()
+                                .addComponent(jCheckBox88, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jCheckBox90))
+                            .addGroup(panelSexoOpuestoLayout.createSequentialGroup()
+                                .addComponent(jCheckBox89, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jCheckBox91, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jCheckBox90, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jCheckBox92, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(panelSexoOpuestoLayout.createSequentialGroup()
-                        .addComponent(jCheckBox89, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jCheckBox91, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jCheckBox93)))
-                .addGap(0, 0, Short.MAX_VALUE))
+                        .addGroup(panelSexoOpuestoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jCheckBox93)
+                            .addComponent(jCheckBox92, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addGap(0, 233, Short.MAX_VALUE))
         );
         panelSexoOpuestoLayout.setVerticalGroup(
             panelSexoOpuestoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1358,26 +1494,37 @@ public class PiscologiaClinica extends javax.swing.JFrame {
 
         panelHumor.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
+        jLabel35.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel35.setText("Humor:");
 
+        jCheckBox94.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox94.setText("Triste");
 
+        jCheckBox95.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox95.setText("Irritable");
 
+        jCheckBox96.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox96.setText("Propenso a riñas");
 
+        jCheckBox97.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox97.setText("Suave y afable");
 
+        jCheckBox98.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox98.setText("Indiferente");
 
+        jCheckBox99.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox99.setText("Preocupado y pensativo");
 
+        jCheckBox100.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox100.setText("Tendencia al llanto");
 
+        jCheckBox101.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox101.setText("Alegre");
 
+        jCheckBox102.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox102.setText("Eufórico");
 
+        jCheckBox103.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox103.setText("Lábil de humor");
 
         javax.swing.GroupLayout panelHumorLayout = new javax.swing.GroupLayout(panelHumor);
@@ -1432,42 +1579,61 @@ public class PiscologiaClinica extends javax.swing.JFrame {
 
         panelActividades.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
+        jLabel33.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel33.setText("Actividades:");
 
+        jCheckBox104.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox104.setText("Inactivo");
 
+        jCheckBox105.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox105.setText("Perezoso");
 
+        jCheckBox106.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox106.setText("Sólo hace cosas indispensables");
 
+        jCheckBox107.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox107.setText("Realiza sólo un tipo de trabajo");
 
+        jCheckBox108.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox108.setText("Dedicado a varias actividades");
 
+        jCheckBox109.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox109.setText("Apraxia");
 
+        jCheckBox110.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox110.setText("Catatonia");
 
+        jCheckBox111.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox111.setText("Agitación");
 
+        jCheckBox112.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox112.setText("Amaneramiento");
 
+        jCheckBox113.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox113.setText("Estereotipias");
 
+        jCheckBox114.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox114.setText("Ecopraxia");
 
+        jCheckBox115.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox115.setText("Obediencia automática");
 
+        jCheckBox116.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox116.setText("Negativismo");
 
+        jCheckBox117.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox117.setText("Interceptación motriz");
 
+        jCheckBox118.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox118.setText("Dispraxias");
 
+        jCheckBox119.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox119.setText("Actos impulsivos");
 
+        jCheckBox120.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox120.setText("Actos obsesivos");
 
+        jCheckBox121.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox121.setText("Tics");
 
         javax.swing.GroupLayout panelActividadesLayout = new javax.swing.GroupLayout(panelActividades);
@@ -1503,7 +1669,7 @@ public class PiscologiaClinica extends javax.swing.JFrame {
                                     .addComponent(jCheckBox120)
                                     .addComponent(jCheckBox118)
                                     .addComponent(jCheckBox121))))))
-                .addContainerGap(98, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         panelActividadesLayout.setVerticalGroup(
             panelActividadesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1547,110 +1713,134 @@ public class PiscologiaClinica extends javax.swing.JFrame {
 
         panelComportamiento.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
+        jLabel36.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel36.setText("Comportamiento:");
 
+        jCheckBox122.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox122.setText("Liderazgo");
 
+        jCheckBox123.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox123.setText("Sociabilidad");
 
+        jCheckBox124.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox124.setText("Responsabilidad");
 
+        jCheckBox125.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox125.setText("Tolerancia normal");
 
+        jCheckBox126.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox126.setText("Baja");
 
+        jCheckBox127.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox127.setText("Colaboración");
 
+        jCheckBox128.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox128.setText("Inquietud");
 
+        jCheckBox129.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox129.setText("Acata órdenes verbales");
 
+        jCheckBox130.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox130.setText("Agresivo");
 
+        jCheckBox131.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox131.setText("Extravagante");
 
+        jCheckBox132.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox132.setText("Antisocial");
 
+        jCheckBox133.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox133.setText("Impulsivo");
 
+        jCheckBox134.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox134.setText("Reflexivo");
 
+        jCheckBox135.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox135.setText("Pasivo");
 
+        jCheckBox136.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox136.setText("Apático");
 
+        jCheckBox137.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox137.setText("Dependiente");
 
+        jCheckBox138.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox138.setText("Dominante");
 
+        jCheckBox139.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox139.setText("Cauteloso");
 
+        jCheckBox140.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox140.setText("Quejoso");
 
+        jCheckBox141.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox141.setText("Temeroso");
 
+        jCheckBox142.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox142.setText("Teatral");
 
+        jCheckBox143.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox143.setText("Ritualista");
 
+        jCheckBox144.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox144.setText("Aislamiento");
 
+        jCheckBox145.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox145.setText("Ataques de pánico");
 
+        jCheckBox146.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox146.setText("Incapacidad de realización de actividades productivas");
 
+        jCheckBox147.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox147.setText("Riesgos o potencial suicida");
 
         javax.swing.GroupLayout panelComportamientoLayout = new javax.swing.GroupLayout(panelComportamiento);
         panelComportamiento.setLayout(panelComportamientoLayout);
         panelComportamientoLayout.setHorizontalGroup(
             panelComportamientoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel36)
             .addGroup(panelComportamientoLayout.createSequentialGroup()
                 .addGroup(panelComportamientoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel36)
+                    .addComponent(jCheckBox125)
+                    .addComponent(jCheckBox126)
+                    .addComponent(jCheckBox127)
+                    .addComponent(jCheckBox128)
+                    .addComponent(jCheckBox123)
+                    .addComponent(jCheckBox122)
+                    .addComponent(jCheckBox124))
+                .addGap(33, 33, 33)
+                .addGroup(panelComportamientoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(panelComportamientoLayout.createSequentialGroup()
-                        .addGroup(panelComportamientoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jCheckBox125)
-                            .addComponent(jCheckBox126)
-                            .addComponent(jCheckBox127)
-                            .addComponent(jCheckBox128)
-                            .addComponent(jCheckBox123)
-                            .addComponent(jCheckBox122)
-                            .addComponent(jCheckBox124))
-                        .addGap(33, 33, 33)
-                        .addGroup(panelComportamientoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(panelComportamientoLayout.createSequentialGroup()
-                                .addComponent(jCheckBox137)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jCheckBox146))
-                            .addComponent(jCheckBox135)
-                            .addComponent(jCheckBox134)
-                            .addComponent(jCheckBox133)
-                            .addComponent(jCheckBox132)
-                            .addGroup(panelComportamientoLayout.createSequentialGroup()
-                                .addGroup(panelComportamientoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jCheckBox131)
-                                    .addComponent(jCheckBox136))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(panelComportamientoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jCheckBox145)
-                                    .addComponent(jCheckBox140)
-                                    .addComponent(jCheckBox141)
-                                    .addComponent(jCheckBox142)
-                                    .addComponent(jCheckBox143)
-                                    .addComponent(jCheckBox144)))))
-                    .addGroup(panelComportamientoLayout.createSequentialGroup()
-                        .addGroup(panelComportamientoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jCheckBox129)
-                            .addComponent(jCheckBox130))
+                        .addComponent(jCheckBox137)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jCheckBox146))
+                    .addComponent(jCheckBox135)
+                    .addComponent(jCheckBox134)
+                    .addComponent(jCheckBox133)
+                    .addComponent(jCheckBox132)
+                    .addGroup(panelComportamientoLayout.createSequentialGroup()
                         .addGroup(panelComportamientoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jCheckBox139)
-                            .addGroup(panelComportamientoLayout.createSequentialGroup()
-                                .addComponent(jCheckBox138)
-                                .addGap(18, 18, 18)
-                                .addComponent(jCheckBox147)))))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(jCheckBox131)
+                            .addComponent(jCheckBox136))
+                        .addGap(3, 3, 3)
+                        .addGroup(panelComportamientoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jCheckBox144)
+                            .addComponent(jCheckBox145)
+                            .addComponent(jCheckBox143)
+                            .addComponent(jCheckBox142)
+                            .addComponent(jCheckBox141)
+                            .addComponent(jCheckBox140)))))
+            .addGroup(panelComportamientoLayout.createSequentialGroup()
+                .addGroup(panelComportamientoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jCheckBox129)
+                    .addComponent(jCheckBox130))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(panelComportamientoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jCheckBox139)
+                    .addGroup(panelComportamientoLayout.createSequentialGroup()
+                        .addComponent(jCheckBox138)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jCheckBox147, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE))))
         );
         panelComportamientoLayout.setVerticalGroup(
             panelComportamientoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1706,77 +1896,100 @@ public class PiscologiaClinica extends javax.swing.JFrame {
 
         panelAfectividad.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
+        jLabel37.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel37.setText("Afectividad:");
 
+        jCheckBox148.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox148.setText("Inhibición");
 
+        jCheckBox149.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox149.setText("Apatía");
 
+        jCheckBox150.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox150.setText("Humor variable");
 
+        jCheckBox151.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox151.setText("Alta sensibilidad");
 
+        jCheckBox152.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox152.setText("Agresividad");
 
+        jCheckBox153.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox153.setText("Sumisión");
 
+        jCheckBox154.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox154.setText("Rabietas");
 
+        jCheckBox155.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox155.setText("Solidadridad");
 
+        jCheckBox156.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox156.setText("Generosidad");
 
+        jCheckBox157.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox157.setText("Afectuoso");
 
+        jCheckBox158.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox158.setText("Angustia");
 
+        jCheckBox159.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox159.setText("Ansiedad situacional");
 
+        jCheckBox160.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox160.setText("Timidez");
 
+        jCheckBox161.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox161.setText("Ansiedad expectante");
 
+        jCheckBox162.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox162.setText("Depresión");
 
+        jCheckBox163.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox163.setText("Pérdida reciente de interés");
 
+        jCheckBox164.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox164.setText("Desesperación");
 
+        jCheckBox165.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox165.setText("Euforia");
 
+        jCheckBox166.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox166.setText("Indiferencia");
 
+        jCheckBox167.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox167.setText("Aplanamiento");
 
+        jCheckBox168.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox168.setText("Ambivalencia");
 
+        jCheckBox169.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox169.setText("Irritabilidad");
 
+        jCheckBox170.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox170.setText("Labilidad");
 
+        jCheckBox171.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox171.setText("Tenacidad");
 
+        jCheckBox172.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox172.setText("Incontinencia");
 
+        jCheckBox173.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox173.setText("Sentimientos inadecuados");
 
+        jCheckBox174.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox174.setText("Neotimia");
 
+        jCheckBox175.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox175.setText("Disociación ideo-afectiva");
 
+        jCheckBox176.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox176.setText("Anhedonia");
 
         javax.swing.GroupLayout panelAfectividadLayout = new javax.swing.GroupLayout(panelAfectividad);
         panelAfectividad.setLayout(panelAfectividadLayout);
         panelAfectividadLayout.setHorizontalGroup(
             panelAfectividadLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelAfectividadLayout.createSequentialGroup()
-                .addGap(117, 117, 117)
-                .addGroup(panelAfectividadLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jCheckBox158)
-                    .addComponent(jCheckBox159)
-                    .addComponent(jCheckBox160))
-                .addGap(0, 0, Short.MAX_VALUE))
             .addGroup(panelAfectividadLayout.createSequentialGroup()
                 .addGroup(panelAfectividadLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel37)
@@ -1791,30 +2004,25 @@ public class PiscologiaClinica extends javax.swing.JFrame {
                             .addComponent(jCheckBox148)
                             .addComponent(jCheckBox152)
                             .addComponent(jCheckBox157))
+                        .addGap(12, 12, 12)
                         .addGroup(panelAfectividadLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jCheckBox162)
+                            .addComponent(jCheckBox167)
                             .addGroup(panelAfectividadLayout.createSequentialGroup()
-                                .addGap(12, 12, 12)
                                 .addGroup(panelAfectividadLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jCheckBox162)
-                                    .addComponent(jCheckBox167)
-                                    .addGroup(panelAfectividadLayout.createSequentialGroup()
-                                        .addGroup(panelAfectividadLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jCheckBox163)
-                                            .addComponent(jCheckBox164)
-                                            .addComponent(jCheckBox166)
-                                            .addComponent(jCheckBox165))
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addGroup(panelAfectividadLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jCheckBox175)
-                                            .addComponent(jCheckBox174)
-                                            .addComponent(jCheckBox173)
-                                            .addComponent(jCheckBox176)))))
-                            .addGroup(panelAfectividadLayout.createSequentialGroup()
-                                .addGap(183, 183, 183)
+                                    .addComponent(jCheckBox163)
+                                    .addComponent(jCheckBox164)
+                                    .addComponent(jCheckBox166)
+                                    .addComponent(jCheckBox165))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(panelAfectividadLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jCheckBox169)
-                                    .addComponent(jCheckBox170)
-                                    .addComponent(jCheckBox168)))))
+                                    .addComponent(jCheckBox175)
+                                    .addComponent(jCheckBox174)
+                                    .addComponent(jCheckBox173)
+                                    .addComponent(jCheckBox176)))
+                            .addComponent(jCheckBox160)
+                            .addComponent(jCheckBox159)
+                            .addComponent(jCheckBox158)))
                     .addGroup(panelAfectividadLayout.createSequentialGroup()
                         .addComponent(jCheckBox151)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -1822,7 +2030,10 @@ public class PiscologiaClinica extends javax.swing.JFrame {
                         .addGap(37, 37, 37)
                         .addGroup(panelAfectividadLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jCheckBox172)
-                            .addComponent(jCheckBox171))))
+                            .addComponent(jCheckBox171)
+                            .addComponent(jCheckBox170)
+                            .addComponent(jCheckBox169)
+                            .addComponent(jCheckBox168))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         panelAfectividadLayout.setVerticalGroup(
@@ -1889,24 +2100,34 @@ public class PiscologiaClinica extends javax.swing.JFrame {
 
         panelEstadoConciencia.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
+        jLabel8.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel8.setText("Estado de conciencia:");
 
+        jCheckBox177.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox177.setText("Lucidez");
 
+        jCheckBox178.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox178.setText("Obnubilación");
 
+        jCheckBox179.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox179.setText("Estupor");
 
+        jCheckBox180.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox180.setText("Coma");
 
+        jCheckBox181.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox181.setText("Hipervigilancia");
 
+        jCheckBox182.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox182.setText("Confusión");
 
+        jCheckBox183.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox183.setText("Estado crepuscular");
 
+        jCheckBox184.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox184.setText("Onirismo");
 
+        jCheckBox185.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox185.setText("Sonambulismo");
 
         javax.swing.GroupLayout panelEstadoConcienciaLayout = new javax.swing.GroupLayout(panelEstadoConciencia);
@@ -1958,16 +2179,22 @@ public class PiscologiaClinica extends javax.swing.JFrame {
 
         panelAtencion.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
+        jLabel9.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel9.setText("Atención:");
 
+        jCheckBox186.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox186.setText("Hipercepción");
 
+        jCheckBox187.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox187.setText("Hipoprosexia");
 
+        jCheckBox188.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox188.setText("Disprosexia");
 
+        jCheckBox189.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox189.setText("Distraibilidad");
 
+        jCheckBox190.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox190.setText("Sin alteración");
 
         javax.swing.GroupLayout panelAtencionLayout = new javax.swing.GroupLayout(panelAtencion);
@@ -2008,18 +2235,25 @@ public class PiscologiaClinica extends javax.swing.JFrame {
 
         panelSensopercepcion.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
+        jLabel10.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel10.setText("Sensopercepción:");
 
+        jCheckBox191.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox191.setText("Hipercepción");
 
+        jCheckBox192.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox192.setText("Ilusiones");
 
+        jCheckBox193.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox193.setText("Seudoalucinaciones");
 
+        jCheckBox194.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox194.setText("Alusinosis");
 
+        jCheckBox195.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox195.setText("Macropsias");
 
+        jCheckBox196.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox196.setText("Micropsias");
         jCheckBox196.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -2027,8 +2261,10 @@ public class PiscologiaClinica extends javax.swing.JFrame {
             }
         });
 
+        jCheckBox197.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox197.setText("No presenta");
 
+        jCheckBox198.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox198.setText("Alucinaciones");
 
         javax.swing.GroupLayout panelSensopercepcionLayout = new javax.swing.GroupLayout(panelSensopercepcion);
@@ -2079,22 +2315,31 @@ public class PiscologiaClinica extends javax.swing.JFrame {
 
         panelMemoria.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
+        jLabel11.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel11.setText("Memoria:");
 
+        jCheckBox199.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox199.setText("Hipermnecia");
 
+        jCheckBox200.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox200.setText("Amnesia de fijación");
 
+        jCheckBox201.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox201.setText("Amnesia de evocación");
 
+        jCheckBox202.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox202.setText("Mixta");
 
+        jCheckBox203.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox203.setText("Lacunar");
 
+        jCheckBox204.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox204.setText("Dismensia");
 
+        jCheckBox205.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox205.setText("Paramnesias");
 
+        jCheckBox206.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox206.setText("Sin alteración");
 
         javax.swing.GroupLayout panelMemoriaLayout = new javax.swing.GroupLayout(panelMemoria);
@@ -2144,18 +2389,25 @@ public class PiscologiaClinica extends javax.swing.JFrame {
 
         panelConductaMotora.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
+        jLabel12.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel12.setText("Conducta motora:");
 
+        jCheckBox207.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox207.setText("Enlentecimiento");
 
+        jCheckBox208.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox208.setText("Excitación psicomotriz");
 
+        jCheckBox209.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox209.setText("Catatonia");
 
+        jCheckBox210.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox210.setText("Actitudes anormales");
 
+        jCheckBox211.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox211.setText("Alteraciones de la marcha");
 
+        jCheckBox212.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox212.setText("Inquietud");
 
         javax.swing.GroupLayout panelConductaMotoraLayout = new javax.swing.GroupLayout(panelConductaMotora);
@@ -2210,72 +2462,106 @@ public class PiscologiaClinica extends javax.swing.JFrame {
 
         panelContenidoPensamiento.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
+        jLabel50.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel50.setText("Contenido del pensamiento");
 
+        jCheckBox213.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox213.setText("Grandeza");
 
+        jCheckBox214.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox214.setText("Suicidio");
 
+        jCheckBox215.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox215.setText("Autocompasión");
 
+        jCheckBox216.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox216.setText("Inferioridad");
 
+        jCheckBox217.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox217.setText("Pérdida de interés");
 
+        jCheckBox218.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox218.setText("Indecisión");
 
+        jCheckBox219.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox219.setText("Necesidad de ayuda");
 
+        jCheckBox220.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox220.setText("Fracaso");
 
+        jCheckBox221.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox221.setText("Ruina");
 
+        jCheckBox222.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox222.setText("Autoacusación");
 
+        jCheckBox223.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox223.setText("Resentimiento");
 
+        jCheckBox224.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox224.setText("Muerte");
 
+        jCheckBox225.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox225.setText("Daño");
 
+        jCheckBox226.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox226.setText("Enfermedad grave");
 
+        jCheckBox227.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox227.setText("Hipocondrias");
 
+        jCheckBox228.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox228.setText("Nihilistas");
 
+        jCheckBox229.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox229.setText("No tener sentimientos");
 
+        jCheckBox230.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox230.setText("El mundo ha dejado de existir");
 
+        jCheckBox231.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox231.setText("Referencia");
 
+        jCheckBox232.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox232.setText("Extravagantes");
 
+        jCheckBox233.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox233.setText("Fóbicas");
 
+        jCheckBox234.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox234.setText("Compulsivas");
 
+        jCheckBox235.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox235.setText("Obsesivas");
 
+        jCheckBox236.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox236.setText("Desconfiazas");
 
+        jCheckBox237.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox237.setText("Des realización");
 
+        jCheckBox238.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox238.setText("Pérdida de control");
 
+        jCheckBox239.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox239.setText("Ser calumniado");
 
+        jCheckBox240.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox240.setText("Delirios paranoides");
 
+        jCheckBox241.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox241.setText("Depresivos");
 
+        jCheckBox242.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox242.setText("Místico religiosos");
 
+        jCheckBox243.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox243.setText("Sexuales");
 
+        jCheckBox244.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox244.setText("Otros");
 
+        jCheckBox245.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox245.setText("Difusos");
 
         javax.swing.GroupLayout panelContenidoPensamientoLayout = new javax.swing.GroupLayout(panelContenidoPensamiento);
@@ -2332,7 +2618,7 @@ public class PiscologiaClinica extends javax.swing.JFrame {
                                             .addComponent(jCheckBox244)
                                             .addComponent(jCheckBox245)
                                             .addComponent(jCheckBox243))))))))
-                .addContainerGap(43, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         panelContenidoPensamientoLayout.setVerticalGroup(
             panelContenidoPensamientoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2397,14 +2683,19 @@ public class PiscologiaClinica extends javax.swing.JFrame {
 
         panelJuicio.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
+        jLabel14.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel14.setText("Juicio:");
 
+        jCheckBox246.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox246.setText("Capacidad de autocrítica");
 
+        jCheckBox247.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox247.setText("Heterocrítica");
 
+        jCheckBox248.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox248.setText("Proyectos futuros");
 
+        jCheckBox249.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox249.setText("Conciencia de la enfermedad");
 
         javax.swing.GroupLayout panelJuicioLayout = new javax.swing.GroupLayout(panelJuicio);
@@ -2442,8 +2733,10 @@ public class PiscologiaClinica extends javax.swing.JFrame {
 
         panelOrientacionFunciones.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
+        jLabel51.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel51.setText("Orientación:");
 
+        jLabel62.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel62.setText("Desorientación en tiempo:");
 
         cbDesorientacion.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "0", "1", "2", "3" }));
@@ -2454,10 +2747,13 @@ public class PiscologiaClinica extends javax.swing.JFrame {
 
         cbRespectoOtrasPersonas.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "0", "1", "2", "3" }));
 
+        jLabel63.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel63.setText("Espacio:");
 
+        jLabel64.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel64.setText("Respecto a sí mismo:");
 
+        jLabel65.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel65.setText("Respecto a otras personas:");
 
         javax.swing.GroupLayout panelOrientacionFuncionesLayout = new javax.swing.GroupLayout(panelOrientacionFunciones);
@@ -2470,10 +2766,10 @@ public class PiscologiaClinica extends javax.swing.JFrame {
             .addGroup(panelOrientacionFuncionesLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(panelOrientacionFuncionesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel62)
-                    .addComponent(jLabel64)
                     .addComponent(jLabel65)
-                    .addComponent(jLabel63, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabel63, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel62, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel64, javax.swing.GroupLayout.Alignment.TRAILING))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(panelOrientacionFuncionesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(cbRespectoOtrasPersonas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -2508,20 +2804,26 @@ public class PiscologiaClinica extends javax.swing.JFrame {
 
         panelTratamientoIndividual.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
+        jLabel52.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel52.setText("Plan de Tratamiento Individual");
 
+        jLabel17.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel17.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel17.setText("Objetivo:");
 
+        jLabel18.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel18.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel18.setText("Estrategias de intervención:");
 
+        jLabel19.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel19.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel19.setText("Indicador de logro:");
 
+        jLabel21.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel21.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel21.setText("Tiempo estimado:");
 
+        jLabel22.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel22.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel22.setText("Conclusiones de la evaluación:");
 
@@ -2532,28 +2834,22 @@ public class PiscologiaClinica extends javax.swing.JFrame {
             .addGroup(panelTratamientoIndividualLayout.createSequentialGroup()
                 .addGroup(panelTratamientoIndividualLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(panelTratamientoIndividualLayout.createSequentialGroup()
-                        .addGroup(panelTratamientoIndividualLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(panelTratamientoIndividualLayout.createSequentialGroup()
-                                .addGroup(panelTratamientoIndividualLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(jLabel18, javax.swing.GroupLayout.DEFAULT_SIZE, 146, Short.MAX_VALUE)
-                                    .addComponent(jLabel19, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jLabel21, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                .addGap(11, 11, 11))
-                            .addGroup(panelTratamientoIndividualLayout.createSequentialGroup()
-                                .addComponent(jLabel17, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addGap(12, 12, 12)))
-                        .addGroup(panelTratamientoIndividualLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txtTiempo, javax.swing.GroupLayout.DEFAULT_SIZE, 389, Short.MAX_VALUE)
-                            .addComponent(txtLogro)
-                            .addComponent(txtEstrategiasIntervencio)
-                            .addComponent(txtObjetivo)))
-                    .addGroup(panelTratamientoIndividualLayout.createSequentialGroup()
                         .addComponent(jLabel52)
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(panelTratamientoIndividualLayout.createSequentialGroup()
-                        .addComponent(jLabel22)
-                        .addGap(11, 11, 11)
-                        .addComponent(txtEvaluacionConclusiones)))
+                        .addGroup(panelTratamientoIndividualLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel21, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel22)
+                            .addComponent(jLabel19, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel18)
+                            .addComponent(jLabel17, javax.swing.GroupLayout.PREFERRED_SIZE, 153, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(panelTratamientoIndividualLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txtEvaluacionConclusiones, javax.swing.GroupLayout.DEFAULT_SIZE, 397, Short.MAX_VALUE)
+                            .addComponent(txtTiempo)
+                            .addComponent(txtLogro)
+                            .addComponent(txtEstrategiasIntervencio)
+                            .addComponent(txtObjetivo))))
                 .addContainerGap())
         );
         panelTratamientoIndividualLayout.setVerticalGroup(
@@ -2586,6 +2882,7 @@ public class PiscologiaClinica extends javax.swing.JFrame {
 
         panelEstructuraPensamiento.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
+        jLabel13.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel13.setText("Estructura del pensamiento:");
 
         cbincoherencia.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "0", "1", "2", "3" }));
@@ -2604,38 +2901,51 @@ public class PiscologiaClinica extends javax.swing.JFrame {
 
         cbNeologismos.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "0", "1", "2", "3" }));
 
+        jLabel53.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel53.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel53.setText("Incoherencia:");
 
+        jLabel54.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel54.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel54.setText("Bloqueos:");
 
+        jLabel55.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel55.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel55.setText("Perseveración");
 
+        jLabel56.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel56.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel56.setText("Prolijidad:");
 
+        jLabel57.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel57.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel57.setText("Desgragación:");
 
+        jLabel58.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel58.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel58.setText("Estereotipias:");
 
+        jLabel59.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel59.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel59.setText("Neologismos:");
 
+        jLabel60.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel60.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel60.setText("Musitación:");
 
+        jLabel61.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel61.setText("Curso de pensamiento:");
 
+        jCheckBox250.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox250.setText("Retardo");
 
+        jCheckBox251.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox251.setText("Aceleración");
 
+        jCheckBox252.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox252.setText("Fuga de ideas");
 
+        jCheckBox253.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jCheckBox253.setText("Mutismo");
 
         javax.swing.GroupLayout panelEstructuraPensamientoLayout = new javax.swing.GroupLayout(panelEstructuraPensamiento);
@@ -2727,34 +3037,19 @@ public class PiscologiaClinica extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jPanel6.setBackground(new java.awt.Color(181, 37, 26));
-
-        jLabel20.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel20.setForeground(new java.awt.Color(240, 240, 240));
-        jLabel20.setText("Asignación de Paciente");
-
-        javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
-        jPanel6.setLayout(jPanel6Layout);
-        jPanel6Layout.setHorizontalGroup(
-            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel6Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel20, javax.swing.GroupLayout.PREFERRED_SIZE, 923, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(246, Short.MAX_VALUE))
-        );
-        jPanel6Layout.setVerticalGroup(
-            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel6Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel20)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
+        jLabel68.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jLabel68.setText("Asignación de Paciente");
+        jLabel68.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel68, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -2765,51 +3060,47 @@ public class PiscologiaClinica extends javax.swing.JFrame {
                             .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addComponent(txtInformacionPersonal, javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(txtAnamnesis, javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(txtIdPaciente, javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(txtEvolutivosDesarrollo, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 352, Short.MAX_VALUE))
-                            .addComponent(txtHabitosOralidad)))
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addComponent(panelHumor, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(panelSexoOpuesto, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(panelFormaRelacion, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(panelAspectos, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(panelActividadesIntelectivas, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(panelHabitosPersonales, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(panelExpresionLenguaje, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(panelAspectoPsicosexual, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(panelConductasPreocupantes, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(panelHabitosSueno, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(txtInformacionPersonal, javax.swing.GroupLayout.DEFAULT_SIZE, 368, Short.MAX_VALUE)
+                            .addComponent(txtAnamnesis)
+                            .addComponent(txtIdPaciente)
+                            .addComponent(txtHabitosOralidad, javax.swing.GroupLayout.DEFAULT_SIZE, 368, Short.MAX_VALUE)
+                            .addComponent(txtEvolutivosDesarrollo)))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(panelHumor, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(panelSexoOpuesto, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(panelFormaRelacion, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(panelAspectos, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(panelActividadesIntelectivas, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(panelHabitosPersonales, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(panelExpresionLenguaje, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(panelAspectoPsicosexual, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(panelConductasPreocupantes, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(panelHabitosSueno, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(0, 0, Short.MAX_VALUE))
                     .addComponent(panelActividades, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jLabel39, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(txtIdEspecialista, javax.swing.GroupLayout.PREFERRED_SIZE, 430, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addGroup(jPanel1Layout.createSequentialGroup()
+                            .addGap(18, 18, 18)
+                            .addComponent(jLabel39, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(txtIdEspecialista))
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(panelTratamientoIndividual, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addComponent(jLabel16)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(txtDerivacion, javax.swing.GroupLayout.PREFERRED_SIZE, 435, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addComponent(jLabel15)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(txtDiagnostico, javax.swing.GroupLayout.PREFERRED_SIZE, 435, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addComponent(panelOrientacionFunciones, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(panelJuicio, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(panelContenidoPensamiento, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addComponent(panelTratamientoIndividual, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jPanel20, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGap(2347, 2347, 2347))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(jLabel15)
+                                    .addComponent(jLabel16))
+                                .addGroup(jPanel1Layout.createSequentialGroup()
+                                    .addGap(145, 145, 145)
+                                    .addComponent(txtDerivacion, javax.swing.GroupLayout.PREFERRED_SIZE, 434, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(txtDiagnostico, javax.swing.GroupLayout.PREFERRED_SIZE, 434, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(panelOrientacionFunciones, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(panelJuicio, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(panelContenidoPensamiento, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
                                 .addComponent(jLabel38)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -2819,38 +3110,20 @@ public class PiscologiaClinica extends javax.swing.JFrame {
                             .addComponent(panelAtencion, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(panelEstadoConciencia, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(panelAfectividad, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(panelComportamiento, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(panelConductaMotora, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(panelEstructuraPensamiento, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addGap(0, 0, Short.MAX_VALUE))))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+                            .addComponent(panelEstructuraPensamiento, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(panelComportamiento, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jPanel20, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(2347, 2347, 2347))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel68)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(panelComportamiento, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(panelAfectividad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(txtObservacionesguiaObservacion, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel38))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(panelEstadoConciencia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(panelAtencion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(3, 3, 3)
-                        .addComponent(panelSensopercepcion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(panelMemoria, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(panelConductaMotora, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel1)
@@ -2878,18 +3151,8 @@ public class PiscologiaClinica extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(panelAspectoPsicosexual, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(panelExpresionLenguaje, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(panelEstructuraPensamiento, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(panelExpresionLenguaje, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(panelContenidoPensamiento, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(panelJuicio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(panelOrientacionFunciones, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(panelHabitosPersonales, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(panelActividadesIntelectivas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -2900,11 +3163,41 @@ public class PiscologiaClinica extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(panelSexoOpuesto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(panelHumor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel20, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(panelHumor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(60, 60, 60)
+                                .addComponent(jPanel20, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(41, 41, 41)
+                                .addComponent(panelActividades, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(panelComportamiento, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(panelAfectividad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(txtObservacionesguiaObservacion, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel38))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(panelEstadoConciencia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(panelAtencion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(3, 3, 3)
+                        .addComponent(panelSensopercepcion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(panelMemoria, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(panelConductaMotora, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(panelEstructuraPensamiento, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(panelContenidoPensamiento, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(panelJuicio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(panelOrientacionFunciones, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(txtDiagnostico, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel15))
@@ -2913,32 +3206,97 @@ public class PiscologiaClinica extends javax.swing.JFrame {
                             .addComponent(txtDerivacion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel16))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(panelTratamientoIndividual, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(panelActividades, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(txtIdEspecialista, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel39))
-                .addContainerGap(85, Short.MAX_VALUE))
+                        .addComponent(panelTratamientoIndividual, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(txtIdEspecialista, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel39))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
+        jPanel1Layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {txtAnamnesis, txtEvolutivosDesarrollo, txtHabitosOralidad, txtInformacionPersonal});
+
         jScrollPane1.setViewportView(jPanel1);
+
+        jPanel2.setBackground(new java.awt.Color(181, 37, 26));
+
+        jLabel66.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel66.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel66.setText("UDIPSAI");
+
+        jPanel4.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+
+        jLabel67.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel67.setForeground(new java.awt.Color(51, 51, 51));
+        jLabel67.setText("Psicología clínica");
+
+        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
+        jPanel4.setLayout(jPanel4Layout);
+        jPanel4Layout.setHorizontalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addComponent(jLabel67)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+        jPanel4Layout.setVerticalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel67)
+                .addContainerGap(14, Short.MAX_VALUE))
+        );
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel66, javax.swing.GroupLayout.PREFERRED_SIZE, 280, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(889, Short.MAX_VALUE))
+            .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel66, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+
+        menu.setText("Menu");
+        menu.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menuActionPerformed(evt);
+            }
+        });
+
+        menuActualiza.setText("Actualizar");
+        menuActualiza.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menuActualizaActionPerformed(evt);
+            }
+        });
+        menu.add(menuActualiza);
+
+        jMenuBar1.add(menu);
+
+        setJMenuBar(jMenuBar1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1200, Short.MAX_VALUE)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 1200, Short.MAX_VALUE))
+            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 1179, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 650, Short.MAX_VALUE)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 650, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 690, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         pack();
@@ -3471,6 +3829,156 @@ public class PiscologiaClinica extends javax.swing.JFrame {
         return sb.toString();
     }
 
+    private void menuActualizaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuActualizaActionPerformed
+        // TODO add your handling code here:
+
+        // TODO add your handling code here:
+        // Obtener los valores ingresados en los campos de texto
+        // Obtener los valores ingresados en los campos de texto
+        int idPaciente = Integer.parseInt(txtIdPaciente.getText());
+        String anamnesisFamiliar = txtAnamnesis.getText();
+        String informacionPersonal = txtInformacionPersonal.getText();
+        String evolutivosYDesarrollo = txtEvolutivosDesarrollo.getText();
+        String habitosOralidad = txtHabitosOralidad.getText();
+        String observacionesSueno = txtObseravacionSueno.getText();
+        String observacionesConductaPreocupante = txtObservacionesConductasPreocupantes.getText();
+        String adaptacionSexual = txtAdaptacionSexual.getText();
+        String observacionesPsicosexual = txtObservacionesPsicosexual.getText();
+        String observacionesguiaObservacion = txtObservacionesguiaObservacion.getText();
+        String diagnostico = txtDiagnostico.getText();
+        String derivacionInterconsulta = txtDerivacion.getText();
+        String objetivo = txtObjetivo.getText();
+        String estrategiasIntervencion = txtEstrategiasIntervencio.getText();
+        String logro = txtLogro.getText();
+        String tiempo = txtTiempo.getText();
+        String conclusiones = txtEvaluacionConclusiones.getText();
+        String idespecialista = txtIdEspecialista.getText();
+
+        // Obtener los valores seleccionados de los JComboBox
+        String sexoNacimiento = cbSexoNacimiento.getSelectedItem().toString();
+        String genero = cbGenero.getSelectedItem().toString();
+        String orientacionSexual = cbOrientacionSexual.getSelectedItem().toString();
+
+        // Obtener los valores seleccionados de los JCheckBox y convertirlos en una cadena separada por comas
+        String conductasPreocupantes = obtenerValoresSeleccionados(panelConductasPreocupantes);
+        String estadoConciencia = obtenerValoresSeleccionados(panelEstadoConciencia);
+        String atencion = obtenerValoresSeleccionados(panelAtencion);
+        String sensopercepcion = obtenerValoresSeleccionados(panelSensopercepcion);
+        String memoria = obtenerValoresSeleccionados(panelMemoria);
+        String conductaMotora = obtenerValoresSeleccionados(panelConductaMotora);
+        String contenidoPensamiento = obtenerValoresSeleccionados(panelContenidoPensamiento);
+        String juicio = obtenerValoresSeleccionados(panelJuicio);
+        String expresionLenguaje = obtenerValoresSeleccionados(panelExpresionLenguaje);
+        String habitosPersonales = obtenerValoresSeleccionados(panelHabitosPersonales);
+        String actividadesIntelectivas = obtenerValoresSeleccionados(panelActividadesIntelectivas);
+        String aspectos = obtenerValoresSeleccionados(panelAspectos);
+        String formaRelacion = obtenerValoresSeleccionados(panelFormaRelacion);
+        String sexoOpuesto = obtenerValoresSeleccionados(panelSexoOpuesto);
+        String humor = obtenerValoresSeleccionados(panelHumor);
+        String actividades = obtenerValoresSeleccionados(panelActividades);
+        String comportamiento = obtenerValoresSeleccionados(panelComportamiento);
+        String afectividad = obtenerValoresSeleccionados(panelAfectividad);
+
+        // Obtener los valores concatenados de los campos específicos
+        String horario = txtHorario.getText();
+        String horario2 = txtHorario2.getText();
+        String cbHorarioValue = cbHorario.getSelectedItem().toString();
+        String cbDuermeValue = cbDuerme.getSelectedItem().toString();
+        String conQuien = txtConQuien.getText();
+        String edad = txtEdad.getText();
+
+        String habitosSeleccionados = obtenerHabitosSuenoSeleccionados(); // Método para obtener las opciones seleccionadas de los JCheckBox
+
+        String valoresConcatenados = horario + "|||" + horario2 + "|||" + cbHorarioValue + "|||" + cbDuermeValue + "|||" + conQuien + "|||" + edad + "|||" + habitosSeleccionados;
+
+        String incoherencia = cbincoherencia.getSelectedItem().toString();
+        String bloqueos = cbbloquelos.getSelectedItem().toString();
+        String Perseveracion = cbPerseveracion.getSelectedItem().toString();
+        String Prolijidad = cbProlijidad.getSelectedItem().toString();
+        String Desgragacion = cbDesgragacion.getSelectedItem().toString();
+        String Estereotipias = cbEstereotipias.getSelectedItem().toString();
+        String Neologismos = cbNeologismos.getSelectedItem().toString();
+        String Musitacion = cbMusitacion.getSelectedItem().toString();
+
+        String estructurapensamientoSeleccionados = obtenerEstruscturaPensamiento(); // Método para obtener las opciones seleccionadas de los JCheckBox
+
+        String valoresConcatenados2 = incoherencia + "|||" + bloqueos + "|||" + Perseveracion + "|||" + Prolijidad + "|||" + Desgragacion + "|||" + Estereotipias + "|||" + Neologismos + "|||" + Musitacion + "|||" + estructurapensamientoSeleccionados;
+
+        String Desorientacion = cbDesorientacion.getSelectedItem().toString();
+        String Espacio = cbEspacio.getSelectedItem().toString();
+        String RespectoSiMismo = cbRespectoSiMismo.getSelectedItem().toString();
+        String RespectoOtrasPersonas = cbRespectoOtrasPersonas.getSelectedItem().toString();
+
+        String valoresConcatenados3 = Desorientacion + "|||" + Espacio + "|||" + RespectoSiMismo + "|||" + RespectoOtrasPersonas;
+
+        // Realizar la actualización en la base de datos con los valores obtenidos
+        Connection con = null;
+
+        try {
+            con = conexion();
+
+            PreparedStatement ps = con.prepareStatement("UPDATE historia_psicologia_clinica SET anamnesisFamiliar=?, personal=?, momentosEvolutivosDesarrollo=?, habitosOralidad=?, habitosSueño=?, observacioneshabitossueno=?, observacionesconductaspreocupantes=?, adaptacionSexual=?, observacionesAspectoPsicosexual=?, observacionesguiaobservacion=?, estructuraDelPensamiento=?, impresionDiagnostica=?, derivacionInterconsulta=?, objetivo=?, estrategiasIntervencion=?, indicadorLogro=?, tiempoEstimado=?, evaluacionConclusiones=?, sexoNacimiento=?, genero=?, orientacion=?, idEspecialista=?, conductasPreocupantes=?, estadoConciencia=?, atencion=?, sensopercepsion=?, memoria=?, conductaMotora=?, contenidodelpensamiento=?, orientacionfunciones=?, juicio=?, expresionYLenguaje=?, habitosPersonales=?, actividadesIntelectivas=?, aspectos=?, formaRelacion=?, comportamientoSexoOpuesto=?, humor=?, actividades=?, comportamiento=?, afectividad=? WHERE idPaciente=?");
+
+            ps.setString(1, anamnesisFamiliar);
+            ps.setString(2, informacionPersonal);
+            ps.setString(3, evolutivosYDesarrollo);
+            ps.setString(4, habitosOralidad);
+            ps.setString(5, valoresConcatenados);
+            ps.setString(6, observacionesSueno);
+            ps.setString(7, observacionesConductaPreocupante);
+            ps.setString(8, adaptacionSexual);
+            ps.setString(9, observacionesPsicosexual);
+            ps.setString(10, observacionesguiaObservacion);
+            ps.setString(11, valoresConcatenados2);
+            ps.setString(12, diagnostico);
+            ps.setString(13, derivacionInterconsulta);
+            ps.setString(14, objetivo);
+            ps.setString(15, estrategiasIntervencion);
+            ps.setString(16, logro);
+            ps.setString(17, tiempo);
+            ps.setString(18, conclusiones);
+            ps.setString(19, sexoNacimiento);
+            ps.setString(20, genero);
+            ps.setString(21, orientacionSexual);
+            ps.setString(22, idespecialista);
+            ps.setString(23, conductasPreocupantes);
+            ps.setString(24, estadoConciencia);
+            ps.setString(25, atencion);
+            ps.setString(26, sensopercepcion);
+            ps.setString(27, memoria);
+            ps.setString(28, conductaMotora);
+            ps.setString(29, contenidoPensamiento);
+            ps.setString(30, valoresConcatenados3);
+            ps.setString(31, juicio);
+            ps.setString(32, expresionLenguaje);
+            ps.setString(33, habitosPersonales);
+            ps.setString(34, actividadesIntelectivas);
+            ps.setString(35, aspectos);
+            ps.setString(36, formaRelacion);
+            ps.setString(37, sexoOpuesto);
+            ps.setString(38, humor);
+            ps.setString(39, actividades);
+            ps.setString(40, comportamiento);
+            ps.setString(41, afectividad);
+            ps.setInt(42, idPaciente);
+
+            int rowsAffected = ps.executeUpdate();
+
+            if (rowsAffected > 0) {
+                JOptionPane.showMessageDialog(null, "Los datos se han actualizado correctamente");
+            } else {
+                JOptionPane.showMessageDialog(null, "No se pudo actualizar los datos");
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(Asignar_Paciente.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+    }//GEN-LAST:event_menuActualizaActionPerformed
+
+    private void menuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_menuActionPerformed
+
     private void jCheckBox14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox14ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jCheckBox14ActionPerformed
@@ -3808,7 +4316,6 @@ public class PiscologiaClinica extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel23;
@@ -3861,18 +4368,17 @@ public class PiscologiaClinica extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel66;
     private javax.swing.JLabel jLabel67;
     private javax.swing.JLabel jLabel68;
-    private javax.swing.JLabel jLabel69;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
+    private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel20;
-    private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
-    private javax.swing.JPanel jPanel5;
-    private javax.swing.JPanel jPanel6;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JMenu menu;
+    private javax.swing.JMenuItem menuActualiza;
     private javax.swing.JPanel panelActividades;
     private javax.swing.JPanel panelActividadesIntelectivas;
     private javax.swing.JPanel panelAfectividad;
