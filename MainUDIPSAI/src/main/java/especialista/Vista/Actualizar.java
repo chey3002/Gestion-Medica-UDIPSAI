@@ -60,7 +60,7 @@ public class Actualizar extends javax.swing.JFrame {
         setPreferredSize(new java.awt.Dimension(900, 640));
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Actualizar Especialista", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(181, 37, 26))); // NOI18N
+        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Actualizar Especialista", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(181, 37, 26))); // NOI18N
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
@@ -94,7 +94,7 @@ public class Actualizar extends javax.swing.JFrame {
 
         btnguardar.setBackground(new java.awt.Color(181, 37, 26));
         btnguardar.setForeground(new java.awt.Color(255, 255, 255));
-        btnguardar.setText("Guardar");
+        btnguardar.setText("Actualizar");
         btnguardar.setBorder(null);
         jPanel1.add(btnguardar, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 340, 95, 30));
 
@@ -106,9 +106,9 @@ public class Actualizar extends javax.swing.JFrame {
 
         btnactualizar.setBackground(new java.awt.Color(181, 37, 26));
         btnactualizar.setForeground(new java.awt.Color(255, 255, 255));
-        btnactualizar.setText("Actualizar");
+        btnactualizar.setText("Cargar Especialista");
         btnactualizar.setBorder(null);
-        jPanel1.add(btnactualizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 340, 100, 30));
+        jPanel1.add(btnactualizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 340, 120, 30));
 
         jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel9.setText("Contraseña:");
@@ -149,7 +149,7 @@ public class Actualizar extends javax.swing.JFrame {
         jPanel1.add(checkActivoNo, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 292, -1, -1));
 
         jScrollPane1.setBackground(new java.awt.Color(255, 255, 255));
-        jScrollPane1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Tabla Especialistas", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(181, 37, 26))); // NOI18N
+        jScrollPane1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Tabla Especialistas", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(181, 37, 26))); // NOI18N
 
         tablaespecialistas.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {

@@ -1,0 +1,404 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="e1ae86f3-4250-44d6-8ddf-e239da6ffdd1">
+	<property name="template.type" value="columnar"/>
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="576"/>
+	<style name="Title" forecolor="#000000" fontName="Times New Roman" fontSize="50" isBold="false" pdfFontName="Times-Bold"/>
+	<style name="SubTitle" forecolor="#666666" fontName="Times New Roman" fontSize="18" isBold="false" pdfFontName="Times-Roman"/>
+	<style name="Column header" forecolor="#666666" fontName="Times New Roman" fontSize="14" isBold="true" pdfFontName="Times-Roman"/>
+	<style name="Detail" mode="Transparent" fontName="Times New Roman" pdfFontName="Times-Roman"/>
+	<style name="Row" mode="Transparent" fontName="Times New Roman" pdfFontName="Times-Roman">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$V{REPORT_COUNT}%2 == 0]]></conditionExpression>
+			<style mode="Opaque" backcolor="#F0EFEF"/>
+		</conditionalStyle>
+	</style>
+	<parameter name="idPaciente" class="java.lang.Integer"/>
+        <queryString language="SQL">
+        <![CDATA[select * from historia_fonoaudiologia where idPaciente = $P{idPaciente}]]>
+        </queryString>
+	<field name="id" class="java.lang.Integer"/>
+	<field name="idPaciente" class="java.lang.Integer"/>
+	<field name="tonoVoz" class="java.lang.String"/>
+	<field name="respiracion" class="java.lang.String"/>
+	<field name="situacionesAlteracionVoz" class="java.lang.String"/>
+	<field name="desdeCuandoAlteracionesDeVoz" class="java.lang.String"/>
+	<field name="informacion" class="java.lang.String"/>
+	<field name="dificultadPalabras" class="java.lang.String"/>
+	<field name="trabarse" class="java.lang.String"/>
+	<field name="comprension" class="java.lang.String"/>
+	<field name="objetosEntorno" class="java.lang.String"/>
+	<field name="comprendeSuHabla" class="java.lang.String"/>
+	<field name="reconoceFuenteSonora" class="java.lang.String"/>
+	<field name="preferenciaComunicacion" class="java.lang.String"/>
+	<field name="examenAudiologico" class="java.lang.String"/>
+	<field name="diagnostico" class="java.lang.String"/>
+	<field name="perdidaAudicion" class="java.lang.String"/>
+	<field name="infeccionesOido" class="java.lang.String"/>
+	<field name="edad" class="java.lang.Integer"/>
+	<field name="idEspecialista" class="java.lang.String"/>
+	<field name="diagnosticoEvaluacion" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="782" splitType="Stretch">
+			<staticText>
+				<reportElement style="Column header" positionType="Float" x="0" y="153" width="266" height="20" forecolor="#000000" uuid="22c5eb1b-ccf3-4ae0-841b-0ae5f2705d5f"/>
+				<textElement>
+					<font size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Dificultad para pronunciar algunas palabras: ]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="Detail" positionType="Float" x="0" y="173" width="555" height="18" uuid="bbe5bb83-afbe-4d11-bee3-97620eef52e8"/>
+				<textElement>
+					<font size="12" isBold="true" pdfFontName="Times-Bold"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{dificultadPalabras}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="Column header" positionType="Float" x="0" y="205" width="132" height="20" forecolor="#000000" uuid="9174fcea-ff88-4da2-8c8a-a4a5783cff43"/>
+				<textElement>
+					<font size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Trabarse:]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="Detail" positionType="Float" x="0" y="225" width="555" height="18" uuid="bcd2e237-6832-4ed7-b877-6e8f04862f8d"/>
+				<textElement>
+					<font size="12" isBold="true" pdfFontName="Times-Bold"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{trabarse}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="Column header" positionType="Float" x="0" y="257" width="285" height="20" forecolor="#000000" uuid="3ea8870d-beb2-47e9-824e-fbf3e93ad798"/>
+				<textElement>
+					<font size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Sabe cómo se llaman los objetos de su entorno:   ]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="Detail" positionType="Float" x="0" y="277" width="557" height="18" uuid="93231aaf-134b-4f31-a946-30784d67056e"/>
+				<textElement>
+					<font size="12" isBold="true" pdfFontName="Times-Bold"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{objetosEntorno}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="Column header" positionType="Float" x="0" y="307" width="285" height="20" forecolor="#000000" uuid="73260409-7580-4633-aa6d-3cd15ece1ceb"/>
+				<textElement>
+					<font size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Se entiende lo que dice:     ]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="Detail" positionType="Float" x="0" y="327" width="555" height="18" uuid="5518fca9-76d7-4642-8a62-f0ac1b8adf33"/>
+				<textElement>
+					<font size="12" isBold="true" pdfFontName="Times-Bold"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{comprendeSuHabla}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="Column header" positionType="Float" x="0" y="408" width="175" height="20" forecolor="#000000" uuid="3495c03f-c5cb-4077-8fb1-ffca43d90231"/>
+				<textElement>
+					<font size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Reconoce la fuente sonora:]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="Detail" positionType="Float" x="0" y="428" width="555" height="18" uuid="ba617c79-c746-4b1a-af03-6e0e9460cf15"/>
+				<textElement>
+					<font size="12" isBold="true" pdfFontName="Times-Bold"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{reconoceFuenteSonora}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="Column header" positionType="Float" x="0" y="460" width="266" height="20" forecolor="#000000" uuid="f12a7a17-0e71-4eb6-b21e-39f2ef4c8517"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Comunicación preferentemente en forma: ]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="Detail" positionType="Float" x="0" y="480" width="557" height="18" uuid="e748b564-53fe-421d-b6a9-a83bd538cca5"/>
+				<textElement>
+					<font size="12" isBold="true" pdfFontName="Times-Bold"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{preferenciaComunicacion}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="Column header" positionType="Float" x="0" y="540" width="240" height="20" forecolor="#000000" uuid="adc04466-ba65-41d2-bfd7-15b600f665ff"/>
+				<textElement>
+					<font size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Se ha realizado un examen audiológico:  ]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="Detail" positionType="Float" x="0" y="560" width="557" height="18" uuid="347339a6-2cb3-4945-9ef2-f14ac9011eb5"/>
+				<textElement>
+					<font size="12" isBold="true" pdfFontName="Times-Bold"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{examenAudiologico}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="Column header" positionType="Float" x="0" y="597" width="132" height="20" forecolor="#000000" uuid="91dedbd3-931d-4afa-96f5-98ecd6d39723"/>
+				<textElement>
+					<font size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Diagnóstico:  ]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="Detail" positionType="Float" x="0" y="617" width="555" height="25" uuid="5d698090-e80c-40fe-85d2-186aeb1b4246"/>
+				<textElement>
+					<font size="12" isBold="true" pdfFontName="Times-Bold"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{diagnostico}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="Column header" positionType="Float" x="0" y="657" width="330" height="20" forecolor="#000000" uuid="991e947a-5017-42ab-8411-7b69bd094d37"/>
+				<textElement>
+					<font size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Ha tenido en niño pérdida de la audición en el pasado:   ]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="Detail" positionType="Float" x="0" y="677" width="555" height="18" uuid="5b4c1b22-4e88-4bab-b28a-154889592dc4"/>
+				<textElement>
+					<font size="12" isBold="true" pdfFontName="Times-Bold"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{perdidaAudicion}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="177" y="86" width="124" height="20" uuid="5967b321-62d9-4904-856f-7ee2af5c3bf4"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[FONOAUDIOLOGÍA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="120" width="201" height="20" uuid="bd0ffede-9ba5-44c0-a940-353034833d13"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Características del habla/ Lenguaje]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="520" width="100" height="20" uuid="149d0cb8-bd27-47ec-8c82-a55f64c872c2"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Historia Audición ]]></text>
+			</staticText>
+			<image>
+				<reportElement x="2" y="0" width="553" height="73" uuid="7bc3e709-0294-4f83-ae8f-2a72fda5e1b3"/>
+				<imageExpression><![CDATA["C:\\Reportes_udipsai\\img\\pagina1.jpg"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="2" y="707" width="553" height="75" uuid="a66237e7-cf8b-4730-80c7-9ffc7dc21924"/>
+				<imageExpression><![CDATA["C:\\Reportes_udipsai\\img\\abajo.jpg"]]></imageExpression>
+			</image>
+		</band>
+		<band height="782">
+			<staticText>
+				<reportElement x="2" y="189" width="64" height="20" uuid="36729c63-3de0-43c2-90c0-1f9a2b5646dd"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Fonación ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="161" y="585" width="198" height="20" uuid="6e94cf1b-6c85-4a20-ba25-35221405877b"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PROFESIONAL RESPONSABLE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="330" y="631" width="204" height="20" uuid="7dbdb7e9-62b0-4b6e-92fd-c9b409730013"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[………………………………………….		]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" positionType="Float" x="0" y="137" width="132" height="20" forecolor="#000000" uuid="a26533b7-1a22-47da-9017-48c50ed04e98"/>
+				<textElement>
+					<font size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Edad:]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="Detail" positionType="Float" x="0" y="157" width="555" height="18" uuid="1c6e7817-df01-4a0e-a49f-43cabdd739ac"/>
+				<textElement>
+					<font size="12" isBold="true" pdfFontName="Times-Bold"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{edad}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="Column header" positionType="Float" x="0" y="86" width="199" height="20" forecolor="#000000" uuid="34eb20de-f46b-486f-bb6c-e43eee2a6a78"/>
+				<textElement>
+					<font size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Infecciones del oído frecuentes: ]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="Detail" positionType="Float" x="0" y="106" width="555" height="18" uuid="a2c89de7-72b4-4ef1-bc0e-ce5704d146ca"/>
+				<textElement>
+					<font size="12" isBold="true" pdfFontName="Times-Bold"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{infeccionesOido}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="Column header" positionType="Float" x="0" y="-423" width="177" height="20" forecolor="#000000" uuid="0f54244c-19d0-4fae-88f3-fbdfcc47f44c"/>
+				<textElement>
+					<font size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Comprende todo lo que se le dice:]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="Detail" positionType="Float" x="0" y="-403" width="338" height="18" uuid="9e7541bd-8244-48d5-97f8-4769d2fa28d6"/>
+				<textElement>
+					<font size="12" isBold="true" pdfFontName="Times-Bold"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{comprension}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="Column header" positionType="Float" x="0" y="449" width="442" height="20" forecolor="#000000" uuid="17cbb365-0819-4e0b-8dab-6aac9412ed53"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Por favor añada cualquier otra información que crea importante para ayudar al niño:]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="Detail" positionType="Float" x="0" y="469" width="555" height="78" uuid="a838d7f3-fce8-424e-a2c1-e7a346758db9"/>
+				<textElement>
+					<font size="12" isBold="true" pdfFontName="Times-Bold"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{informacion}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="Column header" positionType="Float" x="0" y="387" width="238" height="20" forecolor="#000000" uuid="a78b4d3e-b2f2-4ba4-a94a-4b31aeaf2130"/>
+				<textElement>
+					<font size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Desde cuando presenta alteraciones de su voz:]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="Detail" positionType="Float" x="0" y="407" width="555" height="18" uuid="6411fdb5-ae1b-4d9d-bad6-07b012d05d44"/>
+				<textElement>
+					<font size="12" isBold="true" pdfFontName="Times-Bold"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{desdeCuandoAlteracionesDeVoz}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="Column header" positionType="Float" x="0" y="334" width="217" height="20" forecolor="#000000" uuid="931e04f3-cee8-4f68-9ceb-54ddc38782fe"/>
+				<textElement>
+					<font size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[En qué situaciones se altera el tono de voz:]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="Detail" positionType="Float" x="0" y="354" width="555" height="18" uuid="d7ede41c-55cd-47c5-9fea-d6d5cd6fac4d"/>
+				<textElement>
+					<font size="12" isBold="true" pdfFontName="Times-Bold"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{situacionesAlteracionVoz}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="Column header" positionType="Float" x="0" y="279" width="132" height="20" forecolor="#000000" uuid="a37f9327-2922-45e7-a6fe-d96867aeb5cf"/>
+				<textElement>
+					<font size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[La respiración es normal:]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="Detail" positionType="Float" x="0" y="299" width="555" height="18" uuid="a7c8f720-1fe0-4fda-8c26-0a76775e6734"/>
+				<textElement>
+					<font size="12" isBold="true" pdfFontName="Times-Bold"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{respiracion}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="Column header" positionType="Float" x="0" y="221" width="285" height="20" forecolor="#000000" uuid="29107f44-6b3d-4f20-88b1-7a64ef10293c"/>
+				<textElement>
+					<font size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Cree usted que el tono de voz del niño es el apropiado:  ]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="Detail" positionType="Float" x="0" y="241" width="555" height="18" uuid="d51b1611-b752-4ad0-a4fa-9e6ca119e5d6"/>
+				<textElement>
+					<font size="12" isBold="true" pdfFontName="Times-Bold"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tonoVoz}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="385" y="661" width="100" height="20" uuid="a7a548ce-d3ee-4f78-aee6-49be6e2d1615"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[FIRMA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="631" width="199" height="20" uuid="89c0567a-7d92-4b99-9582-36ed4ea9dbc5"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[………………………………………….		]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="43" y="661" width="100" height="20" uuid="07655528-9110-4c24-ad67-ac0a84e23a9a"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[NOMBRE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="554" width="159" height="20" uuid="d20eb8fc-1ed3-49fc-aea7-a12b5130289e"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Diagnóstico Fonoaudiológico:  ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="187" y="554" width="368" height="20" uuid="e648d753-eb19-4eaa-a25e-59178747c039"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{diagnosticoEvaluacion}]]></textFieldExpression>
+			</textField>
+			<image>
+				<reportElement x="4" y="707" width="553" height="75" uuid="a66237e7-cf8b-4730-80c7-9ffc7dc21924"/>
+				<imageExpression><![CDATA["C:\\Reportes_udipsai\\img\\abajo.jpg"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="2" y="0" width="553" height="71" uuid="01b742db-bc91-489e-a1a0-78074e17eda4"/>
+				<imageExpression><![CDATA["C:\\Reportes_udipsai\\img\\pagina2.jpg"]]></imageExpression>
+			</image>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="7" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="3" width="555" height="1" uuid="4dcf3b7c-4a21-4f36-a958-6447eff16df6"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="13" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

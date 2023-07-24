@@ -21,7 +21,7 @@ import java.util.logging.Logger;
  */
 public class EspecialistaDao {
 
-    private Conexion conexion;
+    public Conexion conexion;
     public String registro;
 
     public EspecialistaDao() {
@@ -48,8 +48,7 @@ public class EspecialistaDao {
             ps.setString(10, String.valueOf(especialista.isEstaActivo()));
 
             ps.executeUpdate();
-            ps.close();
-            connection.close();
+            
 
             return true;
         } catch (Exception e) {
@@ -120,7 +119,6 @@ public class EspecialistaDao {
                 especialista.setEsPasante(data.getBoolean(7));
                 especialista.setNombreEspecilistaResponsable(data.getString(8));
                 especialista.setContraseña(data.getString(9));
-
                 listaespecialistas.add(especialista);
 
             }
@@ -136,16 +134,20 @@ public class EspecialistaDao {
         return listaespecialistas;
     }
 
-    public void delete(String cedula) {
-        PreparedStatement ps = null;
-        String consulta = "delete from especialista where cedula=" + cedula;
-        try {
-            Connection connection = this.conexion.getConnection();
-            ps = connection.prepareStatement(consulta);
-            ps.executeUpdate();
-            ps.close();
-        } catch (Exception e) {
+    public boolean delete(String cedula) {
+        String consulta = "DELETE FROM especialista WHERE cedula=?";
+        try (Connection connection = this.conexion.getConnection()) {
+            PreparedStatement ps = connection.prepareStatement(consulta);
+            ps.setString(1, cedula);
+            int filasAfectadas = ps.executeUpdate(); // Ejecutar la consulta y guardar el número de filas afectadas
+            if (filasAfectadas > 0) {
+                return true;
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return false;
         }
+        return false;
     }
 
     public int existeUsuario(String especialista) {
@@ -195,32 +197,26 @@ public class EspecialistaDao {
         return null;
     }
 
-
-    /*
-    public boolean login(Especialista especialista) {
-        PreparedStatement ps = null;
-        ResultSet rs = null;
-        Connection connection = this.conexion.getConnection();
-        String consulta = "Select cedula,primerNombre,primerApellido,areaEspecialidad,contraseña from especialista where cedula=?";
-        try {
-            ps = connection.prepareStatement(consulta);
-            ps.setString(1, especialista.getCedula());
-            rs = ps.executeQuery();
-            if (rs.next()) {
-                if (especialista.getContraseña().equals(rs.getString(5))) {
-                    especialista.setPrimerNombre(rs.getString(2));
-                    especialista.setPrimerApellido(rs.getString(3));
-                    especialista.setAreaProfesional(rs.getString(4));
-                    return true;
-
+    public boolean existenRegistrosRelacionados(String cedula) throws SQLException {
+        String consulta = "SELECT COUNT(*) FROM historia_fonoaudiologia WHERE cedula = ?";
+        try (Connection connection = this.conexion.getConnection(); PreparedStatement ps = connection.prepareStatement(consulta)) {
+            ps.setString(1, cedula);
+            try (ResultSet rs = ps.executeQuery()) {
+                if (rs.next()) {
+                    int count = rs.getInt(1);
+                    return count > 0;
                 }
             }
-            return false;
-        } catch (Exception e) {
-            Logger.getLogger(EspecialistaDao.class.getName()).log(Level.SEVERE, null, e);
-            return false;
         }
-
+        return false;
     }
-     */
+
+    public void eliminarRegistrosRelacionados(String cedula) throws SQLException {
+        String consulta = "DELETE FROM historia_fonoaudiologia WHERE cedula = ?";
+        try (Connection connection = this.conexion.getConnection(); PreparedStatement ps = connection.prepareStatement(consulta)) {
+            ps.setString(1, cedula);
+            ps.executeUpdate();
+        }
+    }
+
 }

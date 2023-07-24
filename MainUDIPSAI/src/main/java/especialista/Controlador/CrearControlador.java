@@ -11,6 +11,7 @@ import comons.datos.EspecialistaDao;
 import comons.negocio.Especialista;
 import comons.negocio.Especialidades;
 import java.awt.event.ActionEvent;
+import especialista.Vista.Eliminar;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
@@ -220,25 +221,6 @@ public class CrearControlador implements ActionListener, KeyListener {
         return opciones;
     }
 
-    /*
-    public void llenarComboBox() {
-
-        DefaultComboBoxModel<String> comboBoxModel = new DefaultComboBoxModel<>();
-
-        // Llama a la función obtenerOpciones() para obtener el array de opciones
-        String[] opciones = obtenerOpciones();
-
-        // Agrega las opciones al modelo del ComboBox
-        for (String opcion : opciones) {
-            comboBoxModel.addElement(opcion);
-        }
-
-        // Asigna el modelo al ComboBox
-        crear.comboEspecialidades.setModel(comboBoxModel);
-
-    }
-
-     */
     @Override
     public void keyTyped(KeyEvent evt) {
         char caracter = evt.getKeyChar();

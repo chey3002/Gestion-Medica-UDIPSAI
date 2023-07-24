@@ -18,23 +18,9 @@ import especialista.Vista.Login;
 import especialista.Vista.Crear;
 import comons.datos.EspecialidadesDao;
 import comons.datos.EspecialistaDao;
-import comons.negocio.Especialidades;
 import comons.negocio.Especialista;
-import java.awt.Color;
 import java.util.Date;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.List;
-import javax.swing.JFrame;
-import javax.swing.JTextField;
-import javax.swing.SwingUtilities;
-import javax.swing.UIManager;
-import javax.swing.event.DocumentEvent;
-import javax.swing.event.DocumentListener;
-import javax.swing.text.AbstractDocument;
-import javax.swing.text.AttributeSet;
-import javax.swing.text.BadLocationException;
-import javax.swing.text.DocumentFilter;
 
 
 /**
@@ -55,26 +41,18 @@ public class EspecialistaMain  {
         Date fechaActual = new Date();
         SimpleDateFormat formatoHora = new SimpleDateFormat("HH:mm");
         String horaFormateada = formatoHora.format(fechaActual);
-        inicio.labelhorasistema.setText(horaFormateada);
+        inicio.labelhorasistema.setText(""+horaFormateada);
         //Obtener fecha del Sistema
         Date fecha = new Date();
-        String fechaconvertida = (String) fecha.toString();
-        inicio.labelfechasistema.setText(fechaconvertida);
-        
-         
-        
-        
-        
-      
-        
+        SimpleDateFormat formatoFecha = new SimpleDateFormat("dd/MM/yyyy");
+        String fechaConvertida = formatoFecha.format(fecha);
+        inicio.labelfechasistema.setText(fechaConvertida);
+
         //Instacias la clase especialista y especialistaDao
         Especialista especialista = new Especialista();
         EspecialistaDao especialistadao = new EspecialistaDao();
         EspecialidadesDao especialidadesDao = new EspecialidadesDao();
-        
-      
-        
-        
+
         //Instacias de las Vistas
         Crear crear = new Crear();
         Listar listar = new Listar();
@@ -87,8 +65,8 @@ public class EspecialistaMain  {
         ControladorListar cl = new ControladorListar(inicio, listar);
         CrearControlador cr = new CrearControlador(especialista, especialistadao, crear,especialidadesDao);
         ControladorInicio ci = new ControladorInicio(crear, inicio, listar,actualizar,eliminar,login,especialistadao);
-        ControladorEliminar ce = new ControladorEliminar(eliminar, especialistadao);
-        ControladorActualizar ca = new ControladorActualizar( actualizar,especialistadao,especialista,especialidadesDao);
+        ControladorEliminar ce = new ControladorEliminar(eliminar,inicio);
+        ControladorActualizar ca = new ControladorActualizar( actualizar,especialista,especialidadesDao,inicio);
         ControladorLogin clo = new ControladorLogin(especialistadao, especialista, login, inicio);
         //Fin de las instancias de los controladores
         
@@ -102,6 +80,7 @@ public class EspecialistaMain  {
         listar.setSize(700, 450);
         actualizar.setSize(850,590);
         eliminar.setSize(700,450);
+        
         
        
         

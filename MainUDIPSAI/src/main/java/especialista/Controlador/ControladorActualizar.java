@@ -29,17 +29,17 @@ public class ControladorActualizar implements ActionListener {
 
     private Inicio inicio;
     private Actualizar actualizar;
-    private EspecialistaDao especialistadao;
+    EspecialistaDao especialistadao = new EspecialistaDao();
     private EspecialidadesDao especialidadesdao;
     Especialista especialista = new Especialista();
-    DefaultTableModel tabla = new DefaultTableModel();
 
-    public ControladorActualizar(Actualizar actualizar, EspecialistaDao especialistadao, Especialista especialista, EspecialidadesDao especialidadesdao) {
+    public ControladorActualizar(Actualizar actualizar, Especialista especialista, EspecialidadesDao especialidadesdao, Inicio inicio) {
         this.inicio = inicio;
         this.actualizar = actualizar;
         this.especialistadao = especialistadao;
         this.especialista = especialista;
         this.especialidadesdao = especialidadesdao;
+        this.inicio.menuactualizar.addActionListener(this);
         this.actualizar.btnactualizar.addActionListener(this);
         this.actualizar.btnguardar.addActionListener(this);
         this.actualizar.checkSi.addActionListener(this);
@@ -47,12 +47,15 @@ public class ControladorActualizar implements ActionListener {
         this.actualizar.checkActivoSi.addActionListener(this);
         this.actualizar.checkActivoNo.addActionListener(this);
         this.actualizar.btnAtras.addActionListener(this);
-        recuperardatostabla();
         validarVentana();
     }
 
     @Override
     public void actionPerformed(ActionEvent e) {
+
+        if (e.getSource() == inicio.menuactualizar) {
+            recuperardatostabla();
+        }
         if (e.getSource() == actualizar.btnactualizar) {
             int fila = actualizar.tablaespecialistas.getSelectedRow();
             if (fila == -1) {
@@ -116,7 +119,9 @@ public class ControladorActualizar implements ActionListener {
                 JOptionPane.showMessageDialog(actualizar, "Especialista no seleccionado");
             } else {
                 actualizar();
-                limpiarTabla();
+                // Llamar a la función limpiarTabla() pasando el modelo de la tabla actualizar.tablaespecialistas
+                limpiarTabla((DefaultTableModel) actualizar.tablaespecialistas.getModel());
+
                 recuperardatostabla();
                 limpiarCampos();
                 iniciarComboBox();
@@ -147,7 +152,9 @@ public class ControladorActualizar implements ActionListener {
                 } else if (seleccion == 1) {
                     actualizar.dispose();
                     limpiarCampos();
-                    limpiarTabla();
+                    // Llamar a la función limpiarTabla() pasando el modelo de la tabla actualizar.tablaespecialistas
+                    limpiarTabla((DefaultTableModel) actualizar.tablaespecialistas.getModel());
+
                 }
             }
         }
@@ -227,7 +234,7 @@ public class ControladorActualizar implements ActionListener {
     }
 
     public void recuperardatostabla() {
-
+        DefaultTableModel tabla = new DefaultTableModel();
         List<Especialista> especialistas = this.especialistadao.listar();
         tabla.setColumnIdentifiers(new Object[]{"Cedula", "Primer Nombre ", "Segundo Nombre", "Primer Apellido", "Segundo Apellido", "Area Especialidad", "Es Pasante", "Especialista Asignado", "Contraseña", "Esta Activo"});
         Object[] objeto = new Object[10];
@@ -247,13 +254,10 @@ public class ControladorActualizar implements ActionListener {
         actualizar.tablaespecialistas.setModel(tabla);
     }
 
-    public void limpiarTabla() {
-        for (int i = 0; i < actualizar.tablaespecialistas.getRowCount(); i++) {
-            tabla.removeRow(i);
-            i = i - 1;
-
+    public void limpiarTabla(DefaultTableModel modeloTabla) {
+        for (int i = modeloTabla.getRowCount() - 1; i >= 0; i--) {
+            modeloTabla.removeRow(i);
         }
-
     }
 
     public void llenarComboBox() {

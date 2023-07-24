@@ -1,0 +1,594 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="d2c9f66a-14e5-4d3b-b65a-5451f24fbcde">
+	<property name="template.type" value="columnar"/>
+	<property name="ireport.zoom" value="0.9090909090909091"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="1968"/>
+	<style name="Title" forecolor="#000000" fontName="Times New Roman" fontSize="50" isBold="false" pdfFontName="Times-Bold"/>
+	<style name="SubTitle" forecolor="#666666" fontName="Times New Roman" fontSize="18" isBold="false" pdfFontName="Times-Roman"/>
+	<style name="Column header" forecolor="#666666" fontName="Times New Roman" fontSize="14" isBold="true" pdfFontName="Times-Roman"/>
+	<style name="Detail" mode="Transparent" fontName="Times New Roman" pdfFontName="Times-Roman"/>
+	<style name="Row" mode="Transparent" fontName="Times New Roman" pdfFontName="Times-Roman">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$V{REPORT_COUNT}%2 == 0]]></conditionExpression>
+			<style mode="Opaque" backcolor="#F0EFEF"/>
+		</conditionalStyle>
+	</style>
+	<parameter name="idPaciente" class="java.lang.Integer"/>
+	<queryString language="SQL">
+        <![CDATA[select * from historia_psicologia_educativa where idPaciente = $P{idPaciente}]]>
+        </queryString>
+	<field name="idInformacion" class="java.lang.Integer"/>
+	<field name="idPaciente" class="java.lang.Integer"/>
+	<field name="nombre" class="java.lang.String"/>
+	<field name="ci" class="java.lang.String"/>
+	<field name="asignaturasPreferidas" class="java.lang.String"/>
+	<field name="asignaturasDisgustan" class="java.lang.String"/>
+	<field name="relacionDocente" class="java.lang.String"/>
+	<field name="leGustaEscuela" class="java.lang.String"/>
+	<field name="relacionGrupo" class="java.lang.String"/>
+	<field name="inclusionEducativa" class="java.lang.String"/>
+	<field name="adaptacionesCurriculares" class="java.lang.String"/>
+	<field name="gradoAdaptacion" class="java.lang.String"/>
+	<field name="especificarAsignaturas" class="java.lang.String"/>
+	<field name="cdi" class="java.lang.String"/>
+	<field name="cdiEdad" class="java.lang.Integer"/>
+	<field name="inicial1" class="java.lang.String"/>
+	<field name="edadInicial1" class="java.lang.Integer"/>
+	<field name="inicial2" class="java.lang.String"/>
+	<field name="edadInicial2" class="java.lang.Integer"/>
+	<field name="egb1" class="java.lang.String"/>
+	<field name="edadEGB1" class="java.lang.Integer"/>
+	<field name="perdidaCurso" class="java.lang.String"/>
+	<field name="causaPerdida" class="java.lang.String"/>
+	<field name="desercionEscolar" class="java.lang.String"/>
+	<field name="causaDesercion" class="java.lang.String"/>
+	<field name="cambioInstitucion" class="java.lang.String"/>
+	<field name="causaCambio" class="java.lang.String"/>
+	<field name="problemasAprendizaje" class="java.lang.String"/>
+	<field name="evaluacionPsicologica" class="java.lang.String"/>
+	<field name="recibeTratamiento" class="java.lang.String"/>
+	<field name="aprovechamientoGeneral" class="java.lang.String"/>
+	<field name="actividadEscolar" class="java.lang.String"/>
+	<field name="idEspecialista" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="795" splitType="Stretch">
+			<staticText>
+				<reportElement style="Column header" positionType="Float" x="0" y="110" width="132" height="35" forecolor="#000000" uuid="e0e816a3-adab-4924-ad7a-3c00a191a086"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nombre:]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="Detail" positionType="Float" x="191" y="110" width="358" height="47" uuid="73d8fb5f-ee03-423a-9ee1-d9a574428af6"/>
+				<textElement>
+					<font size="12" isBold="true" pdfFontName="Times-Bold"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nombre}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="Column header" positionType="Float" x="2" y="157" width="132" height="26" forecolor="#000000" uuid="2260fd41-50d4-41c6-8cc7-f625873af3f2"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Cédula de identidad:]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="Detail" positionType="Float" x="191" y="157" width="358" height="40" uuid="e278cb86-c46c-492e-bf32-9cd03ee2ccc8"/>
+				<textElement>
+					<font size="12" isBold="true" pdfFontName="Times-Bold"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{ci}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="Column header" positionType="Float" x="0" y="227" width="154" height="54" forecolor="#000000" uuid="85bf8752-0926-479f-b30c-b547e3d64e4e"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Asignaturas Preferidas:]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="Detail" positionType="Float" x="191" y="227" width="358" height="65" uuid="1d42bee3-76fe-4732-be60-db3858021fc4"/>
+				<textElement>
+					<font size="12" isBold="true" pdfFontName="Times-Bold"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{asignaturasPreferidas}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="Column header" positionType="Float" x="0" y="292" width="154" height="58" forecolor="#000000" uuid="4fcda26e-28dd-4f54-86fe-552179a270de"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Asignaturas Disgustan:]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="Detail" positionType="Float" x="191" y="292" width="364" height="58" uuid="2b545c82-aa6a-4994-8a0e-4c8be3fa1fd8"/>
+				<textElement>
+					<font size="12" isBold="true" pdfFontName="Times-Bold"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{asignaturasDisgustan}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="Column header" positionType="Float" x="0" y="358" width="132" height="55" forecolor="#000000" uuid="bdf24f36-b5bc-4408-988b-a4fda0771294"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Relacion Docente:]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="Detail" positionType="Float" x="191" y="358" width="364" height="66" uuid="4a5154a3-c7dd-411b-a6a7-570a669ea683"/>
+				<textElement>
+					<font size="12" isBold="true" pdfFontName="Times-Bold"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{relacionDocente}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="Column header" positionType="Float" x="0" y="424" width="132" height="50" forecolor="#000000" uuid="94e2acdd-df6c-4be8-a6cc-06b9d08fc002"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Le gusta la escuela:]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="Detail" positionType="Float" x="191" y="424" width="364" height="64" uuid="f47ebbde-b41b-46a3-8c03-650e82866548"/>
+				<textElement>
+					<font size="12" isBold="true" pdfFontName="Times-Bold"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{leGustaEscuela}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="Column header" positionType="Float" x="0" y="488" width="140" height="44" forecolor="#000000" uuid="dfb6c30a-f060-41fc-8373-38bae63388cd"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Relación con el grupo:]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="Detail" positionType="Float" x="191" y="488" width="363" height="58" uuid="5dab300e-106f-4ef9-8aaa-41c0c1ccc6f7"/>
+				<textElement>
+					<font size="12" isBold="true" pdfFontName="Times-Bold"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{relacionGrupo}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="Column header" positionType="Float" x="0" y="546" width="132" height="48" forecolor="#000000" uuid="c4bb5e7f-03fd-4e93-8a31-0196a2711188"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Inclusión Educativa:]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="Detail" positionType="Float" x="191" y="546" width="363" height="58" uuid="d8f4fa67-0ec8-481f-9957-185dc8ab5ef4"/>
+				<textElement>
+					<font size="12" isBold="true" pdfFontName="Times-Bold"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{inclusionEducativa}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="Column header" positionType="Float" x="0" y="604" width="178" height="55" forecolor="#000000" uuid="be8820d2-2af5-42c7-a997-1f8be8a3c06f"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Adaptaciones Currículares:]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="Detail" positionType="Float" x="191" y="604" width="364" height="104" uuid="c391d254-3623-45c3-a9c3-e45ef281ba82"/>
+				<textElement>
+					<font size="12" isBold="true" pdfFontName="Times-Bold"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{adaptacionesCurriculares}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="154" y="74" width="189" height="20" uuid="dc01c5ec-8bfc-4304-9e6f-817bc512beb4"/>
+				<textElement>
+					<font fontName="Times New Roman" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PSICOLOGIA EDUCATIVA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="-2" y="197" width="134" height="20" uuid="ac1017b3-8b5b-45c6-b5b6-546618d65501"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[1. Datos Académicos.]]></text>
+			</staticText>
+			<image>
+				<reportElement x="2" y="720" width="553" height="75" uuid="a66237e7-cf8b-4730-80c7-9ffc7dc21924"/>
+				<imageExpression><![CDATA["C:\\Reportes_udipsai\\img\\abajo.jpg"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="2" y="1" width="553" height="73" uuid="7bc3e709-0294-4f83-ae8f-2a72fda5e1b3"/>
+				<imageExpression><![CDATA["C:\\Reportes_udipsai\\img\\pagina1.jpg"]]></imageExpression>
+			</image>
+		</band>
+		<band height="795">
+			<staticText>
+				<reportElement style="Column header" positionType="Float" x="-2" y="612" width="132" height="32" forecolor="#000000" uuid="b25bab50-0679-4973-aac8-6556c8425105"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Perdida Curso:]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="Detail" positionType="Float" x="217" y="612" width="338" height="81" uuid="6b473a10-9f76-4190-ab47-5dfc57158d3e"/>
+				<textElement>
+					<font size="12" isBold="true" pdfFontName="Times-Bold"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{perdidaCurso}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="Column header" positionType="Float" x="0" y="566" width="132" height="36" forecolor="#000000" uuid="f65f7151-15ad-4f26-9d02-08889172386d"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Edad EGB 1:]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="Detail" positionType="Float" x="216" y="566" width="338" height="36" uuid="b6679b3e-2bbc-411b-81b3-5eb8156ede65"/>
+				<textElement>
+					<font size="12" isBold="true" pdfFontName="Times-Bold"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{edadEGB1}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="Column header" positionType="Float" x="-2" y="524" width="132" height="29" forecolor="#000000" uuid="706c6826-8b35-461c-a917-9794de44db59"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[EGB 1:]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="Detail" positionType="Float" x="223" y="524" width="332" height="29" uuid="9eae087e-28db-4283-b4aa-9fb0addb7fdf"/>
+				<textElement>
+					<font size="12" isBold="true" pdfFontName="Times-Bold"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{egb1}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="Column header" positionType="Float" x="0" y="473" width="132" height="33" forecolor="#000000" uuid="80f41b29-6b2f-42b3-b066-bb7e621e24ce"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Edad Inicial 2:]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="Detail" positionType="Float" x="217" y="473" width="338" height="33" uuid="962e0cf8-8072-43e3-905e-a67d410053de"/>
+				<textElement>
+					<font size="12" isBold="true" pdfFontName="Times-Bold"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{edadInicial2}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="Column header" positionType="Float" x="-2" y="421" width="132" height="34" forecolor="#000000" uuid="04c9c887-0310-49c2-8d8a-84160d32d080"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Inicial 2:]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="Detail" positionType="Float" x="217" y="421" width="338" height="34" uuid="23c1177c-3e1c-4cb2-b596-c1640971dc84"/>
+				<textElement>
+					<font size="12" isBold="true" pdfFontName="Times-Bold"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{inicial2}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="Column header" positionType="Float" x="0" y="366" width="132" height="34" forecolor="#000000" uuid="6cf4b399-243b-4695-867f-63d9c1cda1bf"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Edad Inicial 1]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="Detail" positionType="Float" x="217" y="366" width="338" height="34" uuid="0eddf2e7-290d-4fdf-8e2c-7cb400024bb6"/>
+				<textElement>
+					<font size="12" isBold="true" pdfFontName="Times-Bold"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{edadInicial1}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="Column header" positionType="Float" x="-2" y="312" width="132" height="35" forecolor="#000000" uuid="e74cf13a-694a-4b6a-9edc-25d342c6579f"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Inicial 1:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" positionType="Float" x="-2" y="264" width="132" height="29" forecolor="#000000" uuid="7a744a2d-8762-43b4-b1dc-cebfa0c35f54"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CDI Edad:]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="Detail" positionType="Float" x="217" y="312" width="338" height="35" uuid="85664ce2-ffd4-4ad3-8abf-f6ed391b8b74"/>
+				<textElement>
+					<font size="12" isBold="true" pdfFontName="Times-Bold"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{inicial1}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="Detail" positionType="Float" x="217" y="264" width="338" height="29" uuid="07b45ce9-8dea-4016-95b2-ee50d5396e78"/>
+				<textElement>
+					<font size="12" isBold="true" pdfFontName="Times-Bold"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{cdiEdad}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="Detail" positionType="Float" x="217" y="218" width="338" height="28" uuid="6a26cfdc-5e17-40e7-a8be-d16e241956a8"/>
+				<textElement>
+					<font size="12" isBold="true" pdfFontName="Times-Bold"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{cdi}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="Detail" positionType="Float" x="217" y="127" width="338" height="69" uuid="b7b42c79-6ad1-4c00-8294-ebc61fc27560"/>
+				<textElement>
+					<font size="12" isBold="true" pdfFontName="Times-Bold"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{especificarAsignaturas}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="Detail" positionType="Float" x="217" y="79" width="332" height="38" uuid="55e9af3b-874e-4f3f-89e2-28c5cbb9ad93"/>
+				<textElement>
+					<font size="12" isBold="true" pdfFontName="Times-Bold"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{gradoAdaptacion}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="Column header" positionType="Float" x="-2" y="218" width="132" height="28" forecolor="#000000" uuid="7fbc5971-008b-482b-8e24-5a9fa10d0e63"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CDI:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" positionType="Float" x="0" y="127" width="154" height="69" forecolor="#000000" uuid="522e5866-2625-4c39-8270-e55bd575d38b"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Especificar Asignaturas:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" positionType="Float" x="0" y="79" width="132" height="38" forecolor="#000000" uuid="ce5ef23d-594d-4645-bc98-8c9a50777eb6"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Grado Adaptaci.ón:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="-2" y="196" width="156" height="20" uuid="031e40b5-6669-4da9-a32d-a7a25936bf48"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[2. Desarrollo Académico.]]></text>
+			</staticText>
+			<image>
+				<reportElement x="2" y="720" width="553" height="75" uuid="a66237e7-cf8b-4730-80c7-9ffc7dc21924"/>
+				<imageExpression><![CDATA["C:\\Reportes_udipsai\\img\\abajo.jpg"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="2" y="0" width="553" height="71" uuid="01b742db-bc91-489e-a1a0-78074e17eda4"/>
+				<imageExpression><![CDATA["C:\\Reportes_udipsai\\img\\pagina2.jpg"]]></imageExpression>
+			</image>
+		</band>
+		<band height="795">
+			<staticText>
+				<reportElement style="Column header" positionType="Float" x="0" y="605" width="156" height="50" forecolor="#000000" uuid="a0e21df7-4131-4582-8528-df2f442968a5"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Evaluación Psicologica:]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="Detail" positionType="Float" x="217" y="605" width="338" height="65" uuid="c326dac7-f363-490e-81a8-636f9c80a4b2"/>
+				<textElement>
+					<font size="14" isBold="true" pdfFontName="Times-Bold"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{evaluacionPsicologica}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="Column header" positionType="Float" x="0" y="505" width="160" height="56" forecolor="#000000" uuid="c18f04cb-ea0b-44ec-ac49-79253cafa030"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Problemas Aprendizaje:]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="Detail" positionType="Float" x="217" y="505" width="338" height="75" uuid="a365c2f0-0b7c-455c-b881-b7ff733f7f70"/>
+				<textElement>
+					<font size="14" isBold="true" pdfFontName="Times-Bold"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{problemasAprendizaje}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="Column header" positionType="Float" x="-2" y="417" width="132" height="51" forecolor="#000000" uuid="53090012-951c-4e5c-94d5-b83440cb2ccc"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Causa Cambio:]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="Detail" positionType="Float" x="217" y="417" width="338" height="77" uuid="d5619ba7-89dd-452c-b887-822d41ad3d4d"/>
+				<textElement>
+					<font size="14" isBold="true" pdfFontName="Times-Bold"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{causaCambio}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="Column header" positionType="Float" x="0" y="329" width="132" height="47" forecolor="#000000" uuid="f77baa2b-41fc-4810-b625-8aedb62651da"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Cambio Institución:]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="Detail" positionType="Float" x="217" y="329" width="338" height="76" uuid="92a229d9-076b-4688-886b-be88389a9ba4"/>
+				<textElement>
+					<font size="14" isBold="true" pdfFontName="Times-Bold"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{cambioInstitucion}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="Column header" positionType="Float" x="0" y="251" width="132" height="45" forecolor="#000000" uuid="74bc720a-c5ac-4f64-9082-00c0de680a62"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Causa Deserción:]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="Detail" positionType="Float" x="217" y="251" width="338" height="65" uuid="8307088c-f1a6-453f-84fa-13ef011771b0"/>
+				<textElement>
+					<font size="14" isBold="true" pdfFontName="Times-Bold"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{causaDesercion}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="Column header" positionType="Float" x="2" y="169" width="132" height="32" forecolor="#000000" uuid="e8a531bd-3363-4ca6-bd6f-c4a9619b38fc"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Desercion Escolar:]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="Detail" positionType="Float" x="217" y="169" width="338" height="66" uuid="6f6db9fc-e08d-42aa-9a97-ae7704a04f0b"/>
+				<textElement>
+					<font size="14" isBold="true" pdfFontName="Times-Bold"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{desercionEscolar}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="Detail" positionType="Float" x="223" y="79" width="332" height="73" uuid="10fa5641-4140-451e-a2f9-75b5b7ffe014"/>
+				<textElement>
+					<font size="12" isBold="true" pdfFontName="Times-Bold"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{causaPerdida}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="Column header" positionType="Float" x="2" y="79" width="132" height="28" forecolor="#000000" uuid="8652e798-5d3a-42a6-b573-f1ab8a188980"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Causa Perdida:]]></text>
+			</staticText>
+			<image>
+				<reportElement x="2" y="720" width="553" height="75" uuid="a66237e7-cf8b-4730-80c7-9ffc7dc21924"/>
+				<imageExpression><![CDATA["C:\\Reportes_udipsai\\img\\abajo.jpg"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="2" y="0" width="549" height="74" uuid="4edc7844-986f-4fbc-8535-d5435ba8fe3e"/>
+				<imageExpression><![CDATA["C:\\Reportes_udipsai\\img\\pagina3.jpg"]]></imageExpression>
+			</image>
+		</band>
+		<band height="795">
+			<staticText>
+				<reportElement x="156" y="500" width="224" height="26" uuid="153fe4c7-6ec5-4b6e-bd05-252697574b9c"/>
+				<textElement>
+					<font fontName="Times New Roman" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PROSEFIONAL RESPONSABLE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="14" y="588" width="239" height="20" uuid="3d58a4d7-6ece-46fc-908d-6a611af055d4"/>
+				<textElement>
+					<font fontName="Times New Roman" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[………………………………………….]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="78" y="641" width="100" height="20" uuid="8bb7cf14-d33b-4565-b136-d75490d5a7ab"/>
+				<textElement>
+					<font fontName="Times New Roman" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[NOMBRE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="380" y="641" width="100" height="20" uuid="76942661-513c-4994-bfd3-ae276515cbac"/>
+				<textElement>
+					<font fontName="Times New Roman" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[FIRMA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="296" y="588" width="240" height="20" uuid="e7005097-3cea-443d-a4cd-608662fed515"/>
+				<textElement>
+					<font fontName="Times New Roman" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[………………………………………….]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" positionType="Float" x="0" y="246" width="146" height="27" forecolor="#000000" uuid="e96355f7-de1b-48b5-91fb-2740b92fc7e7"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[3. Actividad Escolar:]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="Detail" positionType="Float" x="-2" y="273" width="556" height="177" uuid="91db7c98-b0d5-40ee-b9eb-704fa8c3a0dd"/>
+				<textElement>
+					<font size="14" isBold="true" pdfFontName="Times-Bold"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{actividadEscolar}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="Column header" positionType="Float" x="2" y="165" width="178" height="48" forecolor="#000000" uuid="2af514f1-be1d-4e6c-98df-4bc6c0134761"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Aprovechamiento General:]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="Detail" positionType="Float" x="216" y="165" width="338" height="65" uuid="4631f02f-5f4c-41a8-885c-24c9ae335dc0"/>
+				<textElement>
+					<font size="14" isBold="true" pdfFontName="Times-Bold"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{aprovechamientoGeneral}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="Column header" positionType="Float" x="0" y="73" width="132" height="44" forecolor="#000000" uuid="97fae32f-7aa4-4588-b29d-327b55972c6f"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Recibe Tratamiento:]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="Detail" positionType="Float" x="216" y="73" width="338" height="56" uuid="59be3ba2-3756-4e64-a639-fd41862611e3"/>
+				<textElement>
+					<font size="14" isBold="true" pdfFontName="Times-Bold"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{recibeTratamiento}]]></textFieldExpression>
+			</textField>
+			<image>
+				<reportElement x="1" y="720" width="553" height="75" uuid="a66237e7-cf8b-4730-80c7-9ffc7dc21924"/>
+				<imageExpression><![CDATA["C:\\Reportes_udipsai\\img\\abajo.jpg"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="-2" y="1" width="555" height="72" uuid="b4d4f2b0-68f6-40e5-b63d-a7af634259a8"/>
+				<imageExpression><![CDATA["C:\\Reportes_udipsai\\img\\pagina4.jpg"]]></imageExpression>
+			</image>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="7" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="3" width="555" height="1" uuid="856221e4-6a6f-41f2-b3ed-77939c445b98"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

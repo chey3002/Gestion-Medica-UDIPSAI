@@ -5,12 +5,11 @@
 package especialista.Controlador;
 
 import especialista.Vista.Eliminar;
-import especialista.Vista.Listar;
-import especialista.Vista.Inicio;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import comons.datos.EspecialistaDao;
 import comons.negocio.Especialista;
+import especialista.Vista.Inicio;
 import javax.swing.JOptionPane;
 import java.util.List;
 import javax.swing.table.DefaultTableModel;
@@ -21,54 +20,60 @@ import javax.swing.table.DefaultTableModel;
  */
 public class ControladorEliminar implements ActionListener {
 
-    private Eliminar eliminar;
-    private EspecialistaDao especialistadao;
-    private ControladorListar cl;
     private Inicio inicio;
-    private Listar listar;
-    DefaultTableModel tabla = new DefaultTableModel();
+    private Eliminar eliminar;
+    EspecialistaDao especialistadao = new EspecialistaDao();
+    
+    
 
-    public ControladorEliminar(Eliminar eliminar, EspecialistaDao especialistadao) {
+    public ControladorEliminar(Eliminar eliminar,Inicio inicio) {
+         this.inicio = inicio;
         this.eliminar = eliminar;
-        this.especialistadao = especialistadao;
-        this.eliminar.btneliminar.addActionListener(this);
-        this.eliminar.btnatras.addActionListener(this);
-        recuperardatostabla();
+        this.inicio.menueliminar.addActionListener(this);
+        this.eliminar.itemEliminar.addActionListener(this);
+        this.eliminar.itemAtras.addActionListener(this);
+        
     }
 
     @Override
     public void actionPerformed(ActionEvent e) {
+        
+         if (e.getSource() == inicio.menueliminar) {
+            recuperardatostabla();
+        }
         try {
-            if (e.getSource() == eliminar.btneliminar) {
+            if (e.getSource() == eliminar.itemEliminar) {
                 int fila = eliminar.tablaespecialistas.getSelectedRow();
 
                 if (fila == -1) {
-                    JOptionPane.showMessageDialog(eliminar, "Debe sellecionar un Especialista");
+                    JOptionPane.showMessageDialog(eliminar, "Debe seleccionar un Especialista");
                 } else {
-                    String cedula = (String) eliminar.tablaespecialistas.getValueAt(fila, 0).toString();
-                    especialistadao.delete(cedula);
-                    System.out.println("" + cedula);
-                    JOptionPane.showMessageDialog(eliminar, "Usuario Eliminado");
+                    String cedula = (String) eliminar.tablaespecialistas.getValueAt(fila, 0);
+                    int confirmDialog = JOptionPane.showConfirmDialog(eliminar, "¿Está seguro de eliminar este especialista con cédula? "  +cedula, "Confirmar Eliminación", JOptionPane.YES_NO_OPTION);
+                    if (confirmDialog == JOptionPane.YES_OPTION) {
+                        especialistadao.delete(cedula);
+                        JOptionPane.showMessageDialog(eliminar, "Usuario Eliminado");
+                        
+                        recuperardatostabla();
+                    }
                 }
-                limpiarTabla();
-                recuperardatostabla();
-
             }
         } catch (Exception ex) {
-            System.out.println("" + ex);
+            ex.printStackTrace();
+            JOptionPane.showMessageDialog(eliminar, "Error al eliminar el Especialista");
         }
 
-        if (e.getSource() == eliminar.btnatras) {
+        if (e.getSource() == eliminar.itemAtras) {
             eliminar.dispose();
-
         }
-
     }
 
-    public void recuperardatostabla() {
+    
 
+    public void recuperardatostabla() {
+        DefaultTableModel tabla = new DefaultTableModel();
         List<Especialista> especialistas = this.especialistadao.listar();
-        tabla.setColumnIdentifiers(new Object[]{"Cedula", "Primer Nombre ", "Segundo Nombre", "Primer Apellido", "Segundo Apellido", "Id Especialidad","Es Pasante","Especialista Asignado","Contraseña","Esta activo"});
+        tabla.setColumnIdentifiers(new Object[]{"Cedula", "Primer Nombre ", "Segundo Nombre", "Primer Apellido", "Segundo Apellido", "Area Especialidad", "Es Pasante", "Especialista Asignado", "Contraseña","Esta Activo"});
         Object[] objeto = new Object[10];
         for (int i = 0; i < especialistas.size(); i++) {
             objeto[0] = especialistas.get(i).getCedula();
@@ -86,13 +91,5 @@ public class ControladorEliminar implements ActionListener {
         eliminar.tablaespecialistas.setModel(tabla);
     }
 
-    void limpiarTabla() {
-        for (int i = 0; i < eliminar.tablaespecialistas.getRowCount(); i++) {
-            tabla.removeRow(i);
-            i = i - 1;
-
-        }
-
-    }
-
+    
 }

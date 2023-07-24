@@ -55,7 +55,7 @@ public class EspecialidadesDao {
         return listaEspecialidades;
     }
 
-    public String obtenerNombreArea(int id_Especialidad) {
+    public String obtenerNombreArea(int id) {
         Conexion conexion = new Conexion();
         String nombreArea = null;
         Connection connection = null;
@@ -66,7 +66,7 @@ public class EspecialidadesDao {
             String query = "SELECT area FROM especialidad WHERE id = ?";
             connection = conexion.getConnection();
             statement = connection.prepareStatement(query);
-            statement.setInt(1, id_Especialidad);
+            statement.setInt(1, id);
             rs = statement.executeQuery();
 
             if (rs.next()) {

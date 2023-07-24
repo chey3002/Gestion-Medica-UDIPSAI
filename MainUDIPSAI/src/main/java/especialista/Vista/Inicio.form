@@ -20,9 +20,6 @@
         <Menu class="javax.swing.JMenu" name="menugestion">
           <Properties>
             <Property name="text" type="java.lang.String" value="Gesti&#xf3;n Especialistas"/>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Century Gothic" size="12" style="0"/>
-            </Property>
           </Properties>
           <AuxValues>
             <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
@@ -30,9 +27,6 @@
           <SubComponents>
             <MenuItem class="javax.swing.JMenuItem" name="menuitemcrear">
               <Properties>
-                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Century Gothic" size="12" style="0"/>
-                </Property>
                 <Property name="text" type="java.lang.String" value="Crear Especialista"/>
               </Properties>
               <Events>
@@ -44,10 +38,7 @@
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="menuactualizar">
               <Properties>
-                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Century Gothic" size="12" style="0"/>
-                </Property>
-                <Property name="text" type="java.lang.String" value="Editar Especialista"/>
+                <Property name="text" type="java.lang.String" value="Actualizar Especialista"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="menuactualizarActionPerformed"/>
@@ -55,10 +46,7 @@
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="menuver">
               <Properties>
-                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Century Gothic" size="12" style="0"/>
-                </Property>
-                <Property name="text" type="java.lang.String" value="Ver Especialistas"/>
+                <Property name="text" type="java.lang.String" value="Lista Especialistas"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="menuverActionPerformed"/>
@@ -66,9 +54,6 @@
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="menueliminar">
               <Properties>
-                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Century Gothic" size="12" style="0"/>
-                </Property>
                 <Property name="text" type="java.lang.String" value="Eliminar Especialista"/>
               </Properties>
               <Events>

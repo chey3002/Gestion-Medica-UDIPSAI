@@ -8,6 +8,10 @@ import Seguimiento.presentacion.SeguimientoPaciente;
 import Tests.presentacion.AgregarTest;
 import asignaciones.Asignar_Paciente;
 import comons.negocio.Especialista;
+import ReportesFonoaudiologia.*;
+import ReportesPersonales.*;
+import ReportesClinicas.*;
+import ReportesEducativos.*;
 import comons.negocio.Paciente;
 import configReader.ConfigReader;
 import java.sql.Connection;
@@ -28,14 +32,16 @@ public class Resultados extends javax.swing.JFrame {
 
     Paciente paciente;
     Especialista especialista;
+
     /**
      * Creates new form Resultados
      */
     public Resultados(Paciente paciente, Especialista especialista) {
-        this.especialista=especialista;
+        this.especialista = especialista;
         this.paciente = paciente;
         initComponents();
         Connection con = null;
+        System.err.println("" + paciente.id + "" + paciente.nombresApellidos);
 
         try {
             con = conexion();
@@ -438,6 +444,11 @@ public class Resultados extends javax.swing.JFrame {
         jMenuItem1 = new javax.swing.JMenuItem();
         jMenu6 = new javax.swing.JMenu();
         jMenuItem6 = new javax.swing.JMenuItem();
+        menuInformes = new javax.swing.JMenu();
+        itemFonoaudiologia = new javax.swing.JMenuItem();
+        itemPsicologiaClinica = new javax.swing.JMenuItem();
+        itemPsicologiaEducativa = new javax.swing.JMenuItem();
+        itemResultados = new javax.swing.JMenuItem();
 
         menu1.setLabel("File");
         menuBar1.add(menu1);
@@ -756,6 +767,42 @@ public class Resultados extends javax.swing.JFrame {
         jMenu6.add(jMenuItem6);
 
         jMenuBar1.add(jMenu6);
+
+        menuInformes.setText("Informes");
+
+        itemFonoaudiologia.setText("Fonoaudiologia");
+        itemFonoaudiologia.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                itemFonoaudiologiaActionPerformed(evt);
+            }
+        });
+        menuInformes.add(itemFonoaudiologia);
+
+        itemPsicologiaClinica.setText("Psicologia Clinica");
+        itemPsicologiaClinica.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                itemPsicologiaClinicaActionPerformed(evt);
+            }
+        });
+        menuInformes.add(itemPsicologiaClinica);
+
+        itemPsicologiaEducativa.setText("Psicologia Educativa");
+        itemPsicologiaEducativa.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                itemPsicologiaEducativaActionPerformed(evt);
+            }
+        });
+        menuInformes.add(itemPsicologiaEducativa);
+
+        itemResultados.setText("Resultados");
+        itemResultados.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                itemResultadosActionPerformed(evt);
+            }
+        });
+        menuInformes.add(itemResultados);
+
+        jMenuBar1.add(menuInformes);
 
         setJMenuBar(jMenuBar1);
 
@@ -1117,11 +1164,10 @@ public class Resultados extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
-        // TODO add your handling code here:
-
         Fonoaudilogia f = new Fonoaudilogia(paciente);
         f.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         f.setVisible(true);
+
     }//GEN-LAST:event_jMenuItem2ActionPerformed
 
     private void txtConsumoMedicamentosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtConsumoMedicamentosActionPerformed
@@ -1307,10 +1353,10 @@ public class Resultados extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItem5ActionPerformed
 
     private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
-        // TODO add your handling code here:
-         PiscologiaClinica f = new PiscologiaClinica(paciente);
-         f.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        PiscologiaClinica f = new PiscologiaClinica(paciente);
+        f.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         f.setVisible(true);
+
     }//GEN-LAST:event_jMenuItem3ActionPerformed
 
     private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
@@ -1322,14 +1368,14 @@ public class Resultados extends javax.swing.JFrame {
 
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
         // TODO add your handling code here:
-          AgregarTest tests = new AgregarTest(this.especialista, paciente);
+        AgregarTest tests = new AgregarTest(this.especialista, paciente);
         tests.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE); // Establecer acción de cierre
         tests.setVisible(true); // Mostrar el JFrame NuevoFrame
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
     private void jMenuItem6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem6ActionPerformed
         // TODO add your handling code here:
-         SeguimientoPaciente seguimientos = new SeguimientoPaciente(this.especialista, paciente);
+        SeguimientoPaciente seguimientos = new SeguimientoPaciente(this.especialista, paciente);
         seguimientos.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE); // Establecer acción de cierre
         seguimientos.setVisible(true); // Mostrar el JFrame NuevoFrame
     }//GEN-LAST:event_jMenuItem6ActionPerformed
@@ -1337,10 +1383,32 @@ public class Resultados extends javax.swing.JFrame {
     private void txtJuegoVocalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtJuegoVocalActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtJuegoVocalActionPerformed
-    ConfigReader configReader=new ConfigReader();
-    public String url = "jdbc:mysql://"+configReader.getIp()+":3306/"+configReader.getDatabase();
+
+    private void itemResultadosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemResultadosActionPerformed
+        Reportes_personales reportesPersonales = new Reportes_personales(paciente);
+        reportesPersonales.Reportes_personales(paciente);
+    }//GEN-LAST:event_itemResultadosActionPerformed
+
+    private void itemFonoaudiologiaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemFonoaudiologiaActionPerformed
+        fonoaudiologia fono = new fonoaudiologia(paciente);
+        fono.fonoaudoliga(paciente);
+
+    }//GEN-LAST:event_itemFonoaudiologiaActionPerformed
+
+    private void itemPsicologiaClinicaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemPsicologiaClinicaActionPerformed
+        Reportes_clinica reportes = new Reportes_clinica(paciente);
+        reportes.reportes_clinica(paciente);
+
+    }//GEN-LAST:event_itemPsicologiaClinicaActionPerformed
+
+    private void itemPsicologiaEducativaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemPsicologiaEducativaActionPerformed
+        Reportes_educativos reportesEducativos = new Reportes_educativos(paciente);
+        reportesEducativos.reportes_educativos(paciente);
+    }//GEN-LAST:event_itemPsicologiaEducativaActionPerformed
+    ConfigReader configReader = new ConfigReader();
+    public String url = "jdbc:mysql://" + configReader.getIp() + ":3306/" + configReader.getDatabase();
     public String usuario = configReader.getUser();
-    public String contrasena = configReader.getPass();//Preguntar
+    public String contrasena = configReader.getPass();
     PreparedStatement ps;
     ResultSet rs;
 
@@ -1405,6 +1473,10 @@ public class Resultados extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> cmbPresento;
     private javax.swing.JComboBox<String> cmbTipoParto;
     private javax.swing.JComboBox<String> cmbVacunacion;
+    private javax.swing.JMenuItem itemFonoaudiologia;
+    private javax.swing.JMenuItem itemPsicologiaClinica;
+    private javax.swing.JMenuItem itemPsicologiaEducativa;
+    private javax.swing.JMenuItem itemResultados;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -1475,6 +1547,7 @@ public class Resultados extends javax.swing.JFrame {
     private java.awt.Menu menu1;
     private java.awt.Menu menu2;
     private java.awt.MenuBar menuBar1;
+    public javax.swing.JMenu menuInformes;
     private javax.swing.JTextField txtAntecedentesMedicos;
     private javax.swing.JTextField txtAntecentesFamiliares;
     private javax.swing.JTextField txtBalbuceo;

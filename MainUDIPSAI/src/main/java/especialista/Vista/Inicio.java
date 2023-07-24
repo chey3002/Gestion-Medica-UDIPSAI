@@ -83,9 +83,7 @@ public class Inicio extends javax.swing.JFrame {
         jMenuBar1.add(menuInicio);
 
         menugestion.setText("Gestión Especialistas");
-        menugestion.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
 
-        menuitemcrear.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
         menuitemcrear.setText("Crear Especialista");
         menuitemcrear.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -94,8 +92,7 @@ public class Inicio extends javax.swing.JFrame {
         });
         menugestion.add(menuitemcrear);
 
-        menuactualizar.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
-        menuactualizar.setText("Editar Especialista");
+        menuactualizar.setText("Actualizar Especialista");
         menuactualizar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 menuactualizarActionPerformed(evt);
@@ -103,8 +100,7 @@ public class Inicio extends javax.swing.JFrame {
         });
         menugestion.add(menuactualizar);
 
-        menuver.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
-        menuver.setText("Ver Especialistas");
+        menuver.setText("Lista Especialistas");
         menuver.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 menuverActionPerformed(evt);
@@ -112,7 +108,6 @@ public class Inicio extends javax.swing.JFrame {
         });
         menugestion.add(menuver);
 
-        menueliminar.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
         menueliminar.setText("Eliminar Especialista");
         menueliminar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
