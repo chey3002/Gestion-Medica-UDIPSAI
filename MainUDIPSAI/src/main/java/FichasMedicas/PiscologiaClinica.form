@@ -301,6 +301,9 @@
           </Layout>
           <SubComponents>
             <Component class="javax.swing.JTextField" name="txtDiagnostico">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtDiagnosticoActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel15">
               <Properties>
@@ -685,7 +688,7 @@
                   <Font name="Segoe UI" size="12" style="1"/>
                 </Property>
                 <Property name="horizontalAlignment" type="int" value="4"/>
-                <Property name="text" type="java.lang.String" value="Id del paciente:"/>
+                <Property name="text" type="java.lang.String" value="# de Ficha"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel2">
@@ -952,7 +955,7 @@
                   <Font name="Segoe UI" size="12" style="1"/>
                 </Property>
                 <Property name="horizontalAlignment" type="int" value="4"/>
-                <Property name="text" type="java.lang.String" value="Id del Especialista:"/>
+                <Property name="text" type="java.lang.String" value="C&#xe9;dula del especialista:"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="txtDerivacion">

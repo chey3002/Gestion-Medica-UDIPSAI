@@ -188,7 +188,7 @@ public class PiscologiaEducativa extends javax.swing.JFrame {
         jLabel18.setText("Edad inicial 2:");
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jLabel1.setText("Id del paciente:");
+        jLabel1.setText("# de Ficha:");
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel2.setText("Nombre del paciente:");
@@ -209,7 +209,7 @@ public class PiscologiaEducativa extends javax.swing.JFrame {
         jLabel7.setText("Le gusta ir a la institucion:");
 
         jLabel39.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jLabel39.setText("Id del Especialista:");
+        jLabel39.setText("Cédula del especialista:");
 
         jLabel26.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel26.setText("Cambio de institución:");

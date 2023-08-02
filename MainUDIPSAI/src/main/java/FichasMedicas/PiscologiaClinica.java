@@ -447,6 +447,12 @@ public class PiscologiaClinica extends javax.swing.JFrame {
         jPanel1.setMinimumSize(new java.awt.Dimension(500, 500));
         jPanel1.setPreferredSize(new java.awt.Dimension(2479, 2479));
 
+        txtDiagnostico.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtDiagnosticoActionPerformed(evt);
+            }
+        });
+
         jLabel15.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel15.setText("Impresión diagnóstica:");
 
@@ -652,7 +658,7 @@ public class PiscologiaClinica extends javax.swing.JFrame {
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel1.setText("Id del paciente:");
+        jLabel1.setText("# de Ficha");
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
@@ -785,7 +791,7 @@ public class PiscologiaClinica extends javax.swing.JFrame {
 
         jLabel39.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel39.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel39.setText("Id del Especialista:");
+        jLabel39.setText("Cédula del especialista:");
 
         panelHabitosPersonales.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
@@ -3994,6 +4000,10 @@ public class PiscologiaClinica extends javax.swing.JFrame {
     private void jCheckBox28ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox28ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jCheckBox28ActionPerformed
+
+    private void txtDiagnosticoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtDiagnosticoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtDiagnosticoActionPerformed
 
     /**
      * @param args the command line arguments

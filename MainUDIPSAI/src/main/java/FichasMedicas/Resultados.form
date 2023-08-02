@@ -182,9 +182,16 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" attributes="0">
+                  <Group type="102" alignment="1" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="jLabel9" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="txtContactoEmergencia" max="32767" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="103" groupAlignment="1" attributes="0">
+                          <Component id="jLabel27" min="-2" max="-2" attributes="0"/>
                           <Component id="jLabel24" alignment="1" min="-2" max="-2" attributes="0"/>
                           <Component id="jLabel3" alignment="1" min="-2" max="-2" attributes="0"/>
                           <Component id="jLabel4" alignment="1" min="-2" max="-2" attributes="0"/>
@@ -207,46 +214,37 @@
                                   <Component id="txtAntecentesFamiliares" alignment="0" max="32767" attributes="0"/>
                                   <Component id="txtAntecedentesMedicos" alignment="0" max="32767" attributes="0"/>
                                   <Component id="txtEspecialidad" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="txtMotivo" alignment="0" pref="201" max="32767" attributes="0"/>
+                                  <Component id="txtMotivo" alignment="0" pref="226" max="32767" attributes="0"/>
                                   <Component id="txtFuenteInformacion" alignment="0" max="32767" attributes="0"/>
                                   <Component id="txtGrado" alignment="0" max="32767" attributes="0"/>
                                   <Component id="cmbDiscapacidad" alignment="0" max="32767" attributes="0"/>
                               </Group>
                           </Group>
-                          <Group type="102" attributes="0">
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="txtLugarNacimiento" max="32767" attributes="0"/>
-                          </Group>
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="txtDireccion" max="32767" attributes="0"/>
                           </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="txtIdEspecialista" pref="226" max="32767" attributes="0"/>
+                                  <Component id="txtLugarNacimiento" max="32767" attributes="0"/>
+                              </Group>
+                          </Group>
                       </Group>
                   </Group>
-                  <Group type="102" alignment="1" attributes="0">
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jLabel9" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="txtContactoEmergencia" max="32767" attributes="0"/>
-                  </Group>
-                  <Group type="102" attributes="0">
-                      <EmptySpace min="-2" pref="74" max="-2" attributes="0"/>
-                      <Component id="jLabel27" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="txtIdEspecialista" pref="200" max="32767" attributes="0"/>
-                  </Group>
                   <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace max="32767" attributes="0"/>
+                      <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="jLabel11" alignment="1" min="-2" max="-2" attributes="0"/>
                           <Component id="jLabel12" alignment="1" min="-2" max="-2" attributes="0"/>
                           <Component id="jLabel10" alignment="1" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace max="-2" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Component id="txtCorreo" alignment="1" max="32767" attributes="0"/>
-                          <Component id="cmbEmbarazoDeseado" alignment="1" pref="200" max="32767" attributes="0"/>
+                          <Component id="cmbEmbarazoDeseado" alignment="1" pref="226" max="32767" attributes="0"/>
                           <Component id="cmbControlEmbarazo" max="32767" attributes="0"/>
+                          <Component id="txtCorreo" alignment="1" max="32767" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
@@ -312,23 +310,23 @@
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="cmbIncubadora" alignment="0" pref="200" max="32767" attributes="0"/>
-                  <Component id="txtCausa" alignment="0" pref="200" max="32767" attributes="0"/>
-                  <Component id="cmbVacunacion" alignment="0" pref="200" max="32767" attributes="0"/>
-                  <Component id="txtCefalico" alignment="0" pref="200" max="32767" attributes="0"/>
-                  <Component id="txtSedestacion" alignment="0" pref="200" max="32767" attributes="0"/>
-                  <Component id="txtBipedestacion" alignment="0" pref="200" max="32767" attributes="0"/>
-                  <Component id="txtCaminaApoyo" alignment="0" pref="200" max="32767" attributes="0"/>
-                  <Component id="txtCaminaSolo" alignment="0" pref="200" max="32767" attributes="0"/>
-                  <Component id="txtSubeEscaleras" alignment="0" pref="200" max="32767" attributes="0"/>
-                  <Component id="txtSilabeo" alignment="0" pref="200" max="32767" attributes="0"/>
-                  <Component id="txtPrimerasPalabras" alignment="0" pref="200" max="32767" attributes="0"/>
-                  <Component id="txtOraciones" alignment="0" pref="200" max="32767" attributes="0"/>
-                  <Component id="txtFormulacionL" alignment="0" pref="200" max="32767" attributes="0"/>
-                  <Component id="txtNumeroPalabras" alignment="0" pref="200" max="32767" attributes="0"/>
-                  <Component id="txtTipoAntecedente" alignment="0" pref="200" max="32767" attributes="0"/>
-                  <Component id="txtDescripcion" alignment="0" pref="200" max="32767" attributes="0"/>
-                  <Component id="txtTiempo" alignment="0" pref="200" max="32767" attributes="0"/>
+                  <Component id="cmbIncubadora" alignment="0" pref="175" max="32767" attributes="0"/>
+                  <Component id="txtCausa" alignment="0" pref="175" max="32767" attributes="0"/>
+                  <Component id="cmbVacunacion" alignment="0" pref="175" max="32767" attributes="0"/>
+                  <Component id="txtCefalico" alignment="0" pref="175" max="32767" attributes="0"/>
+                  <Component id="txtSedestacion" alignment="0" pref="175" max="32767" attributes="0"/>
+                  <Component id="txtBipedestacion" alignment="0" pref="175" max="32767" attributes="0"/>
+                  <Component id="txtCaminaApoyo" alignment="0" pref="175" max="32767" attributes="0"/>
+                  <Component id="txtCaminaSolo" alignment="0" pref="175" max="32767" attributes="0"/>
+                  <Component id="txtSubeEscaleras" alignment="0" pref="175" max="32767" attributes="0"/>
+                  <Component id="txtSilabeo" alignment="0" pref="175" max="32767" attributes="0"/>
+                  <Component id="txtPrimerasPalabras" alignment="0" pref="175" max="32767" attributes="0"/>
+                  <Component id="txtOraciones" alignment="0" pref="175" max="32767" attributes="0"/>
+                  <Component id="txtFormulacionL" alignment="0" pref="175" max="32767" attributes="0"/>
+                  <Component id="txtNumeroPalabras" alignment="0" pref="175" max="32767" attributes="0"/>
+                  <Component id="txtTipoAntecedente" alignment="0" pref="175" max="32767" attributes="0"/>
+                  <Component id="txtDescripcion" alignment="0" pref="175" max="32767" attributes="0"/>
+                  <Component id="txtTiempo" alignment="0" pref="175" max="32767" attributes="0"/>
               </Group>
               <EmptySpace min="-2" max="-2" attributes="0"/>
           </Group>
@@ -504,61 +502,18 @@
                                   <Component id="txtDireccion" linkSize="8" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="jLabel24" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Group type="103" groupAlignment="3" attributes="0">
-                                          <Component id="jLabel10" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="txtCorreo" linkSize="8" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      </Group>
-                                      <EmptySpace min="-2" pref="5" max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="3" attributes="0">
-                                          <Component id="jLabel11" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="cmbEmbarazoDeseado" linkSize="8" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      </Group>
-                                  </Group>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Group type="103" groupAlignment="3" attributes="0">
-                                          <Component id="jLabel39" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="txtVocalizacion" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      </Group>
-                                      <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="3" attributes="0">
-                                          <Component id="jLabel40" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="txtBalbuceo" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      </Group>
-                                  </Group>
-                              </Group>
-                              <EmptySpace min="-2" pref="7" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" attributes="0">
-                                      <Group type="103" groupAlignment="3" attributes="0">
-                                          <Component id="jLabel38" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="cmbComplicaionesParto" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      </Group>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="3" attributes="0">
-                                          <Component id="jLabel44" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="txtJuegoVocal" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      </Group>
-                                  </Group>
-                                  <Group type="103" groupAlignment="3" attributes="0">
-                                      <Component id="jLabel12" alignment="3" min="-2" pref="17" max="-2" attributes="0"/>
-                                      <Component id="cmbControlEmbarazo" linkSize="8" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                              </Group>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="txtIdPaciente" linkSize="8" alignment="0" min="-2" max="-2" attributes="0"/>
                                   <Component id="jLabel25" alignment="0" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace max="-2" attributes="0"/>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="txtIdEspecialista" linkSize="8" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="jLabel27" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txtIdEspecialista" linkSize="8" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="7" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="jLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="txtLugarNacimiento" linkSize="8" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -598,6 +553,51 @@
                                   <Component id="jLabel8" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="txtAntecentesFamiliares" linkSize="8" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
+                          </Group>
+                      </Group>
+                      <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="txtCorreo" linkSize="8" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="5" max="-2" attributes="0"/>
+                                      <Component id="cmbEmbarazoDeseado" linkSize="8" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Group type="103" groupAlignment="3" attributes="0">
+                                          <Component id="jLabel39" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="txtVocalizacion" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="3" attributes="0">
+                                          <Component id="jLabel40" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="txtBalbuceo" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                              </Group>
+                              <EmptySpace min="-2" pref="7" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" attributes="0">
+                                      <Group type="103" groupAlignment="3" attributes="0">
+                                          <Component id="jLabel38" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="cmbComplicaionesParto" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="3" attributes="0">
+                                          <Component id="jLabel44" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="txtJuegoVocal" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                                  <Component id="cmbControlEmbarazo" linkSize="8" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <Group type="102" attributes="0">
+                              <Component id="jLabel10" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="5" max="-2" attributes="0"/>
+                              <Component id="jLabel11" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="7" max="-2" attributes="0"/>
+                              <Component id="jLabel12" min="-2" pref="17" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
@@ -778,7 +778,7 @@
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Segoe UI" size="12" style="1"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Id:"/>
+        <Property name="text" type="java.lang.String" value="# de Ficha:"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="txtTalla">
@@ -862,7 +862,7 @@
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Segoe UI" size="12" style="1"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="IdEspecialista:"/>
+        <Property name="text" type="java.lang.String" value="C&#xe9;dula del especialista:"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="txtIdPaciente">

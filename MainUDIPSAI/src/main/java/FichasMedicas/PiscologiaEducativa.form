@@ -474,7 +474,7 @@
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Segoe UI" size="12" style="1"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Id del paciente:"/>
+        <Property name="text" type="java.lang.String" value="# de Ficha:"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel2">
@@ -530,7 +530,7 @@
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Segoe UI" size="12" style="1"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Id del Especialista:"/>
+        <Property name="text" type="java.lang.String" value="C&#xe9;dula del especialista:"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="txtIdEspecialista">
